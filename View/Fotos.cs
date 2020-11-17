@@ -35,6 +35,7 @@ namespace desktop_bitinvest_v1.View
             MemoryStream memory = new MemoryStream();
             bmp.Save(memory, ImageFormat.Bmp);
             byte[] foto = memory.ToArray();
+          //  Cliente.Foto = foto;
 
         }
     }
