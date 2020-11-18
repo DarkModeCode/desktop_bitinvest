@@ -27,7 +27,7 @@ namespace desktop_bitinvest_v1.Controller
         public static string Estado { get; set; }
         public static string Pais { get; set; }
         public static string Cep { get; set; }
-        public static bool Foto { get; set; }
+        public static byte[] Foto { get; set; }
        
     }
 }

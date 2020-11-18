@@ -71,7 +71,7 @@ namespace desktop_bitinvest_v1
             {
                 var perfil = 4;
                 var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, Cliente.rg, Cliente.cpf_cnpj, Cliente.telefone_residencial,
-       Cliente.celular,/* bool foto_doc_frente, bool foto_doc_tras, bool foto_doc_selfie, */ Cliente.RendaMensal, perfil,Cliente.Rua,Cliente.Bairro,Cliente.Complemento,Cliente.Cidade,Cliente.Numero,Cliente.Estado,Cliente.Pais, Cliente.Cep);
+       Cliente.celular, Cliente.Foto, Cliente.Foto, Cliente.Foto, Cliente.RendaMensal, perfil,Cliente.Rua,Cliente.Bairro,Cliente.Complemento,Cliente.Cidade,Cliente.Numero,Cliente.Estado,Cliente.Pais, Cliente.Cep);
                MessageBox.Show("Cadastrado com Sucesso!");
               
             }
@@ -80,7 +80,7 @@ namespace desktop_bitinvest_v1
                 var nulo = "Nulo";
                 var perfil = 5;
                 var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, nulo, Cliente.cpf_cnpj, Cliente.telefone_residencial,
-       nulo,/* bool foto_doc_frente, bool foto_doc_tras, bool foto_doc_selfie, */ nulo, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
+       nulo, Cliente.Foto, Cliente.Foto, Cliente.Foto, nulo, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
                MessageBox.Show("Cadastrado com Sucesso!");
                
 

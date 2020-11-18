@@ -16,11 +16,11 @@ namespace desktop_bitinvest_v1.Model
             return userDao.Login(email, senha);
         }
         public bool CadastrarCliente(string nome, string email, string senha, string data_nasc_fund,  string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
-        string celular,/* bool foto_doc_frente, bool foto_doc_tras, bool foto_doc_selfie,*/ string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
+        string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
            )
         {
             return userDao.CadastrarClientes( nome,  email,  senha,  data_nasc_fund,  sobrenome,  rg,  cpf_cnpj,  telefone_residencial,
-         celular, /*foto_doc_frente,  foto_doc_tras,  foto_doc_selfie,  */renda_mensal,  tipo_pessoa, rua, bairro, complemento, cidade, numero, estado, pais, cep
+         celular, foto_doc_frente,  foto_doc_tras,  foto_doc_selfie,  renda_mensal,  tipo_pessoa, rua, bairro, complemento, cidade, numero, estado, pais, cep
            );
         }
 

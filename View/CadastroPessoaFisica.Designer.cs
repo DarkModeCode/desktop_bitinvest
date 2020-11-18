@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtPais = new System.Windows.Forms.TextBox();
             this.txtTelefoneR = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -82,13 +83,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDadosPeF = new System.Windows.Forms.Label();
-            this.txtPais = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtPais);
             this.panel2.Controls.Add(this.txtTelefoneR);
             this.panel2.Controls.Add(this.txtCpf);
@@ -148,6 +151,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(860, 508);
             this.panel2.TabIndex = 1;
+            // 
+            // txtPais
+            // 
+            this.txtPais.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtPais.Location = new System.Drawing.Point(147, 273);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(195, 25);
+            this.txtPais.TabIndex = 70;
+            this.txtPais.TextChanged += new System.EventHandler(this.txtPais_TextChanged);
             // 
             // txtTelefoneR
             // 
@@ -650,6 +662,7 @@
             this.bntUploadImage.Size = new System.Drawing.Size(164, 36);
             this.bntUploadImage.TabIndex = 4;
             this.bntUploadImage.Text = "ADICIONAR FOTOS";
+            this.bntUploadImage.Click += new System.EventHandler(this.bntUploadImage_Click);
             // 
             // label7
             // 
@@ -786,14 +799,14 @@
             this.lblDadosPeF.TabIndex = 0;
             this.lblDadosPeF.Text = "DADOS PESSOAIS";
             // 
-            // txtPais
+            // pictureBox1
             // 
-            this.txtPais.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtPais.Location = new System.Drawing.Point(147, 273);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(195, 25);
-            this.txtPais.TabIndex = 70;
-            this.txtPais.TextChanged += new System.EventHandler(this.txtPais_TextChanged);
+            this.pictureBox1.Location = new System.Drawing.Point(701, 177);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 63);
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // CadastroPessoaFisica
             // 
@@ -806,6 +819,7 @@
             this.Text = "CadastroPessoaFisica";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -867,5 +881,6 @@
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtTelefoneR;
         private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

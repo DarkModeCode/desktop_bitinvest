@@ -68,7 +68,7 @@ namespace desktop_bitinvest_v1.Controller
 
 
         public bool CadastrarClientes(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
-        string celular,/* bool foto_doc_frente, bool foto_doc_tras, bool foto_doc_selfie, */string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
+        string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
             )
         {
             using (var connection = GetConnection())
@@ -88,9 +88,9 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.Parameters.AddWithValue("@cpf_cnpj ", cpf_cnpj);
                     cmd.Parameters.AddWithValue("@telefone_residencial ", telefone_residencial);
                     cmd.Parameters.AddWithValue("@celular ", celular);
-                 /*   cmd.Parameters.AddWithValue("@foto_doc_frente ", foto_doc_frente);
+                    cmd.Parameters.AddWithValue("@foto_doc_frente ", foto_doc_frente);
                     cmd.Parameters.AddWithValue("@foto_doc_tras ", foto_doc_tras);
-                    cmd.Parameters.AddWithValue("@foto_doc_selfie ", foto_doc_selfie); */
+                    cmd.Parameters.AddWithValue("@foto_doc_selfie ", foto_doc_selfie); 
                     cmd.Parameters.AddWithValue("@renda_mensal ", renda_mensal);
                     cmd.Parameters.AddWithValue("@tipo_pessoa ", tipo_pessoa);
                     SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //creating  SqlCommand  object  

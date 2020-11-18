@@ -187,5 +187,18 @@ namespace desktop_bitinvest_v1.View
         {
             Cliente.Pais = txtPais.Text;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntUploadImage_Click(object sender, EventArgs e)
+        {
+            Fotos frm = new Fotos();
+            frm.Show();
+
+        }
+        }
     }
-}
+
