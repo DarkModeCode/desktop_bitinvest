@@ -1,4 +1,5 @@
-﻿using System;
+﻿using desktop_bitinvest_v1.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +36,7 @@ namespace desktop_bitinvest_v1.View
             MemoryStream memory = new MemoryStream();
             bmp.Save(memory, ImageFormat.Bmp);
             byte[] foto = memory.ToArray();
-          //  Cliente.Foto = foto;
+            Cliente.Foto = foto;
 
         }
     }
