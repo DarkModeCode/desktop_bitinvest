@@ -83,15 +83,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDadosPeF = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtPais);
             this.panel2.Controls.Add(this.txtTelefoneR);
             this.panel2.Controls.Add(this.txtCpf);
@@ -799,15 +796,6 @@
             this.lblDadosPeF.TabIndex = 0;
             this.lblDadosPeF.Text = "DADOS PESSOAIS";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(701, 177);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 63);
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // CadastroPessoaFisica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -819,7 +807,6 @@
             this.Text = "CadastroPessoaFisica";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -881,6 +868,5 @@
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtTelefoneR;
         private System.Windows.Forms.TextBox txtPais;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

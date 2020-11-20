@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using desktop_bitinvest_v1.Controller;
+using System.IO;
 
 namespace desktop_bitinvest_v1.View
 {
@@ -199,6 +200,15 @@ namespace desktop_bitinvest_v1.View
             frm.Show();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MemoryStream memory = new MemoryStream(Cliente.Foto);
+            pictureBox1.Image = Image.FromStream(memory);
+
+
+
         }
+    }
     }
 
