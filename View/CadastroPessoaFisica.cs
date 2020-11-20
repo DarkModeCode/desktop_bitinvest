@@ -203,11 +203,21 @@ namespace desktop_bitinvest_v1.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MemoryStream memory = new MemoryStream(Cliente.Foto);
+           
+
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MemoryStream memory = new MemoryStream(Cliente.Foto_Frente);
             pictureBox1.Image = Image.FromStream(memory);
-
-
-
+            MemoryStream memoryT = new MemoryStream(Cliente.Foto_Tras);
+            pictureBox2.Image = Image.FromStream(memoryT);
+            MemoryStream memoryS = new MemoryStream(Cliente.Foto_Selfie);
+            pictureBox3.Image = Image.FromStream(memoryS);
+        
         }
     }
     }

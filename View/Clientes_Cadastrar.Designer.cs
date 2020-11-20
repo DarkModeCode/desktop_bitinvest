@@ -71,6 +71,7 @@
             this.pnlCadCliente.Name = "pnlCadCliente";
             this.pnlCadCliente.Size = new System.Drawing.Size(1104, 661);
             this.pnlCadCliente.TabIndex = 1;
+            this.pnlCadCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCadCliente_Paint);
             // 
             // guna2Button1
             // 
@@ -90,6 +91,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(261, 45);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "CANCELAR";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // bntCadastrar
             // 

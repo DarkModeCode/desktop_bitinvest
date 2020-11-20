@@ -27,18 +27,14 @@ namespace desktop_bitinvest_v1.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+            
+               
 
+                
 
-            MemoryStream memory = new MemoryStream();
-            bmp.Save(memory, ImageFormat.Jpeg);
-            byte[] foto = memory.ToArray();
-            memory.Position = 0;
-            memory.Read(foto, 0, foto.Length);
-            Cliente.Foto_Frente = foto;
-            this.Close();
-     
+                this.Close();
 
+            
 
         }
 
@@ -50,6 +46,12 @@ namespace desktop_bitinvest_v1.View
                 string nome = openFileDialog1.FileName;
                 bmp = new Bitmap(nome);
                 pictureBox1.Image = bmp;
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+                byte[] foto = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(foto, 0, foto.Length);
+                Cliente.Foto_Frente = foto;
             }
         }
 
@@ -61,6 +63,13 @@ namespace desktop_bitinvest_v1.View
                 string nome = openFileDialog1.FileName;
                 bmp = new Bitmap(nome);
                 pictureBox2.Image = bmp;
+
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+                byte[] fotoT = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(fotoT, 0, fotoT.Length);
+                Cliente.Foto_Tras = fotoT;
             }
         }
 
@@ -72,6 +81,13 @@ namespace desktop_bitinvest_v1.View
                 string nome = openFileDialog1.FileName;
                 bmp = new Bitmap(nome);
                 pictureBox3.Image = bmp;
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+
+                byte[] fotoS = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(fotoS, 0, fotoS.Length);
+                Cliente.Foto_Selfie = fotoS;
             }
         }
     }
