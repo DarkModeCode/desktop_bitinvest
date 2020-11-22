@@ -16,5 +16,10 @@ namespace desktop_bitinvest_v1.View
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

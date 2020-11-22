@@ -26,19 +26,31 @@ namespace desktop_bitinvest_v1.View
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            
-               
-
+        {            
                 
-
-                this.Close();
-
-            
+                this.Close();         
 
         }
 
-        private void btnFotoFrente_Click(object sender, EventArgs e)
+        private void btnFotoSelfie_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                string nome = openFileDialog1.FileName;
+                bmp = new Bitmap(nome);
+                pictureBox3.Image = bmp;
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+
+                byte[] fotoS = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(fotoS, 0, fotoS.Length);
+                Cliente.Foto_Selfie = fotoS;
+            }
+        }
+
+        private void btnFotoFrente_Click_1(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -73,7 +85,7 @@ namespace desktop_bitinvest_v1.View
             }
         }
 
-        private void btnFotoSelfie_Click(object sender, EventArgs e)
+        private void btnFotoSelfie_Click_1(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
