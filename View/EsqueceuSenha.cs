@@ -1,4 +1,6 @@
-﻿using System;
+﻿using desktop_bitinvest_v1.Controller;
+using desktop_bitinvest_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,25 @@ namespace desktop_bitinvest_v1.View
         public EsqueceuSenha()
         {
             InitializeComponent();
+        }
+
+        private void bntConfirmarCod_Click(object sender, EventArgs e)
+        {
+            UsuarioModel usuario = new UsuarioModel();
+
+            int cod = Convert.ToInt32(txtCodigo.Text);
+            var codigoValido =  usuario.ConfirmarCod(Usuario.Id, cod);
+
+            if (codigoValido == true)
+            {
+                EsqueceuSenha_RedefinindoSenha novaSenha = new EsqueceuSenha_RedefinindoSenha();
+                novaSenha.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Codigo errado");
+            }
         }
     }
 }

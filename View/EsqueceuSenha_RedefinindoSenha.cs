@@ -1,4 +1,6 @@
-﻿using System;
+﻿using desktop_bitinvest_v1.Controller;
+using desktop_bitinvest_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,13 @@ namespace desktop_bitinvest_v1.View
         public EsqueceuSenha_RedefinindoSenha()
         {
             InitializeComponent();
+        }
+
+        private void bntConfirmarSenha_Click(object sender, EventArgs e)
+        {
+            UsuarioModel usuario = new UsuarioModel();
+            usuario.Atualizar_senha(Usuario.Id, txtNovaSenha.Text);
+            this.Close();
         }
     }
 }

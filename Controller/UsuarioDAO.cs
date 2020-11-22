@@ -38,6 +38,25 @@ namespace desktop_bitinvest_v1.Controller
                 return false;
 
 
+        } 
+        public bool ConfirmarCod(int id_usuario,int cod)
+        {
+            var connection = GetConnection();
+            connection.Open();
+            var command = new SqlCommand();
+
+            command.Connection = connection;
+            command.CommandText = "select * from esqueci_senha where (id_usuario=@id_usuario and codigo=@codigo)";
+            command.Parameters.AddWithValue("@id_usuario", id_usuario);
+            command.Parameters.AddWithValue("@codigo", cod);
+            command.CommandType = CommandType.Text;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+                return false;
         }
 
         public bool Email(string email)
@@ -66,7 +85,6 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
-
 
         public bool CadastrarClientes(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
         string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
@@ -120,6 +138,36 @@ namespace desktop_bitinvest_v1.Controller
 
                   
 
+                }
+
+                return true;
+            }
+        }
+        
+        public bool AtualizarSenha(int id_usuario, string senha)
+        {
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
+            SHA1Managed SHhash = new SHA1Managed();
+            string strHex = "";
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            foreach (byte b in HashValue)
+
+            {
+                strHex += String.Format("{0:x2}", b);
+
+            }
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("atualizar_senha", connection);  //creating  SqlCommand  object  
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_usuario ", id_usuario);
+                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
                 }
 
                 return true;

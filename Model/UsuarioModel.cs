@@ -28,14 +28,25 @@ namespace desktop_bitinvest_v1.Model
         {
             return userDao.Email(email);
         }
+        
+        public bool ConfirmarCod(int id_usuario, int cod)
+        {
+            return userDao.ConfirmarCod(id_usuario, cod);
+        }
         public bool Esqueci(int id_usuario,int cod)
         {
             return userDao.Esqueceu(id_usuario,cod);
         }
+
+        public bool Atualizar_senha(int id_usuario, string senha)
+        {
+            return userDao.AtualizarSenha(id_usuario, senha);
+        }
         public object SelecionarClientes() {
 
             return userDao.SelecionarClientes();
-        }public object SelecionarClientesPendetes() {
+        }
+        public object SelecionarClientesPendetes() {
 
             return userDao.SelecionarClientesPendentes();
         }
