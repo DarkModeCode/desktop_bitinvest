@@ -21,9 +21,17 @@ namespace desktop_bitinvest_v1.View
 
         private void bntConfirmarSenha_Click(object sender, EventArgs e)
         {
-            UsuarioModel usuario = new UsuarioModel();
-            usuario.Atualizar_senha(Usuario.Id, txtNovaSenha.Text);
-            this.Close();
+            if (txtNovaSenha.Text == txtNovaSenhaConfirmar.Text)
+            {
+
+                UsuarioModel usuario = new UsuarioModel();
+                usuario.Atualizar_senha(Usuario.Id, txtNovaSenha.Text);
+                this.Close();
+            }
+            else {
+
+                MessageBox.Show("As senhas não são iguais.");
+            }
         }
     }
 }

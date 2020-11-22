@@ -10,6 +10,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,9 +91,40 @@ namespace desktop_bitinvest_v1
         UsuarioModel usuario = new UsuarioModel();
             usuario.Email(txtEmail.Text);
             usuario.Esqueci(Usuario.Id, cod);
+
+
+            SmtpClient client = new SmtpClient();
+            client.UseDefaultCredentials = false;
+            client.Credentials = new NetworkCredential("contato@bitinvestimentos.com.br", "69634270");
+            client.Port = 587;
+            client.Host = "smtp.gmail.com";
+            client.EnableSsl = true;
+
+            try
+            {
+                MailAddress maFrom = new MailAddress("contato@bitinvestimentos.com.br", "Bit Invest", Encoding.UTF8);
+                MailAddress maTo = new MailAddress(txtEmail.Text, " ", Encoding.UTF8);
+                MailMessage mmsg = new MailMessage(maFrom, maTo);
+                mmsg.Body = "Olá, seu codigo é "+cod;
+                mmsg.BodyEncoding = Encoding.UTF8;
+                mmsg.IsBodyHtml = true;
+                mmsg.Subject = "Codigo de esqueceu a senha";
+                mmsg.SubjectEncoding = Encoding.UTF8;
+
+                client.Send(mmsg);
+                MessageBox.Show("Codigo Enviado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), ex.Message);
+                //throw;
+            }
             EsqueceuSenha formEsqueceu = new EsqueceuSenha();
+
             formEsqueceu.Show();
            // this.Close();
+
+
 
             //Remember to enter your (AWSAccessKeyID, AWSSecretAccessKey) if not using and IAM User with credentials assigned to your instance and your RegionEndpoint
             /* using (var client = new AmazonSimpleEmailServiceClient("AKIAIY6P3I3S2TK2UZKA", "nVAtJH2PYHcwIERlDx41J/EZZWKYTd7lwMANv3BU", RegionEndpoint.USEast1))
