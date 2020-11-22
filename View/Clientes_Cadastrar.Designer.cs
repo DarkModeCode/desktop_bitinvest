@@ -69,7 +69,7 @@
             this.pnlCadCliente.Controls.Add(this.panel2);
             this.pnlCadCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlCadCliente.Name = "pnlCadCliente";
-            this.pnlCadCliente.Size = new System.Drawing.Size(1104, 661);
+            this.pnlCadCliente.Size = new System.Drawing.Size(1121, 699);
             this.pnlCadCliente.TabIndex = 1;
             this.pnlCadCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCadCliente_Paint);
             // 
@@ -84,7 +84,7 @@
             this.guna2Button1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(478, 598);
+            this.guna2Button1.Location = new System.Drawing.Point(475, 604);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -104,7 +104,7 @@
             this.bntCadastrar.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntCadastrar.ForeColor = System.Drawing.Color.White;
             this.bntCadastrar.HoverState.Parent = this.bntCadastrar;
-            this.bntCadastrar.Location = new System.Drawing.Point(127, 598);
+            this.bntCadastrar.Location = new System.Drawing.Point(124, 604);
             this.bntCadastrar.Name = "bntCadastrar";
             this.bntCadastrar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(10)))));
             this.bntCadastrar.ShadowDecoration.Parent = this.bntCadastrar;
@@ -118,7 +118,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(12, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 508);
+            this.panel2.Size = new System.Drawing.Size(865, 524);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 

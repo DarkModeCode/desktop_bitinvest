@@ -701,11 +701,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoScroll = true;
             this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.imgLogo);
-            this.panel3.Location = new System.Drawing.Point(244, 30);
+            this.panel3.Location = new System.Drawing.Point(244, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1121, 700);
+            this.panel3.Size = new System.Drawing.Size(1121, 699);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -713,7 +713,7 @@
             // 
             this.imgLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(153, 139);
+            this.imgLogo.Location = new System.Drawing.Point(153, 138);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(814, 422);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
