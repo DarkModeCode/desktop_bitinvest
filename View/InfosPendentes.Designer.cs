@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlInfosPendentes = new System.Windows.Forms.Panel();
+            this.lblCelularPefPendentes = new System.Windows.Forms.Label();
+            this.lblCelularPendentePf = new System.Windows.Forms.Label();
+            this.lblEmailPfPendente = new System.Windows.Forms.Label();
+            this.lblEmailPendentesPf = new System.Windows.Forms.Label();
             this.bntVerDetalhes = new Guna.UI2.WinForms.Guna2Button();
             this.lblSobrenomPendentesPf = new System.Windows.Forms.Label();
             this.lblSobrenomePendentesPef = new System.Windows.Forms.Label();
@@ -40,10 +44,6 @@
             this.lblRGPendentesPf = new System.Windows.Forms.Label();
             this.lblCPFPendentesPf = new System.Windows.Forms.Label();
             this.lblNomePendentesPf = new System.Windows.Forms.Label();
-            this.lblEmailPfPendente = new System.Windows.Forms.Label();
-            this.lblEmailPendentesPf = new System.Windows.Forms.Label();
-            this.lblCelularPefPendentes = new System.Windows.Forms.Label();
-            this.lblCelularPendentePf = new System.Windows.Forms.Label();
             this.pnlInfosPendentes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,50 @@
             this.pnlInfosPendentes.Name = "pnlInfosPendentes";
             this.pnlInfosPendentes.Size = new System.Drawing.Size(347, 295);
             this.pnlInfosPendentes.TabIndex = 0;
+            // 
+            // lblCelularPefPendentes
+            // 
+            this.lblCelularPefPendentes.AutoSize = true;
+            this.lblCelularPefPendentes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblCelularPefPendentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.lblCelularPefPendentes.Location = new System.Drawing.Point(22, 208);
+            this.lblCelularPefPendentes.Name = "lblCelularPefPendentes";
+            this.lblCelularPefPendentes.Size = new System.Drawing.Size(45, 19);
+            this.lblCelularPefPendentes.TabIndex = 41;
+            this.lblCelularPefPendentes.Text = "label2";
+            // 
+            // lblCelularPendentePf
+            // 
+            this.lblCelularPendentePf.AutoSize = true;
+            this.lblCelularPendentePf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelularPendentePf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.lblCelularPendentePf.Location = new System.Drawing.Point(22, 185);
+            this.lblCelularPendentePf.Name = "lblCelularPendentePf";
+            this.lblCelularPendentePf.Size = new System.Drawing.Size(82, 21);
+            this.lblCelularPendentePf.TabIndex = 40;
+            this.lblCelularPendentePf.Text = "CELULAR:";
+            // 
+            // lblEmailPfPendente
+            // 
+            this.lblEmailPfPendente.AutoSize = true;
+            this.lblEmailPfPendente.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblEmailPfPendente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.lblEmailPfPendente.Location = new System.Drawing.Point(22, 166);
+            this.lblEmailPfPendente.Name = "lblEmailPfPendente";
+            this.lblEmailPfPendente.Size = new System.Drawing.Size(45, 19);
+            this.lblEmailPfPendente.TabIndex = 39;
+            this.lblEmailPfPendente.Text = "label2";
+            // 
+            // lblEmailPendentesPf
+            // 
+            this.lblEmailPendentesPf.AutoSize = true;
+            this.lblEmailPendentesPf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailPendentesPf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.lblEmailPendentesPf.Location = new System.Drawing.Point(22, 143);
+            this.lblEmailPendentesPf.Name = "lblEmailPendentesPf";
+            this.lblEmailPendentesPf.Size = new System.Drawing.Size(68, 21);
+            this.lblEmailPendentesPf.TabIndex = 38;
+            this.lblEmailPendentesPf.Text = "E-MAIL:";
             // 
             // bntVerDetalhes
             // 
@@ -198,50 +242,6 @@
             this.lblNomePendentesPf.Size = new System.Drawing.Size(63, 21);
             this.lblNomePendentesPf.TabIndex = 27;
             this.lblNomePendentesPf.Text = "NOME:";
-            // 
-            // lblEmailPfPendente
-            // 
-            this.lblEmailPfPendente.AutoSize = true;
-            this.lblEmailPfPendente.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblEmailPfPendente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.lblEmailPfPendente.Location = new System.Drawing.Point(22, 166);
-            this.lblEmailPfPendente.Name = "lblEmailPfPendente";
-            this.lblEmailPfPendente.Size = new System.Drawing.Size(45, 19);
-            this.lblEmailPfPendente.TabIndex = 39;
-            this.lblEmailPfPendente.Text = "label2";
-            // 
-            // lblEmailPendentesPf
-            // 
-            this.lblEmailPendentesPf.AutoSize = true;
-            this.lblEmailPendentesPf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailPendentesPf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.lblEmailPendentesPf.Location = new System.Drawing.Point(22, 143);
-            this.lblEmailPendentesPf.Name = "lblEmailPendentesPf";
-            this.lblEmailPendentesPf.Size = new System.Drawing.Size(68, 21);
-            this.lblEmailPendentesPf.TabIndex = 38;
-            this.lblEmailPendentesPf.Text = "E-MAIL:";
-            // 
-            // lblCelularPefPendentes
-            // 
-            this.lblCelularPefPendentes.AutoSize = true;
-            this.lblCelularPefPendentes.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblCelularPefPendentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.lblCelularPefPendentes.Location = new System.Drawing.Point(22, 208);
-            this.lblCelularPefPendentes.Name = "lblCelularPefPendentes";
-            this.lblCelularPefPendentes.Size = new System.Drawing.Size(45, 19);
-            this.lblCelularPefPendentes.TabIndex = 41;
-            this.lblCelularPefPendentes.Text = "label2";
-            // 
-            // lblCelularPendentePf
-            // 
-            this.lblCelularPendentePf.AutoSize = true;
-            this.lblCelularPendentePf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelularPendentePf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.lblCelularPendentePf.Location = new System.Drawing.Point(22, 185);
-            this.lblCelularPendentePf.Name = "lblCelularPendentePf";
-            this.lblCelularPendentePf.Size = new System.Drawing.Size(82, 21);
-            this.lblCelularPendentePf.TabIndex = 40;
-            this.lblCelularPendentePf.Text = "CELULAR:";
             // 
             // InfosPendentes
             // 
