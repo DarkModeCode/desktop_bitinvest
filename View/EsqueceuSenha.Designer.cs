@@ -36,6 +36,7 @@
             this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             this.picLogin = new System.Windows.Forms.PictureBox();
             this.bntConfirmarCod = new Guna.UI2.WinForms.Guna2Button();
+            this.lblCopyright = new System.Windows.Forms.Label();
             this.pnlEsqueceuSenha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTitleBitivest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
@@ -144,12 +145,23 @@
             this.bntConfirmarCod.TabIndex = 5;
             this.bntConfirmarCod.Text = "OK";
             // 
+            // lblCopyright
+            // 
+            this.lblCopyright.AutoSize = true;
+            this.lblCopyright.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblCopyright.Location = new System.Drawing.Point(301, 428);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(199, 13);
+            this.lblCopyright.TabIndex = 4;
+            this.lblCopyright.Text = "Copyright reserved to @DarkMode Code";
+            // 
             // EsqueceuSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.picLogin);
             this.Controls.Add(this.pnlEsqueceuSenha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -161,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTitleBitivest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,5 +186,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCodigo;
         private System.Windows.Forms.PictureBox picLogin;
         private Guna.UI2.WinForms.Guna2Button bntConfirmarCod;
+        private System.Windows.Forms.Label lblCopyright;
     }
 }
