@@ -73,7 +73,7 @@ namespace desktop_bitinvest_v1
             private void bntCadastrar_Click(object sender, EventArgs e)
         {
          UsuarioModel user = new UsuarioModel();
-            //oi
+            //oiiii
             var tipoPessoa = this.cboTipoPessoa.SelectedItem;
 
             if (tipoPessoa == "               PESSOA FÍSICA")
