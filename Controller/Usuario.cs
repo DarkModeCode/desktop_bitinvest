@@ -8,7 +8,7 @@ namespace desktop_bitinvest_v1.Controller
 {
     public class Usuario
     {
-        public static string Id { get; set; }
+        public static int Id { get; set; }
         public static string Email { get; set; }
         public static string Senha { get; set; }
         public static string Nome { get; set; }

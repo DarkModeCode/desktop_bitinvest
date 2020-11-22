@@ -69,21 +69,30 @@ namespace desktop_bitinvest_v1
 
         private  void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Remember to enter your (AWSAccessKeyID, AWSSecretAccessKey) if not using and IAM User with credentials assigned to your instance and your RegionEndpoint
-            using (var client = new AmazonSimpleEmailServiceClient("AKIAIY6P3I3S2TK2UZKA", "nVAtJH2PYHcwIERlDx41J/EZZWKYTd7lwMANv3BU", RegionEndpoint.USEast1))
-            {
-                var emailRequest = new SendEmailRequest()
-                {
-                    Source = "FROMADDRESS@TEST.COM",
-                    Destination = new Destination(),
-                    Message = new Message()
-                };
 
-                emailRequest.Destination.ToAddresses.Add(txtEmail.Text);
-                emailRequest.Message.Subject = new Content("Hello World");
-                emailRequest.Message.Body = new Body(new Content("Hello World"));
-                client.SendEmail(emailRequest);
-            }
+            Random ran = new Random();
+            int cod = ran.Next();
+
+            UsuarioModel usuario = new UsuarioModel();
+            usuario.Email(txtEmail.Text);
+            usuario.Esqueci(Usuario.Id, cod);
+
+
+            //Remember to enter your (AWSAccessKeyID, AWSSecretAccessKey) if not using and IAM User with credentials assigned to your instance and your RegionEndpoint
+            /* using (var client = new AmazonSimpleEmailServiceClient("AKIAIY6P3I3S2TK2UZKA", "nVAtJH2PYHcwIERlDx41J/EZZWKYTd7lwMANv3BU", RegionEndpoint.USEast1))
+             {
+                 var emailRequest = new SendEmailRequest()
+                 {
+                     Source = "FROMADDRESS@TEST.COM",
+                     Destination = new Destination(),
+                     Message = new Message()
+                 };
+
+                 emailRequest.Destination.ToAddresses.Add(txtEmail.Text);
+                 emailRequest.Message.Subject = new Content("Hello World");
+                 emailRequest.Message.Body = new Body(new Content("Hello World"));
+                 client.SendEmail(emailRequest);
+             } */
         }
 
     }

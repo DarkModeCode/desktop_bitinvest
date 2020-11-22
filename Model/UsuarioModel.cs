@@ -28,6 +28,10 @@ namespace desktop_bitinvest_v1.Model
         {
             return userDao.Email(email);
         }
+        public bool Esqueci(int id_usuario,int cod)
+        {
+            return userDao.Esqueceu(id_usuario,cod);
+        }
         public object SelecionarClientes() {
 
             return userDao.SelecionarClientes();

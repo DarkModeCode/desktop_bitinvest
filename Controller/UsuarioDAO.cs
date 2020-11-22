@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace desktop_bitinvest_v1.Controller
 {
@@ -47,7 +48,7 @@ namespace desktop_bitinvest_v1.Controller
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select senha from usuarios where (email=@email)";
+                    command.CommandText = "select id_usuario from usuarios where (email=@email)";
                     command.Parameters.AddWithValue("@email", email);
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
@@ -55,7 +56,7 @@ namespace desktop_bitinvest_v1.Controller
                     {
                         while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
                         {
-                            Usuario.Senha = reader.GetString(0);
+                            Usuario.Id = reader.GetInt32(0);
 
                         }
                         return true;
@@ -71,6 +72,17 @@ namespace desktop_bitinvest_v1.Controller
         string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
             )
         {
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
+            SHA1Managed SHhash = new SHA1Managed();
+            string strHex = "";
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            foreach (byte b in HashValue)
+
+            {
+                strHex += String.Format("{0:x2}", b);
+
+            }
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -81,7 +93,7 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nome", nome);          
                     cmd.Parameters.AddWithValue("@email ", email);       
-                    cmd.Parameters.AddWithValue("@senha ", senha);
+                    cmd.Parameters.AddWithValue("@senha ", strHex);
                     cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
                     cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
                     cmd.Parameters.AddWithValue("@rg ", rg);
@@ -106,9 +118,32 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.ExecuteNonQuery();                     //executing the sqlcommand  
                     cmmd.ExecuteNonQuery();                     //executing the sqlcommand  
 
+                  
+
                 }
 
                 return true;
+            }
+        }
+
+        public bool Esqueceu(int id_usuario, int cod)
+        {
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("esqueci", connection);  //creating  SqlCommand  object  
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_usuario", id_usuario);
+                    cmd.Parameters.AddWithValue("@codigo", cod);
+                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
+                }
+
+                return true;
+
             }
         }
 
