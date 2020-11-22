@@ -486,7 +486,7 @@
             // 
             // picCadastrarCli
             // 
-            this.picCadastrarCli.BackColor = System.Drawing.Color.Transparent;
+            this.picCadastrarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.picCadastrarCli.Image = ((System.Drawing.Image)(resources.GetObject("picCadastrarCli.Image")));
             this.picCadastrarCli.Location = new System.Drawing.Point(13, 5);
             this.picCadastrarCli.Name = "picCadastrarCli";
@@ -494,6 +494,7 @@
             this.picCadastrarCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCadastrarCli.TabIndex = 39;
             this.picCadastrarCli.TabStop = false;
+            this.picCadastrarCli.Click += new System.EventHandler(this.picCadastrarCli_Click);
             // 
             // bntClientePendentes
             // 
@@ -602,6 +603,9 @@
             this.bntCadastrarCliente.Textcolor = System.Drawing.Color.White;
             this.bntCadastrarCliente.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntCadastrarCliente.Click += new System.EventHandler(this.bntCadastrarCliente_Click);
+            this.bntCadastrarCliente.MouseEnter += new System.EventHandler(this.enter);
+            this.bntCadastrarCliente.MouseLeave += new System.EventHandler(this.leave);
+            this.bntCadastrarCliente.MouseHover += new System.EventHandler(this.hover);
             // 
             // bntClientes
             // 

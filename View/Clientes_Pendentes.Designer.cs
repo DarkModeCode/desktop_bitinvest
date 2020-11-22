@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataTabelaClientesPendentes = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnExibitDados = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.DATA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExibitDados = new Guna.UI2.WinForms.Guna2Button();
+            this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlInfosPendentes = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientesPendentes)).BeginInit();
             this.SuspendLayout();
@@ -74,50 +74,8 @@
             this.dataTabelaClientesPendentes.Location = new System.Drawing.Point(24, 71);
             this.dataTabelaClientesPendentes.Name = "dataTabelaClientesPendentes";
             this.dataTabelaClientesPendentes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataTabelaClientesPendentes.Size = new System.Drawing.Size(660, 617);
+            this.dataTabelaClientesPendentes.Size = new System.Drawing.Size(659, 449);
             this.dataTabelaClientesPendentes.TabIndex = 3;
-            // 
-            // btnExibitDados
-            // 
-            this.btnExibitDados.BackColor = System.Drawing.SystemColors.Control;
-            this.btnExibitDados.BorderRadius = 10;
-            this.btnExibitDados.CheckedState.Parent = this.btnExibitDados;
-            this.btnExibitDados.CustomImages.Parent = this.btnExibitDados;
-            this.btnExibitDados.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.btnExibitDados.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExibitDados.ForeColor = System.Drawing.Color.White;
-            this.btnExibitDados.HoverState.Parent = this.btnExibitDados;
-            this.btnExibitDados.Location = new System.Drawing.Point(24, 43);
-            this.btnExibitDados.Name = "btnExibitDados";
-            this.btnExibitDados.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
-            this.btnExibitDados.ShadowDecoration.Parent = this.btnExibitDados;
-            this.btnExibitDados.Size = new System.Drawing.Size(146, 22);
-            this.btnExibitDados.TabIndex = 5;
-            this.btnExibitDados.Text = "Exibir todos os dados";
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.BorderRadius = 15;
-            this.txtPesquisa.BorderThickness = 0;
-            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPesquisa.DefaultText = "";
-            this.txtPesquisa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPesquisa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPesquisa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisa.DisabledState.Parent = this.txtPesquisa;
-            this.txtPesquisa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.FocusedState.Parent = this.txtPesquisa;
-            this.txtPesquisa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.HoverState.Parent = this.txtPesquisa;
-            this.txtPesquisa.Location = new System.Drawing.Point(24, 12);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.PasswordChar = '\0';
-            this.txtPesquisa.PlaceholderText = "ID, NOME, CPF, RG";
-            this.txtPesquisa.SelectedText = "";
-            this.txtPesquisa.ShadowDecoration.Parent = this.txtPesquisa;
-            this.txtPesquisa.Size = new System.Drawing.Size(459, 25);
-            this.txtPesquisa.TabIndex = 4;
             // 
             // DATA
             // 
@@ -151,6 +109,49 @@
             this.RG.Name = "RG";
             this.RG.ReadOnly = true;
             this.RG.Width = 150;
+            // 
+            // btnExibitDados
+            // 
+            this.btnExibitDados.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExibitDados.BorderRadius = 10;
+            this.btnExibitDados.CheckedState.Parent = this.btnExibitDados;
+            this.btnExibitDados.CustomImages.Parent = this.btnExibitDados;
+            this.btnExibitDados.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.btnExibitDados.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExibitDados.ForeColor = System.Drawing.Color.White;
+            this.btnExibitDados.HoverState.Parent = this.btnExibitDados;
+            this.btnExibitDados.Location = new System.Drawing.Point(24, 43);
+            this.btnExibitDados.Name = "btnExibitDados";
+            this.btnExibitDados.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
+            this.btnExibitDados.ShadowDecoration.Parent = this.btnExibitDados;
+            this.btnExibitDados.Size = new System.Drawing.Size(146, 22);
+            this.btnExibitDados.TabIndex = 5;
+            this.btnExibitDados.Text = "Exibir todos os dados";
+            this.btnExibitDados.Click += new System.EventHandler(this.btnExibitDados_Click);
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.BorderRadius = 15;
+            this.txtPesquisa.BorderThickness = 0;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisa.DefaultText = "";
+            this.txtPesquisa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPesquisa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPesquisa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPesquisa.DisabledState.Parent = this.txtPesquisa;
+            this.txtPesquisa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPesquisa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPesquisa.FocusedState.Parent = this.txtPesquisa;
+            this.txtPesquisa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPesquisa.HoverState.Parent = this.txtPesquisa;
+            this.txtPesquisa.Location = new System.Drawing.Point(24, 12);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.PasswordChar = '\0';
+            this.txtPesquisa.PlaceholderText = "ID, NOME, CPF, RG";
+            this.txtPesquisa.SelectedText = "";
+            this.txtPesquisa.ShadowDecoration.Parent = this.txtPesquisa;
+            this.txtPesquisa.Size = new System.Drawing.Size(459, 25);
+            this.txtPesquisa.TabIndex = 4;
             // 
             // pnlInfosPendentes
             // 

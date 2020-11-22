@@ -1,4 +1,7 @@
-﻿using desktop_bitinvest_v1.Controller;
+﻿using Amazon;
+using Amazon.SimpleEmail;
+using Amazon.SimpleEmail.Model;
+using desktop_bitinvest_v1.Controller;
 using desktop_bitinvest_v1.Model;
 using System;
 using System.Collections.Generic;
@@ -9,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Message = Amazon.SimpleEmail.Model.Message;
 
 namespace desktop_bitinvest_v1
 {
@@ -63,37 +67,22 @@ namespace desktop_bitinvest_v1
             else MessageBox.Show("Por favor entre um email.");
         }
 
-        private async void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private  void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient())
+            //Remember to enter your (AWSAccessKeyID, AWSSecretAccessKey) if not using and IAM User with credentials assigned to your instance and your RegionEndpoint
+            using (var client = new AmazonSimpleEmailServiceClient("AKIAIY6P3I3S2TK2UZKA", "nVAtJH2PYHcwIERlDx41J/EZZWKYTd7lwMANv3BU", RegionEndpoint.USEast1))
             {
-                smtp.Host = "localhost";
-                smtp.Port = 587;
-                smtp.EnableSsl = true;
-                smtp.UseDefaultCredentials = false;
-                smtp.Timeout = 50000;
-                smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                smtp.Credentials = new System.Net.NetworkCredential("bit.investimentos2020@gmail.com", "25102020BI.");
-
-                using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
+                var emailRequest = new SendEmailRequest()
                 {
-                    mail.From = new System.Net.Mail.MailAddress("bit.investimentos2020@gmail.com");
+                    Source = "FROMADDRESS@TEST.COM",
+                    Destination = new Destination(),
+                    Message = new Message()
+                };
 
-                    if (!string.IsNullOrWhiteSpace(txtEmail.Text))
-                    {
-                        mail.To.Add(new System.Net.Mail.MailAddress(txtEmail.Text));
-                    }
-                    else
-                    {
-                        MessageBox.Show("Campo 'para' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    UsuarioModel user = new UsuarioModel();
-                    var validLogin = user.Email(txtEmail.Text);
-                    mail.Subject = "noReply";
-                    mail.Body = "Sua senha é " + Usuario.Senha;
-                    await smtp.SendMailAsync(mail);
-                }
+                emailRequest.Destination.ToAddresses.Add(txtEmail.Text);
+                emailRequest.Message.Subject = new Content("Hello World");
+                emailRequest.Message.Body = new Body(new Content("Hello World"));
+                client.SendEmail(emailRequest);
             }
         }
 

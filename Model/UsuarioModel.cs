@@ -31,6 +31,9 @@ namespace desktop_bitinvest_v1.Model
         public object SelecionarClientes() {
 
             return userDao.SelecionarClientes();
+        }public object SelecionarClientesPendetes() {
+
+            return userDao.SelecionarClientesPendentes();
         }
 
         public object Pesquisa(string id) {

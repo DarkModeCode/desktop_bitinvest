@@ -206,5 +206,27 @@ namespace desktop_bitinvest_v1
 
             chamarForm(frm);
         }
+
+        private void hover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enter(object sender, EventArgs e)
+        {
+            picCadastrarCli.BackColor = Color.FromArgb(193,119,31);
+
+        }
+
+        private void picCadastrarCli_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leave(object sender, EventArgs e)
+        {
+            picCadastrarCli.BackColor = System.Drawing.Color.Transparent;
+
+        }
     }
 }

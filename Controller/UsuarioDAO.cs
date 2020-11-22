@@ -123,6 +123,17 @@ namespace desktop_bitinvest_v1.Controller
                 adapter.Fill(dtset);
                 return dtset;
             }
+        }public DataSet SelecionarClientesPendentes()
+        {
+            using (var con = GetConnection())
+            {
+                con.Open();
+                string query =  "select data_nasc_fund, nome,cpf_cnpj ,rg from analise;";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                DataSet dtset = new DataSet();
+                adapter.Fill(dtset);
+                return dtset;
+            }
         }
 
         public bool SelecionarLinha(int id)
