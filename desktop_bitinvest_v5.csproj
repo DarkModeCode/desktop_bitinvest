@@ -106,6 +106,18 @@
     <Compile Include="View\Clientes_Pendentes.Designer.cs">
       <DependentUpon>Clientes_Pendentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EsqueceuSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EsqueceuSenha.Designer.cs">
+      <DependentUpon>EsqueceuSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EsqueceuSenha_RedefinindoSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EsqueceuSenha_RedefinindoSenha.Designer.cs">
+      <DependentUpon>EsqueceuSenha_RedefinindoSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Fotos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Clientes_Pendentes.resx">
       <DependentUpon>Clientes_Pendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EsqueceuSenha.resx">
+      <DependentUpon>EsqueceuSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EsqueceuSenha_RedefinindoSenha.resx">
+      <DependentUpon>EsqueceuSenha_RedefinindoSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Fotos.resx">
       <DependentUpon>Fotos.cs</DependentUpon>
