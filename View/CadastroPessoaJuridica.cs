@@ -71,8 +71,10 @@ namespace desktop_bitinvest_v1.View
 
         private void txtSenhaPeJ_TextChanged(object sender, EventArgs e)
         {
-            Cliente.Senha = txtSenhaPeJ.Text;
-
+            
+                Cliente.Senha = txtSenhaPeJ.Text;
+            
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

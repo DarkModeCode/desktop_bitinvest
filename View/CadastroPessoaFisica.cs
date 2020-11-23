@@ -106,7 +106,9 @@ namespace desktop_bitinvest_v1.View
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            Cliente.Senha = txtSenha.Text;
+            
+                Cliente.Senha = txtSenha.Text;
+            
 
         }
 

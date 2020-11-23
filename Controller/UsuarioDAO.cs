@@ -67,7 +67,7 @@ namespace desktop_bitinvest_v1.Controller
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select id_usuario from usuarios where (email=@email)";
+                    command.CommandText = "select id_usuario,email from usuarios where (email=@email)";
                     command.Parameters.AddWithValue("@email", email);
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
@@ -76,12 +76,16 @@ namespace desktop_bitinvest_v1.Controller
                         while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
                         {
                             Usuario.Id = reader.GetInt32(0);
+                            Usuario.Email = reader.GetString(1);
 
                         }
                         return true;
                     }
                     else
+                    
+                       
                         return false;
+                    
                 }
             }
         }

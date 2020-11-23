@@ -23,7 +23,7 @@ namespace desktop_bitinvest_v1
         {
             guna2Button1.Hide();
             bntCadastrar.Hide();
-        } 
+        }
         private void CadastroPessoaFisica_Load(object sender, System.EventArgs e)
         {
             guna2Button1.Show();
@@ -37,7 +37,7 @@ namespace desktop_bitinvest_v1
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var tipoPessoa =  this.cboTipoPessoa.SelectedItem;
+            var tipoPessoa = this.cboTipoPessoa.SelectedItem;
 
             if (tipoPessoa == "               PESSOA FÍSICA") {
                 CadastroPessoaFisica frm = new CadastroPessoaFisica()
@@ -69,39 +69,66 @@ namespace desktop_bitinvest_v1
         {
 
         }
+        private void limparVariaveis(){
 
-            private void bntCadastrar_Click(object sender, EventArgs e)
+          Cliente.Nome = null; Cliente.Email = null; Cliente.Senha = null;
+          Cliente.Data_nasc_fund = null; Cliente.Sobrenome = null; Cliente.rg = null;
+          Cliente.cpf_cnpj = null;  Cliente.celular = null;  Cliente.Foto_Frente = null;
+          Cliente.Foto_Tras = null; Cliente.Foto_Selfie = null; Cliente.RendaMensal = null;
+          Cliente.Rua = null; Cliente.Bairro = null; Cliente.Complemento = null;
+          Cliente.Cidade = null; Cliente.Numero = null; Cliente.Estado = null;
+          Cliente.Pais = null;  Cliente.Cep = null;
+
+        }
+        private void bntCadastrar_Click(object sender, EventArgs e)
         {
-         UsuarioModel user = new UsuarioModel();
-            //oiiii
-            var tipoPessoa = this.cboTipoPessoa.SelectedItem;
 
-            if (tipoPessoa == "               PESSOA FÍSICA")
+            if (Cliente.Nome != null && Cliente.Email != null && Cliente.Senha != null && Cliente.Data_nasc_fund != null && Cliente.Sobrenome != null && Cliente.rg != null && Cliente.cpf_cnpj != null && Cliente.Foto_Frente != null && Cliente.Foto_Tras != null && Cliente.Foto_Selfie != null && Cliente.Rua != null && Cliente.Bairro != null && Cliente.Complemento != null && Cliente.Cidade != null && Cliente.Numero != null && Cliente.Estado != null && Cliente.Pais != null && Cliente.Cep != null)
             {
-                var perfil = 4;
-                var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, Cliente.rg, Cliente.cpf_cnpj, Cliente.telefone_residencial,
-       Cliente.celular, Cliente.Foto_Frente, Cliente.Foto_Tras, Cliente.Foto_Selfie, Cliente.RendaMensal, perfil,Cliente.Rua,Cliente.Bairro,Cliente.Complemento,Cliente.Cidade,Cliente.Numero,Cliente.Estado,Cliente.Pais, Cliente.Cep);
-               MessageBox.Show("Cadastrado com Sucesso!");
-              
+                if (Cliente.Senha.Length > 7)
+                {
+                    UsuarioModel user = new UsuarioModel();
+                    var tipoPessoa = this.cboTipoPessoa.SelectedItem;
+
+                    if (tipoPessoa == "               PESSOA FÍSICA")
+                    {
+                        if (Cliente.celular != null && Cliente.RendaMensal != null)
+                        {
+                            var perfil = 4;
+                            var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, Cliente.rg, Cliente.cpf_cnpj, Cliente.telefone_residencial,
+                   Cliente.celular, Cliente.Foto_Frente, Cliente.Foto_Tras, Cliente.Foto_Selfie, Cliente.RendaMensal, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
+                            MessageBox.Show("Cadastrado com Sucesso!");
+                            limparVariaveis();
+
+                        }
+                    }
+                    else if (tipoPessoa == "             PESSOA JURÍDICA")
+                    {
+                        var nulo = "Nulo";
+                        var perfil = 5;
+                        var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, nulo, Cliente.cpf_cnpj, Cliente.telefone_residencial,
+               nulo, Cliente.Foto_Frente, Cliente.Foto_Tras, Cliente.Foto_Selfie, nulo, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
+                        MessageBox.Show("Cadastrado com Sucesso!");
+                        limparVariaveis();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("A senha precisa ter 8 caracteres");
+                }
+
             }
-            else if (tipoPessoa == "             PESSOA JURÍDICA")
+            else
             {
-                var nulo = "Nulo";
-                var perfil = 5;
-                var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, nulo, Cliente.cpf_cnpj, Cliente.telefone_residencial,
-       nulo, Cliente.Foto_Frente, Cliente.Foto_Tras, Cliente.Foto_Selfie, nulo, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
-               MessageBox.Show("Cadastrado com Sucesso!");
-               
-
+                MessageBox.Show("Preencha todos os campos");
             }
             
-           
-
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-          
+           
+            
         }
 
         private void pnlCadCliente_Paint(object sender, PaintEventArgs e)

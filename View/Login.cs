@@ -82,66 +82,58 @@ namespace desktop_bitinvest_v1
             else MessageBox.Show("Por favor entre um email.");
         }
 
-        private  void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            Random ran = new Random();
-            int cod = ran.Next(1000,9999);
-
-        UsuarioModel usuario = new UsuarioModel();
-            usuario.Email(txtEmail.Text);
-            usuario.Esqueci(Usuario.Id, cod);
-
-
-            SmtpClient client = new SmtpClient();
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential("contato@bitinvestimentos.com.br", "69634270");
-            client.Port = 587;
-            client.Host = "smtp.gmail.com";
-            client.EnableSsl = true;
-
-            try
+            if (txtEmail != null)
             {
-                MailAddress maFrom = new MailAddress("contato@bitinvestimentos.com.br", "Bit Invest", Encoding.UTF8);
-                MailAddress maTo = new MailAddress(txtEmail.Text, " ", Encoding.UTF8);
-                MailMessage mmsg = new MailMessage(maFrom, maTo);
-                mmsg.Body = "Olá, seu codigo é "+cod;
-                mmsg.BodyEncoding = Encoding.UTF8;
-                mmsg.IsBodyHtml = true;
-                mmsg.Subject = "Codigo de esqueceu a senha";
-                mmsg.SubjectEncoding = Encoding.UTF8;
+                UsuarioModel usuario = new UsuarioModel();
+                var email = usuario.Email(txtEmail.Text);
+                if (email == true)
+                {
+                    Random ran = new Random();
+                    int cod = ran.Next(1000, 9999);
 
-                client.Send(mmsg);
-                MessageBox.Show("Codigo Enviado");
+
+                    usuario.Esqueci(Usuario.Id, cod);
+                    SmtpClient client = new SmtpClient();
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new NetworkCredential("contato@bitinvestimentos.com.br", "69634270");
+                    client.Port = 587;
+                    client.Host = "smtp.gmail.com";
+                    client.EnableSsl = true;
+
+                    try
+                    {
+                        MailAddress maFrom = new MailAddress("contato@bitinvestimentos.com.br", "Bit Invest", Encoding.UTF8);
+                        MailAddress maTo = new MailAddress(txtEmail.Text, " ", Encoding.UTF8);
+                        MailMessage mmsg = new MailMessage(maFrom, maTo);
+                        mmsg.Body = "Olá, seu codigo é " + cod;
+                        mmsg.BodyEncoding = Encoding.UTF8;
+                        mmsg.IsBodyHtml = true;
+                        mmsg.Subject = "Codigo de esqueceu a senha";
+                        mmsg.SubjectEncoding = Encoding.UTF8;
+
+                        client.Send(mmsg);
+                        MessageBox.Show("Codigo Enviado");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), ex.Message);
+                        //throw;
+                    }
+                    EsqueceuSenha formEsqueceu = new EsqueceuSenha();
+
+                    formEsqueceu.Show();
+                }
+                else
+                {
+
+                    MessageBox.Show("Email não cadastrado");
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), ex.Message);
-                //throw;
+            else {
+                MessageBox.Show("Insira um email");
             }
-            EsqueceuSenha formEsqueceu = new EsqueceuSenha();
-
-            formEsqueceu.Show();
-           // this.Close();
-
-
-
-            //Remember to enter your (AWSAccessKeyID, AWSSecretAccessKey) if not using and IAM User with credentials assigned to your instance and your RegionEndpoint
-            /* using (var client = new AmazonSimpleEmailServiceClient("AKIAIY6P3I3S2TK2UZKA", "nVAtJH2PYHcwIERlDx41J/EZZWKYTd7lwMANv3BU", RegionEndpoint.USEast1))
-             {
-                 var emailRequest = new SendEmailRequest()
-                 {
-                     Source = "FROMADDRESS@TEST.COM",
-                     Destination = new Destination(),
-                     Message = new Message()
-                 };
-
-                 emailRequest.Destination.ToAddresses.Add(txtEmail.Text);
-                 emailRequest.Message.Subject = new Content("Hello World");
-                 emailRequest.Message.Body = new Body(new Content("Hello World"));
-                 client.SendEmail(emailRequest);
-             } */
         }
-
     }
 }
