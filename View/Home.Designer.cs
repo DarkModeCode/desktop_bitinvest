@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.pnlSlideMenu = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton12 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bntSmart = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntMonitoramento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntRelatorios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntTransacoes = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -72,7 +72,7 @@
             // 
             this.pnlSlideMenu.AutoScroll = true;
             this.pnlSlideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
-            this.pnlSlideMenu.Controls.Add(this.bunifuFlatButton12);
+            this.pnlSlideMenu.Controls.Add(this.bntSmart);
             this.pnlSlideMenu.Controls.Add(this.bntMonitoramento);
             this.pnlSlideMenu.Controls.Add(this.bntRelatorios);
             this.pnlSlideMenu.Controls.Add(this.bntTransacoes);
@@ -89,41 +89,41 @@
             this.pnlSlideMenu.TabIndex = 0;
             this.pnlSlideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // bunifuFlatButton12
+            // bntSmart
             // 
-            this.bunifuFlatButton12.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
-            this.bunifuFlatButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton12.BorderRadius = 0;
-            this.bunifuFlatButton12.ButtonText = "             SMART CONTRACT";
-            this.bunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton12.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton12.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton12.Iconimage")));
-            this.bunifuFlatButton12.Iconimage_right = null;
-            this.bunifuFlatButton12.Iconimage_right_Selected = null;
-            this.bunifuFlatButton12.Iconimage_Selected = null;
-            this.bunifuFlatButton12.IconMarginLeft = 0;
-            this.bunifuFlatButton12.IconMarginRight = 0;
-            this.bunifuFlatButton12.IconRightVisible = true;
-            this.bunifuFlatButton12.IconRightZoom = 0D;
-            this.bunifuFlatButton12.IconVisible = true;
-            this.bunifuFlatButton12.IconZoom = 60D;
-            this.bunifuFlatButton12.IsTab = false;
-            this.bunifuFlatButton12.Location = new System.Drawing.Point(0, 466);
-            this.bunifuFlatButton12.Name = "bunifuFlatButton12";
-            this.bunifuFlatButton12.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton12.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
-            this.bunifuFlatButton12.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton12.selected = false;
-            this.bunifuFlatButton12.Size = new System.Drawing.Size(244, 40);
-            this.bunifuFlatButton12.TabIndex = 38;
-            this.bunifuFlatButton12.Text = "             SMART CONTRACT";
-            this.bunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton12.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton12.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton12.Click += new System.EventHandler(this.bunifuFlatButton12_Click);
+            this.bntSmart.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
+            this.bntSmart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.bntSmart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bntSmart.BorderRadius = 0;
+            this.bntSmart.ButtonText = "             SMART CONTRACT";
+            this.bntSmart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntSmart.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.bntSmart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bntSmart.Iconcolor = System.Drawing.Color.Transparent;
+            this.bntSmart.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntSmart.Iconimage")));
+            this.bntSmart.Iconimage_right = null;
+            this.bntSmart.Iconimage_right_Selected = null;
+            this.bntSmart.Iconimage_Selected = null;
+            this.bntSmart.IconMarginLeft = 0;
+            this.bntSmart.IconMarginRight = 0;
+            this.bntSmart.IconRightVisible = true;
+            this.bntSmart.IconRightZoom = 0D;
+            this.bntSmart.IconVisible = true;
+            this.bntSmart.IconZoom = 60D;
+            this.bntSmart.IsTab = false;
+            this.bntSmart.Location = new System.Drawing.Point(0, 466);
+            this.bntSmart.Name = "bntSmart";
+            this.bntSmart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.bntSmart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
+            this.bntSmart.OnHoverTextColor = System.Drawing.Color.White;
+            this.bntSmart.selected = false;
+            this.bntSmart.Size = new System.Drawing.Size(244, 40);
+            this.bntSmart.TabIndex = 38;
+            this.bntSmart.Text = "             SMART CONTRACT";
+            this.bntSmart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntSmart.Textcolor = System.Drawing.Color.White;
+            this.bntSmart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntSmart.Click += new System.EventHandler(this.bunifuFlatButton12_Click);
             // 
             // bntMonitoramento
             // 
@@ -706,7 +706,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bntConsultarFunc;
         private Bunifu.Framework.UI.BunifuFlatButton bntCadastrarFunc;
         private Bunifu.Framework.UI.BunifuFlatButton bntFuncionarios;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton12;
+        private Bunifu.Framework.UI.BunifuFlatButton bntSmart;
         private Bunifu.Framework.UI.BunifuFlatButton bntMonitoramento;
         private Bunifu.Framework.UI.BunifuFlatButton bntRelatorios;
         private Bunifu.Framework.UI.BunifuFlatButton bntTransacoes;

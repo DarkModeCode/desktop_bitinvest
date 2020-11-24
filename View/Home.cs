@@ -55,16 +55,32 @@ namespace desktop_bitinvest_v1
         #region Sub Menus
         private void bntClientes_Click_2(object sender, EventArgs e)
         {
-            bntClientes.BackColor = Color.FromArgb(31, 31, 38);
-            this.bntClientes.Activecolor = Color.FromArgb(31, 31, 38);
+            #region Cores 
+            //este código define as cores dos botões selecionados ou não
+            if (bntClientes.Normalcolor == Color.FromArgb(62, 63, 77))
+            {
+                bntClientes.Normalcolor = Color.FromArgb(31, 31, 38);
+            }
+            else if (bntClientes.Normalcolor == Color.FromArgb(31, 31, 38))
+            {
+                bntClientes.Normalcolor = Color.FromArgb(62, 63, 77);
+            } 
+            #endregion
             showSubMenu(pnlSubClientes);
         }
         private void bntFuncionarios_Click_1(object sender, EventArgs e)
         {
-            this.Activate();
-            bntClientes.BackColor = Color.FromArgb(31, 31, 38);
+            #region Cores
+            if (bntFuncionarios.Normalcolor == Color.FromArgb(62, 63, 77))
+            {
+                bntFuncionarios.Normalcolor = Color.FromArgb(31, 31, 38);
+            }
+            else if (bntFuncionarios.Normalcolor == Color.FromArgb(31, 31, 38))
+            {
+                bntFuncionarios.Normalcolor = Color.FromArgb(62, 63, 77);
+            }
+            #endregion
             showSubMenu(pnlSubFunc);
-            bntFuncionarios.BackColor = Color.FromArgb(31, 31, 38);
         }
         #endregion
 
@@ -126,26 +142,62 @@ namespace desktop_bitinvest_v1
         #region Eventos dos botoes
         private void bntTransacoes_Click(object sender, EventArgs e)
         {
+            #region Cores
+            if (bntTransacoes.Normalcolor == Color.FromArgb(62, 63, 77))
+            {
+                bntTransacoes.Normalcolor = Color.FromArgb(31, 31, 38);
+            }
+            else if (bntTransacoes.Normalcolor == Color.FromArgb(31, 31, 38))
+            {
+                bntTransacoes.Normalcolor = Color.FromArgb(62, 63, 77);
+            }
+            #endregion
             hideSubMenu();
-            //Codigos
         }
 
         private void bntRelatorios_Click(object sender, EventArgs e)
         {
+            #region Cores
+            if (bntRelatorios.Normalcolor == Color.FromArgb(62, 63, 77))
+            {
+                bntRelatorios.Normalcolor = Color.FromArgb(31, 31, 38);
+            }
+            else if (bntRelatorios.Normalcolor == Color.FromArgb(31, 31, 38))
+            {
+                bntRelatorios.Normalcolor = Color.FromArgb(62, 63, 77);
+            }
+            #endregion
             hideSubMenu();
-            //Codigos
         }
 
         private void bunifuFlatButton11_Click(object sender, EventArgs e)
         {
+            #region Cores
+            if (bntMonitoramento.Normalcolor == Color.FromArgb(62, 63, 77))
+            {
+                bntMonitoramento.Normalcolor = Color.FromArgb(31, 31, 38);
+            }
+            else if (bntMonitoramento.Normalcolor == Color.FromArgb(31, 31, 38))
+            {
+                bntMonitoramento.Normalcolor = Color.FromArgb(62, 63, 77);
+            }
+            #endregion
             hideSubMenu();
-            //Codigos
         }
 
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
+            #region Cores
+            if (bntSmart.Normalcolor == Color.FromArgb(62, 63, 77))
+            {
+                bntSmart.Normalcolor = Color.FromArgb(31, 31, 38);
+            }
+            else if (bntSmart.Normalcolor == Color.FromArgb(31, 31, 38))
+            {
+                bntSmart.Normalcolor = Color.FromArgb(62, 63, 77);
+            }
+            #endregion
             hideSubMenu();
-            //Codigos
         }
         #endregion
 
