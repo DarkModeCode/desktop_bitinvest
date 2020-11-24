@@ -137,6 +137,7 @@ namespace desktop_bitinvest_v1
         private void Home_Load(object sender, EventArgs e)
         {
             lblNome.Text = Usuario.NomeFun;
+            lblFuncao.Text = Usuario.Cargo;
         }
 
         #region Eventos dos botoes
