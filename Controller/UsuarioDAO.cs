@@ -21,17 +21,22 @@ namespace desktop_bitinvest_v1.Controller
 
             command.Connection = connection;
             command.CommandText = "select * from usuarios where (email=@email and senha=@senha)"; //Selecionando os dados do usuario
+     /*       command.CommandText = "select * from usuarios u  inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario
+inner join perfil p on p.id_perfil=up.id_perfil inner join cliente c on c.id_usuario = u.id_usuario
+where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usuario
+       
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", senha);
             command.CommandType = CommandType.Text;
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
             {
-                while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
+                while (reader.Read())//Salva os dados em cache na classe Usuario
                 {
 
                     Usuario.NomeFun = reader.GetString(3);
-
+                  //Usuario.Cargo = reader.GetString(3);
+                  //Usuario.Id = reader.GetString(3);
 
                 }
                 return true;
@@ -41,6 +46,7 @@ namespace desktop_bitinvest_v1.Controller
 
 
         }
+        //Codígo para confirmar o codigo quando o usuario esquece a senha
         public bool ConfirmarCod(int id_usuario, int cod)
         {
             var connection = GetConnection();
@@ -60,6 +66,8 @@ namespace desktop_bitinvest_v1.Controller
             else
                 return false;
         }
+        
+        //Classe para verificar se o email do usuario existe para pedir a recuperação de senha
         public bool Email(string email)
         {
             using (var connection = GetConnection())
@@ -90,11 +98,12 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
-
+//Classe para cadastrar clientes
         public bool CadastrarClientes(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
         string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
             )
         {
+        //Convertendo a senha em uma hash sha1 criptografada para maior segurança
             UnicodeEncoding UE = new UnicodeEncoding();
             byte[] HashValue, MessageBytes = UE.GetBytes(senha);
             SHA1Managed SHhash = new SHA1Managed();
@@ -112,7 +121,7 @@ namespace desktop_bitinvest_v1.Controller
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("inserir", connection);  //creating  SqlCommand  object  
+                    SqlCommand cmd = new SqlCommand("inserir", connection);  //comando para inserir os dados na procedure de inserir dados na tabela usuario
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@email ", email);
@@ -128,7 +137,7 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.Parameters.AddWithValue("@foto_doc_selfie ", foto_doc_selfie);
                     cmd.Parameters.AddWithValue("@renda_mensal ", renda_mensal);
                     cmd.Parameters.AddWithValue("@tipo_pessoa ", tipo_pessoa);
-                    SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //creating  SqlCommand  object  
+                    SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //comando para inserir os dados na procedure de inserir dados na tabela endereço
                     cmmd.CommandType = CommandType.StoredProcedure;
                     cmmd.Parameters.AddWithValue("@rua", rua);
                     cmmd.Parameters.AddWithValue("@bairro", bairro);
@@ -138,17 +147,14 @@ namespace desktop_bitinvest_v1.Controller
                     cmmd.Parameters.AddWithValue("@estado", estado);
                     cmmd.Parameters.AddWithValue("@pais", pais);
                     cmmd.Parameters.AddWithValue("@cep", cep);
-                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
-                    cmmd.ExecuteNonQuery();                     //executing the sqlcommand  
-
-
-
+                    cmd.ExecuteNonQuery();   //executando o comando sql  
+                    cmmd.ExecuteNonQuery();               
                 }
 
                 return true;
             }
         }
-
+//Codigo para atualizar a senha do usuario
         public bool AtualizarSenha(int id_usuario, string senha)
         {
             UnicodeEncoding UE = new UnicodeEncoding();
@@ -168,17 +174,17 @@ namespace desktop_bitinvest_v1.Controller
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("atualizar_senha", connection);  //creating  SqlCommand  object  
+                    SqlCommand cmd = new SqlCommand("atualizar_senha", connection);   
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_usuario ", id_usuario);
                     cmd.Parameters.AddWithValue("@senha ", strHex);
-                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
+                    cmd.ExecuteNonQuery();                    
                 }
 
                 return true;
             }
         }
-
+//Classe para inserir o código do esqueci a senha do usuario na tabela esqueci a senha
         public bool Esqueceu(int id_usuario, int cod)
         {
 
@@ -188,18 +194,18 @@ namespace desktop_bitinvest_v1.Controller
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    SqlCommand cmd = new SqlCommand("esqueci", connection);  //creating  SqlCommand  object  
+                    SqlCommand cmd = new SqlCommand("esqueci", connection);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_usuario", id_usuario);
                     cmd.Parameters.AddWithValue("@codigo", cod);
-                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
+                    cmd.ExecuteNonQuery();                     
                 }
 
                 return true;
 
             }
         }
-
+//Codigo para selecionar os clientes cadastrados
         public DataSet SelecionarClientes()
         {
             using (var con = GetConnection())
@@ -212,6 +218,7 @@ namespace desktop_bitinvest_v1.Controller
                 return dtset;
             }
         }
+        //Codigo para selecionar os clientes pendentes
         public DataSet SelecionarClientesPendentes()
         {
             using (var con = GetConnection())
@@ -224,7 +231,7 @@ namespace desktop_bitinvest_v1.Controller
                 return dtset;
             }
         }
-
+//classe para pegar o valor da linha selecionada pelo cliente
         public bool SelecionarLinha(int id)
         {
             using (var connection = GetConnection())
@@ -254,7 +261,7 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
-
+//Classe para selecionar as transações do usuario
         public bool SelecionarTransacao(int id)
         {
             using (var connection = GetConnection())
@@ -283,7 +290,7 @@ namespace desktop_bitinvest_v1.Controller
 
 
         }
-
+//Classe para selecionar o valor em Real do Bitcoin do usuario
         public bool SelecionarRealBit(int id)
         {
 
@@ -318,6 +325,7 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
+//Classe para selecionar o valor em Real do Ethereum  do usuario
 
         public bool SelecionarRealEt(int id)
         {
@@ -351,6 +359,8 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
+        //Classe para selecionar o valor do Ethereum do usuario
+
         public bool SelecionarEthereum(int id)
         {
 
@@ -383,6 +393,8 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
+        //Classe para selecionar o valor do Bitcoin do usuario
+
         public bool SelecionarBitcoin(int id)
         {
 
@@ -415,6 +427,8 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
+        //Classe para selecionar o valor do LiteCoin do usuario
+
         public bool SelecionarLitecoin(int id)
         {
 
@@ -447,6 +461,7 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
+//Classe para selecionar o valor em Real do Litecoin do usuario
 
         public bool SelecionarRealLite(int id)
         {
@@ -480,7 +495,7 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
-
+//Classe para fazer a pesquisa dinamica do cliente
         public DataSet Pesquisa(string id)
         {
             DataSet dt = new DataSet();
@@ -502,7 +517,7 @@ namespace desktop_bitinvest_v1.Controller
 
         }
 
-
+//Classe para cadastrar o funcionario
         public bool CadastrarFuncionario(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
             string celular, string CTPS, string data_de_demissao, string salario, string horario_de_trabalho, string concessao_de_ferias,
 string pis_paes, string obs, string data_de_admissao, string tipo_contrato, string dias_de_trabalho,

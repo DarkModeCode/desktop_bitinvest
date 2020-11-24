@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop_bitinvest_v1.Controller
 {
+//Classe que salva os dados do usuario logado
     public class Usuario
     {
         public static int Id { get; set; }
@@ -19,5 +20,8 @@ namespace desktop_bitinvest_v1.Controller
         public static string cpf_cnpj { get; set; }
         public static string telefone_residencial { get; set; }
         public static string celular { get; set; }
+        public static string cargo { get; set; }
+        
+
     }
 }

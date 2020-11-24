@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop_bitinvest_v1.Controller
 {
+//classe para armazenar os dados do cliente
     public class Cliente
     { 
         public static int Id { get; set; }
