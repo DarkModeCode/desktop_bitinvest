@@ -205,7 +205,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
 
             }
         }
-
+//Codigo para selecionar os clientes cadastrados
         public DataSet SelecionarClientes()
         {
             using (var con = GetConnection())
@@ -218,6 +218,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 return dtset;
             }
         }
+        //Codigo para selecionar os clientes pendentes
         public DataSet SelecionarClientesPendentes()
         {
             using (var con = GetConnection())
@@ -230,7 +231,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 return dtset;
             }
         }
-
+//classe para pegar o valor da linha selecionada pelo cliente
         public bool SelecionarLinha(int id)
         {
             using (var connection = GetConnection())
@@ -260,7 +261,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
-
+//Classe para selecionar as transações do usuario
         public bool SelecionarTransacao(int id)
         {
             using (var connection = GetConnection())
@@ -289,7 +290,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
 
 
         }
-
+//Classe para selecionar o valor em Real do Bitcoin do usuario
         public bool SelecionarRealBit(int id)
         {
 
@@ -324,6 +325,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
+//Classe para selecionar o valor em Real do Ethereum  do usuario
 
         public bool SelecionarRealEt(int id)
         {
@@ -357,6 +359,8 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
+        //Classe para selecionar o valor do Ethereum do usuario
+
         public bool SelecionarEthereum(int id)
         {
 
@@ -389,6 +393,8 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
+        //Classe para selecionar o valor do Bitcoin do usuario
+
         public bool SelecionarBitcoin(int id)
         {
 
@@ -421,6 +427,8 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
+        //Classe para selecionar o valor do LiteCoin do usuario
+
         public bool SelecionarLitecoin(int id)
         {
 
@@ -453,6 +461,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
+//Classe para selecionar o valor em Real do Litecoin do usuario
 
         public bool SelecionarRealLite(int id)
         {
@@ -486,7 +495,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
-
+//Classe para fazer a pesquisa dinamica do cliente
         public DataSet Pesquisa(string id)
         {
             DataSet dt = new DataSet();
@@ -508,7 +517,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
 
         }
 
-
+//Classe para cadastrar o funcionario
         public bool CadastrarFuncionario(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
             string celular, string CTPS, string data_de_demissao, string salario, string horario_de_trabalho, string concessao_de_ferias,
 string pis_paes, string obs, string data_de_admissao, string tipo_contrato, string dias_de_trabalho,
