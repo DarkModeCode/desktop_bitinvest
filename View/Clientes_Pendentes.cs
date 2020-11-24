@@ -24,5 +24,10 @@ namespace desktop_bitinvest_v1.View
             dataTabelaClientesPendentes.DataSource = usuario.SelecionarClientesPendetes();
 
         }
+
+        private void bntAbonos_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

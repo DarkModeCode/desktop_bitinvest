@@ -218,6 +218,16 @@ namespace desktop_bitinvest_v1.View
             MemoryStream memoryS = new MemoryStream(Cliente.Foto_Selfie);
         
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            panel2.AutoScroll = true;
+            panel2.Parent = this;
+        }
+        private void picDocFrente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

@@ -48,8 +48,6 @@ namespace desktop_bitinvest_v1
         }
         private void bntClientes_Click_1(object sender, EventArgs e)
         {
-            picClientes.BackColor = Color.FromArgb(31, 31, 38);
-            bntClientes.BackColor = Color.FromArgb(31, 31, 38);
             showSubMenu(pnlSubClientes);
         }
         #endregion
@@ -214,7 +212,6 @@ namespace desktop_bitinvest_v1
 
         private void enter(object sender, EventArgs e)
         {
-            picCadastrarCli.BackColor = Color.FromArgb(193,119,31);
 
         }
 
@@ -222,11 +219,13 @@ namespace desktop_bitinvest_v1
         {
 
         }
-
         private void leave(object sender, EventArgs e)
         {
-            picCadastrarCli.BackColor = System.Drawing.Color.Transparent;
 
         }
+
+        private void picCadastrarFunc_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }

@@ -110,7 +110,6 @@
             // 
             this.txtNovaSenha.BackColor = System.Drawing.Color.White;
             this.txtNovaSenha.BorderRadius = 15;
-            this.txtNovaSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNovaSenha.DefaultText = "";
             this.txtNovaSenha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNovaSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -123,7 +122,7 @@
             this.txtNovaSenha.HoverState.Parent = this.txtNovaSenha;
             this.txtNovaSenha.Location = new System.Drawing.Point(21, 153);
             this.txtNovaSenha.Name = "txtNovaSenha";
-            this.txtNovaSenha.PasswordChar = '\0';
+            this.txtNovaSenha.PasswordChar = '*';
             this.txtNovaSenha.PlaceholderText = "Insira sua nova senha";
             this.txtNovaSenha.SelectedText = "";
             this.txtNovaSenha.ShadowDecoration.Parent = this.txtNovaSenha;
@@ -158,7 +157,6 @@
             this.txtNovaSenhaConfirmar.BackColor = System.Drawing.Color.White;
             this.txtNovaSenhaConfirmar.BorderRadius = 15;
             this.txtNovaSenhaConfirmar.CausesValidation = false;
-            this.txtNovaSenhaConfirmar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNovaSenhaConfirmar.DefaultText = "";
             this.txtNovaSenhaConfirmar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNovaSenhaConfirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));

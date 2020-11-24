@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfosPendentes));
             this.pnlInfosPendentes = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCelularPefPendentes = new System.Windows.Forms.Label();
             this.lblCelularPendentePf = new System.Windows.Forms.Label();
             this.lblEmailPfPendente = new System.Windows.Forms.Label();
@@ -45,11 +47,13 @@
             this.lblCPFPendentesPf = new System.Windows.Forms.Label();
             this.lblNomePendentesPf = new System.Windows.Forms.Label();
             this.pnlInfosPendentes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInfosPendentes
             // 
             this.pnlInfosPendentes.BackColor = System.Drawing.Color.White;
+            this.pnlInfosPendentes.Controls.Add(this.pictureBox1);
             this.pnlInfosPendentes.Controls.Add(this.lblCelularPefPendentes);
             this.pnlInfosPendentes.Controls.Add(this.lblCelularPendentePf);
             this.pnlInfosPendentes.Controls.Add(this.lblEmailPfPendente);
@@ -67,8 +71,19 @@
             this.pnlInfosPendentes.Controls.Add(this.lblNomePendentesPf);
             this.pnlInfosPendentes.Location = new System.Drawing.Point(0, 1);
             this.pnlInfosPendentes.Name = "pnlInfosPendentes";
-            this.pnlInfosPendentes.Size = new System.Drawing.Size(347, 295);
+            this.pnlInfosPendentes.Size = new System.Drawing.Size(346, 300);
             this.pnlInfosPendentes.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(320, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
             // 
             // lblCelularPefPendentes
             // 
@@ -254,6 +269,7 @@
             this.Text = "InfosPendentes";
             this.pnlInfosPendentes.ResumeLayout(false);
             this.pnlInfosPendentes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +292,6 @@
         private System.Windows.Forms.Label lblCelularPendentePf;
         public System.Windows.Forms.Label lblEmailPfPendente;
         private System.Windows.Forms.Label lblEmailPendentesPf;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -102,5 +102,10 @@ namespace desktop_bitinvest_v1.View
                 Cliente.Foto_Selfie = fotoS;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

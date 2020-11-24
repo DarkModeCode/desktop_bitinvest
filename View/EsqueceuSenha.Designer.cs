@@ -67,7 +67,7 @@
             this.bntConfirmarCod.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntConfirmarCod.ForeColor = System.Drawing.Color.White;
             this.bntConfirmarCod.HoverState.Parent = this.bntConfirmarCod;
-            this.bntConfirmarCod.Location = new System.Drawing.Point(86, 314);
+            this.bntConfirmarCod.Location = new System.Drawing.Point(86, 295);
             this.bntConfirmarCod.Name = "bntConfirmarCod";
             this.bntConfirmarCod.ShadowDecoration.Parent = this.bntConfirmarCod;
             this.bntConfirmarCod.Size = new System.Drawing.Size(180, 45);
@@ -78,8 +78,7 @@
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.White;
-            this.txtCodigo.BorderRadius = 40;
-            this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigo.BorderRadius = 27;
             this.txtCodigo.DefaultText = "";
             this.txtCodigo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCodigo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -88,17 +87,18 @@
             this.txtCodigo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigo.FocusedState.Parent = this.txtCodigo;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.ForeColor = System.Drawing.Color.Black;
             this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigo.HoverState.Parent = this.txtCodigo;
-            this.txtCodigo.Location = new System.Drawing.Point(21, 210);
+            this.txtCodigo.Location = new System.Drawing.Point(51, 212);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.PasswordChar = '\0';
             this.txtCodigo.PlaceholderText = "0000";
             this.txtCodigo.SelectedText = "";
             this.txtCodigo.ShadowDecoration.Parent = this.txtCodigo;
-            this.txtCodigo.Size = new System.Drawing.Size(310, 80);
+            this.txtCodigo.Size = new System.Drawing.Size(251, 52);
             this.txtCodigo.TabIndex = 9;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

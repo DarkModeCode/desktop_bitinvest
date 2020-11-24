@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -54,6 +55,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -124,6 +126,18 @@
     <Compile Include="View\Fotos.Designer.cs">
       <DependentUpon>Fotos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Funcionarios_Cadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionarios_Cadastrar.Designer.cs">
+      <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionarios_Cadastrar_Obs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionarios_Cadastrar_Obs.Designer.cs">
+      <DependentUpon>Funcionarios_Cadastrar_Obs.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +156,18 @@
     <Compile Include="View\InfosPendentes.Designer.cs">
       <DependentUpon>InfosPendentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\InfosPendentes_Abonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InfosPendentes_Abonos.Designer.cs">
+      <DependentUpon>InfosPendentes_Abonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Infos_Transações.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Infos_Transações.Designer.cs">
+      <DependentUpon>Infos_Transações.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +176,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Transações.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transações.Designer.cs">
+      <DependentUpon>Transações.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\CadastroPessoaFisica.resx">
       <DependentUpon>CadastroPessoaFisica.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +206,12 @@
     <EmbeddedResource Include="View\Fotos.resx">
       <DependentUpon>Fotos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionarios_Cadastrar.resx">
+      <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionarios_Cadastrar_Obs.resx">
+      <DependentUpon>Funcionarios_Cadastrar_Obs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\InfosPendentes.resx">
       <DependentUpon>InfosPendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InfosPendentes_Abonos.resx">
+      <DependentUpon>InfosPendentes_Abonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Infos_Transações.resx">
+      <DependentUpon>Infos_Transações.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -194,7 +238,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Transações.resx">
+      <DependentUpon>Transações.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bit_investDataSet.xsc">
       <DependentUpon>bit_investDataSet.xsd</DependentUpon>
     </None>
@@ -219,6 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon material-people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-ios-search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

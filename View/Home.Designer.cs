@@ -30,23 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.pnlSlideMenu = new System.Windows.Forms.Panel();
-            this.picClientes = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton12 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntMonitoramento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntRelatorios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntTransacoes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlSubFunc = new System.Windows.Forms.Panel();
-            this.picPendentesFunc = new System.Windows.Forms.PictureBox();
-            this.picConsultarFunc = new System.Windows.Forms.PictureBox();
-            this.picCadastrarFunc = new System.Windows.Forms.PictureBox();
-            this.bntFuncPendentes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntConsultarFunc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntCadastrarFunc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntFuncionarios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlSubClientes = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.picConsultarCli = new System.Windows.Forms.PictureBox();
-            this.picCadastrarCli = new System.Windows.Forms.PictureBox();
             this.bntClientePendentes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntConsultarCliente = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntCadastrarCliente = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -63,16 +55,10 @@
             this.optOpcoes = new System.Windows.Forms.ToolStripMenuItem();
             this.optSair = new System.Windows.Forms.ToolStripMenuItem();
             this.optFAQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblFuncao = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlSlideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClientes)).BeginInit();
             this.pnlSubFunc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPendentesFunc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picConsultarFunc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCadastrarFunc)).BeginInit();
             this.pnlSubClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picConsultarCli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCadastrarCli)).BeginInit();
             this.pnlNameFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -86,7 +72,6 @@
             // 
             this.pnlSlideMenu.AutoScroll = true;
             this.pnlSlideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
-            this.pnlSlideMenu.Controls.Add(this.picClientes);
             this.pnlSlideMenu.Controls.Add(this.bunifuFlatButton12);
             this.pnlSlideMenu.Controls.Add(this.bntMonitoramento);
             this.pnlSlideMenu.Controls.Add(this.bntRelatorios);
@@ -104,28 +89,18 @@
             this.pnlSlideMenu.TabIndex = 0;
             this.pnlSlideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // picClientes
-            // 
-            this.picClientes.Image = ((System.Drawing.Image)(resources.GetObject("picClientes.Image")));
-            this.picClientes.Location = new System.Drawing.Point(10, 75);
-            this.picClientes.Name = "picClientes";
-            this.picClientes.Size = new System.Drawing.Size(35, 25);
-            this.picClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClientes.TabIndex = 9;
-            this.picClientes.TabStop = false;
-            // 
             // bunifuFlatButton12
             // 
             this.bunifuFlatButton12.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
             this.bunifuFlatButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton12.BorderRadius = 0;
-            this.bunifuFlatButton12.ButtonText = "                        SMART CONTRACT";
+            this.bunifuFlatButton12.ButtonText = "             SMART CONTRACT";
             this.bunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton12.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton12.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton12.Iconimage = null;
+            this.bunifuFlatButton12.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton12.Iconimage")));
             this.bunifuFlatButton12.Iconimage_right = null;
             this.bunifuFlatButton12.Iconimage_right_Selected = null;
             this.bunifuFlatButton12.Iconimage_Selected = null;
@@ -134,9 +109,9 @@
             this.bunifuFlatButton12.IconRightVisible = true;
             this.bunifuFlatButton12.IconRightZoom = 0D;
             this.bunifuFlatButton12.IconVisible = true;
-            this.bunifuFlatButton12.IconZoom = 90D;
+            this.bunifuFlatButton12.IconZoom = 60D;
             this.bunifuFlatButton12.IsTab = false;
-            this.bunifuFlatButton12.Location = new System.Drawing.Point(0, 508);
+            this.bunifuFlatButton12.Location = new System.Drawing.Point(0, 466);
             this.bunifuFlatButton12.Name = "bunifuFlatButton12";
             this.bunifuFlatButton12.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton12.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
@@ -144,7 +119,7 @@
             this.bunifuFlatButton12.selected = false;
             this.bunifuFlatButton12.Size = new System.Drawing.Size(244, 40);
             this.bunifuFlatButton12.TabIndex = 38;
-            this.bunifuFlatButton12.Text = "                        SMART CONTRACT";
+            this.bunifuFlatButton12.Text = "             SMART CONTRACT";
             this.bunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton12.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton12.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,12 +131,12 @@
             this.bntMonitoramento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntMonitoramento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntMonitoramento.BorderRadius = 0;
-            this.bntMonitoramento.ButtonText = "                          MONITORAMENTO";
+            this.bntMonitoramento.ButtonText = "               MONITORAMENTO";
             this.bntMonitoramento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntMonitoramento.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntMonitoramento.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntMonitoramento.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntMonitoramento.Iconimage = null;
+            this.bntMonitoramento.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntMonitoramento.Iconimage")));
             this.bntMonitoramento.Iconimage_right = null;
             this.bntMonitoramento.Iconimage_right_Selected = null;
             this.bntMonitoramento.Iconimage_Selected = null;
@@ -170,9 +145,9 @@
             this.bntMonitoramento.IconRightVisible = true;
             this.bntMonitoramento.IconRightZoom = 0D;
             this.bntMonitoramento.IconVisible = true;
-            this.bntMonitoramento.IconZoom = 90D;
+            this.bntMonitoramento.IconZoom = 60D;
             this.bntMonitoramento.IsTab = false;
-            this.bntMonitoramento.Location = new System.Drawing.Point(0, 468);
+            this.bntMonitoramento.Location = new System.Drawing.Point(0, 426);
             this.bntMonitoramento.Name = "bntMonitoramento";
             this.bntMonitoramento.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntMonitoramento.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
@@ -180,7 +155,7 @@
             this.bntMonitoramento.selected = false;
             this.bntMonitoramento.Size = new System.Drawing.Size(244, 40);
             this.bntMonitoramento.TabIndex = 37;
-            this.bntMonitoramento.Text = "                          MONITORAMENTO";
+            this.bntMonitoramento.Text = "               MONITORAMENTO";
             this.bntMonitoramento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntMonitoramento.Textcolor = System.Drawing.Color.White;
             this.bntMonitoramento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,12 +167,12 @@
             this.bntRelatorios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntRelatorios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntRelatorios.BorderRadius = 0;
-            this.bntRelatorios.ButtonText = "                                     RELATÓRIOS";
+            this.bntRelatorios.ButtonText = "                           RELATÓRIOS";
             this.bntRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntRelatorios.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntRelatorios.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntRelatorios.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntRelatorios.Iconimage = null;
+            this.bntRelatorios.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntRelatorios.Iconimage")));
             this.bntRelatorios.Iconimage_right = null;
             this.bntRelatorios.Iconimage_right_Selected = null;
             this.bntRelatorios.Iconimage_Selected = null;
@@ -206,9 +181,9 @@
             this.bntRelatorios.IconRightVisible = true;
             this.bntRelatorios.IconRightZoom = 0D;
             this.bntRelatorios.IconVisible = true;
-            this.bntRelatorios.IconZoom = 90D;
+            this.bntRelatorios.IconZoom = 60D;
             this.bntRelatorios.IsTab = false;
-            this.bntRelatorios.Location = new System.Drawing.Point(0, 428);
+            this.bntRelatorios.Location = new System.Drawing.Point(0, 386);
             this.bntRelatorios.Name = "bntRelatorios";
             this.bntRelatorios.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntRelatorios.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
@@ -216,7 +191,7 @@
             this.bntRelatorios.selected = false;
             this.bntRelatorios.Size = new System.Drawing.Size(244, 40);
             this.bntRelatorios.TabIndex = 36;
-            this.bntRelatorios.Text = "                                     RELATÓRIOS";
+            this.bntRelatorios.Text = "                           RELATÓRIOS";
             this.bntRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntRelatorios.Textcolor = System.Drawing.Color.White;
             this.bntRelatorios.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,12 +203,12 @@
             this.bntTransacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntTransacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntTransacoes.BorderRadius = 0;
-            this.bntTransacoes.ButtonText = "                                    TRANSAÇÕES";
+            this.bntTransacoes.ButtonText = "                        TRANSAÇÕES";
             this.bntTransacoes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntTransacoes.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntTransacoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntTransacoes.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntTransacoes.Iconimage = null;
+            this.bntTransacoes.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntTransacoes.Iconimage")));
             this.bntTransacoes.Iconimage_right = null;
             this.bntTransacoes.Iconimage_right_Selected = null;
             this.bntTransacoes.Iconimage_Selected = null;
@@ -242,9 +217,9 @@
             this.bntTransacoes.IconRightVisible = true;
             this.bntTransacoes.IconRightZoom = 0D;
             this.bntTransacoes.IconVisible = true;
-            this.bntTransacoes.IconZoom = 90D;
+            this.bntTransacoes.IconZoom = 60D;
             this.bntTransacoes.IsTab = false;
-            this.bntTransacoes.Location = new System.Drawing.Point(0, 388);
+            this.bntTransacoes.Location = new System.Drawing.Point(0, 346);
             this.bntTransacoes.Name = "bntTransacoes";
             this.bntTransacoes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntTransacoes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
@@ -252,7 +227,7 @@
             this.bntTransacoes.selected = false;
             this.bntTransacoes.Size = new System.Drawing.Size(244, 40);
             this.bntTransacoes.TabIndex = 35;
-            this.bntTransacoes.Text = "                                    TRANSAÇÕES";
+            this.bntTransacoes.Text = "                        TRANSAÇÕES";
             this.bntTransacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntTransacoes.Textcolor = System.Drawing.Color.White;
             this.bntTransacoes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,85 +236,13 @@
             // pnlSubFunc
             // 
             this.pnlSubFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
-            this.pnlSubFunc.Controls.Add(this.picPendentesFunc);
-            this.pnlSubFunc.Controls.Add(this.picConsultarFunc);
-            this.pnlSubFunc.Controls.Add(this.picCadastrarFunc);
-            this.pnlSubFunc.Controls.Add(this.bntFuncPendentes);
             this.pnlSubFunc.Controls.Add(this.bntConsultarFunc);
             this.pnlSubFunc.Controls.Add(this.bntCadastrarFunc);
             this.pnlSubFunc.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubFunc.Location = new System.Drawing.Point(0, 268);
             this.pnlSubFunc.Name = "pnlSubFunc";
-            this.pnlSubFunc.Size = new System.Drawing.Size(244, 120);
+            this.pnlSubFunc.Size = new System.Drawing.Size(244, 78);
             this.pnlSubFunc.TabIndex = 34;
-            // 
-            // picPendentesFunc
-            // 
-            this.picPendentesFunc.BackColor = System.Drawing.Color.Transparent;
-            this.picPendentesFunc.Image = ((System.Drawing.Image)(resources.GetObject("picPendentesFunc.Image")));
-            this.picPendentesFunc.Location = new System.Drawing.Point(15, 86);
-            this.picPendentesFunc.Name = "picPendentesFunc";
-            this.picPendentesFunc.Size = new System.Drawing.Size(30, 30);
-            this.picPendentesFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPendentesFunc.TabIndex = 44;
-            this.picPendentesFunc.TabStop = false;
-            // 
-            // picConsultarFunc
-            // 
-            this.picConsultarFunc.BackColor = System.Drawing.Color.Transparent;
-            this.picConsultarFunc.Image = ((System.Drawing.Image)(resources.GetObject("picConsultarFunc.Image")));
-            this.picConsultarFunc.Location = new System.Drawing.Point(15, 46);
-            this.picConsultarFunc.Name = "picConsultarFunc";
-            this.picConsultarFunc.Size = new System.Drawing.Size(30, 30);
-            this.picConsultarFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picConsultarFunc.TabIndex = 43;
-            this.picConsultarFunc.TabStop = false;
-            // 
-            // picCadastrarFunc
-            // 
-            this.picCadastrarFunc.BackColor = System.Drawing.Color.Transparent;
-            this.picCadastrarFunc.Image = ((System.Drawing.Image)(resources.GetObject("picCadastrarFunc.Image")));
-            this.picCadastrarFunc.Location = new System.Drawing.Point(15, 6);
-            this.picCadastrarFunc.Name = "picCadastrarFunc";
-            this.picCadastrarFunc.Size = new System.Drawing.Size(30, 30);
-            this.picCadastrarFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCadastrarFunc.TabIndex = 42;
-            this.picCadastrarFunc.TabStop = false;
-            // 
-            // bntFuncPendentes
-            // 
-            this.bntFuncPendentes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
-            this.bntFuncPendentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.bntFuncPendentes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bntFuncPendentes.BorderRadius = 0;
-            this.bntFuncPendentes.ButtonText = "                                      PENDENTES";
-            this.bntFuncPendentes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntFuncPendentes.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.bntFuncPendentes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bntFuncPendentes.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntFuncPendentes.Iconimage = null;
-            this.bntFuncPendentes.Iconimage_right = null;
-            this.bntFuncPendentes.Iconimage_right_Selected = null;
-            this.bntFuncPendentes.Iconimage_Selected = null;
-            this.bntFuncPendentes.IconMarginLeft = 0;
-            this.bntFuncPendentes.IconMarginRight = 0;
-            this.bntFuncPendentes.IconRightVisible = true;
-            this.bntFuncPendentes.IconRightZoom = 0D;
-            this.bntFuncPendentes.IconVisible = true;
-            this.bntFuncPendentes.IconZoom = 90D;
-            this.bntFuncPendentes.IsTab = false;
-            this.bntFuncPendentes.Location = new System.Drawing.Point(0, 80);
-            this.bntFuncPendentes.Name = "bntFuncPendentes";
-            this.bntFuncPendentes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.bntFuncPendentes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
-            this.bntFuncPendentes.OnHoverTextColor = System.Drawing.Color.White;
-            this.bntFuncPendentes.selected = false;
-            this.bntFuncPendentes.Size = new System.Drawing.Size(244, 40);
-            this.bntFuncPendentes.TabIndex = 3;
-            this.bntFuncPendentes.Text = "                                      PENDENTES";
-            this.bntFuncPendentes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntFuncPendentes.Textcolor = System.Drawing.Color.White;
-            this.bntFuncPendentes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bntConsultarFunc
             // 
@@ -347,12 +250,12 @@
             this.bntConsultarFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntConsultarFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntConsultarFunc.BorderRadius = 0;
-            this.bntConsultarFunc.ButtonText = "                                      CONSULTAR";
+            this.bntConsultarFunc.ButtonText = "                           CONSULTAR";
             this.bntConsultarFunc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntConsultarFunc.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntConsultarFunc.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntConsultarFunc.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntConsultarFunc.Iconimage = null;
+            this.bntConsultarFunc.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntConsultarFunc.Iconimage")));
             this.bntConsultarFunc.Iconimage_right = null;
             this.bntConsultarFunc.Iconimage_right_Selected = null;
             this.bntConsultarFunc.Iconimage_Selected = null;
@@ -361,7 +264,7 @@
             this.bntConsultarFunc.IconRightVisible = true;
             this.bntConsultarFunc.IconRightZoom = 0D;
             this.bntConsultarFunc.IconVisible = true;
-            this.bntConsultarFunc.IconZoom = 90D;
+            this.bntConsultarFunc.IconZoom = 60D;
             this.bntConsultarFunc.IsTab = false;
             this.bntConsultarFunc.Location = new System.Drawing.Point(0, 40);
             this.bntConsultarFunc.Name = "bntConsultarFunc";
@@ -371,7 +274,7 @@
             this.bntConsultarFunc.selected = false;
             this.bntConsultarFunc.Size = new System.Drawing.Size(244, 40);
             this.bntConsultarFunc.TabIndex = 2;
-            this.bntConsultarFunc.Text = "                                      CONSULTAR";
+            this.bntConsultarFunc.Text = "                           CONSULTAR";
             this.bntConsultarFunc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntConsultarFunc.Textcolor = System.Drawing.Color.White;
             this.bntConsultarFunc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,12 +285,12 @@
             this.bntCadastrarFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntCadastrarFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntCadastrarFunc.BorderRadius = 0;
-            this.bntCadastrarFunc.ButtonText = "                                      CADASTRAR";
+            this.bntCadastrarFunc.ButtonText = "                           CADASTRAR";
             this.bntCadastrarFunc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntCadastrarFunc.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntCadastrarFunc.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntCadastrarFunc.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntCadastrarFunc.Iconimage = null;
+            this.bntCadastrarFunc.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntCadastrarFunc.Iconimage")));
             this.bntCadastrarFunc.Iconimage_right = null;
             this.bntCadastrarFunc.Iconimage_right_Selected = null;
             this.bntCadastrarFunc.Iconimage_Selected = null;
@@ -396,7 +299,7 @@
             this.bntCadastrarFunc.IconRightVisible = true;
             this.bntCadastrarFunc.IconRightZoom = 0D;
             this.bntCadastrarFunc.IconVisible = true;
-            this.bntCadastrarFunc.IconZoom = 90D;
+            this.bntCadastrarFunc.IconZoom = 60D;
             this.bntCadastrarFunc.IsTab = false;
             this.bntCadastrarFunc.Location = new System.Drawing.Point(0, 0);
             this.bntCadastrarFunc.Name = "bntCadastrarFunc";
@@ -406,7 +309,7 @@
             this.bntCadastrarFunc.selected = false;
             this.bntCadastrarFunc.Size = new System.Drawing.Size(244, 40);
             this.bntCadastrarFunc.TabIndex = 1;
-            this.bntCadastrarFunc.Text = "                                      CADASTRAR";
+            this.bntCadastrarFunc.Text = "                           CADASTRAR";
             this.bntCadastrarFunc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntCadastrarFunc.Textcolor = System.Drawing.Color.White;
             this.bntCadastrarFunc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -414,15 +317,16 @@
             // bntFuncionarios
             // 
             this.bntFuncionarios.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
+            this.bntFuncionarios.AllowDrop = true;
             this.bntFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntFuncionarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntFuncionarios.BorderRadius = 0;
-            this.bntFuncionarios.ButtonText = "                                  FUNCIONÁRIOS";
+            this.bntFuncionarios.ButtonText = "                      FUNCIONÁRIOS";
             this.bntFuncionarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntFuncionarios.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntFuncionarios.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntFuncionarios.Iconimage = null;
+            this.bntFuncionarios.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntFuncionarios.Iconimage")));
             this.bntFuncionarios.Iconimage_right = null;
             this.bntFuncionarios.Iconimage_right_Selected = null;
             this.bntFuncionarios.Iconimage_Selected = null;
@@ -431,7 +335,7 @@
             this.bntFuncionarios.IconRightVisible = true;
             this.bntFuncionarios.IconRightZoom = 0D;
             this.bntFuncionarios.IconVisible = true;
-            this.bntFuncionarios.IconZoom = 90D;
+            this.bntFuncionarios.IconZoom = 55D;
             this.bntFuncionarios.IsTab = false;
             this.bntFuncionarios.Location = new System.Drawing.Point(0, 228);
             this.bntFuncionarios.Name = "bntFuncionarios";
@@ -441,7 +345,7 @@
             this.bntFuncionarios.selected = false;
             this.bntFuncionarios.Size = new System.Drawing.Size(244, 40);
             this.bntFuncionarios.TabIndex = 33;
-            this.bntFuncionarios.Text = "                                  FUNCIONÁRIOS";
+            this.bntFuncionarios.Text = "                      FUNCIONÁRIOS";
             this.bntFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntFuncionarios.Textcolor = System.Drawing.Color.White;
             this.bntFuncionarios.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -450,9 +354,6 @@
             // pnlSubClientes
             // 
             this.pnlSubClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
-            this.pnlSubClientes.Controls.Add(this.pictureBox2);
-            this.pnlSubClientes.Controls.Add(this.picConsultarCli);
-            this.pnlSubClientes.Controls.Add(this.picCadastrarCli);
             this.pnlSubClientes.Controls.Add(this.bntClientePendentes);
             this.pnlSubClientes.Controls.Add(this.bntConsultarCliente);
             this.pnlSubClientes.Controls.Add(this.bntCadastrarCliente);
@@ -462,52 +363,18 @@
             this.pnlSubClientes.Size = new System.Drawing.Size(244, 121);
             this.pnlSubClientes.TabIndex = 32;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 85);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 41;
-            this.pictureBox2.TabStop = false;
-            // 
-            // picConsultarCli
-            // 
-            this.picConsultarCli.BackColor = System.Drawing.Color.Transparent;
-            this.picConsultarCli.Image = ((System.Drawing.Image)(resources.GetObject("picConsultarCli.Image")));
-            this.picConsultarCli.Location = new System.Drawing.Point(13, 45);
-            this.picConsultarCli.Name = "picConsultarCli";
-            this.picConsultarCli.Size = new System.Drawing.Size(30, 30);
-            this.picConsultarCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picConsultarCli.TabIndex = 40;
-            this.picConsultarCli.TabStop = false;
-            // 
-            // picCadastrarCli
-            // 
-            this.picCadastrarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.picCadastrarCli.Image = ((System.Drawing.Image)(resources.GetObject("picCadastrarCli.Image")));
-            this.picCadastrarCli.Location = new System.Drawing.Point(13, 5);
-            this.picCadastrarCli.Name = "picCadastrarCli";
-            this.picCadastrarCli.Size = new System.Drawing.Size(30, 30);
-            this.picCadastrarCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCadastrarCli.TabIndex = 39;
-            this.picCadastrarCli.TabStop = false;
-            this.picCadastrarCli.Click += new System.EventHandler(this.picCadastrarCli_Click);
-            // 
             // bntClientePendentes
             // 
             this.bntClientePendentes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(31)))));
             this.bntClientePendentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntClientePendentes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntClientePendentes.BorderRadius = 0;
-            this.bntClientePendentes.ButtonText = "                                      PENDENTES";
+            this.bntClientePendentes.ButtonText = "                           PENDENTES";
             this.bntClientePendentes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntClientePendentes.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntClientePendentes.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntClientePendentes.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntClientePendentes.Iconimage = null;
+            this.bntClientePendentes.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntClientePendentes.Iconimage")));
             this.bntClientePendentes.Iconimage_right = null;
             this.bntClientePendentes.Iconimage_right_Selected = null;
             this.bntClientePendentes.Iconimage_Selected = null;
@@ -516,7 +383,7 @@
             this.bntClientePendentes.IconRightVisible = true;
             this.bntClientePendentes.IconRightZoom = 0D;
             this.bntClientePendentes.IconVisible = true;
-            this.bntClientePendentes.IconZoom = 90D;
+            this.bntClientePendentes.IconZoom = 60D;
             this.bntClientePendentes.IsTab = false;
             this.bntClientePendentes.Location = new System.Drawing.Point(0, 80);
             this.bntClientePendentes.Name = "bntClientePendentes";
@@ -526,7 +393,7 @@
             this.bntClientePendentes.selected = false;
             this.bntClientePendentes.Size = new System.Drawing.Size(244, 40);
             this.bntClientePendentes.TabIndex = 2;
-            this.bntClientePendentes.Text = "                                      PENDENTES";
+            this.bntClientePendentes.Text = "                           PENDENTES";
             this.bntClientePendentes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntClientePendentes.Textcolor = System.Drawing.Color.White;
             this.bntClientePendentes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -538,12 +405,12 @@
             this.bntConsultarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntConsultarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntConsultarCliente.BorderRadius = 0;
-            this.bntConsultarCliente.ButtonText = "                                      CONSULTAR";
+            this.bntConsultarCliente.ButtonText = "                           CONSULTAR";
             this.bntConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntConsultarCliente.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntConsultarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntConsultarCliente.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntConsultarCliente.Iconimage = null;
+            this.bntConsultarCliente.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntConsultarCliente.Iconimage")));
             this.bntConsultarCliente.Iconimage_right = null;
             this.bntConsultarCliente.Iconimage_right_Selected = null;
             this.bntConsultarCliente.Iconimage_Selected = null;
@@ -552,7 +419,7 @@
             this.bntConsultarCliente.IconRightVisible = true;
             this.bntConsultarCliente.IconRightZoom = 0D;
             this.bntConsultarCliente.IconVisible = true;
-            this.bntConsultarCliente.IconZoom = 90D;
+            this.bntConsultarCliente.IconZoom = 60D;
             this.bntConsultarCliente.IsTab = false;
             this.bntConsultarCliente.Location = new System.Drawing.Point(0, 40);
             this.bntConsultarCliente.Name = "bntConsultarCliente";
@@ -562,7 +429,7 @@
             this.bntConsultarCliente.selected = false;
             this.bntConsultarCliente.Size = new System.Drawing.Size(244, 40);
             this.bntConsultarCliente.TabIndex = 1;
-            this.bntConsultarCliente.Text = "                                      CONSULTAR";
+            this.bntConsultarCliente.Text = "                           CONSULTAR";
             this.bntConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntConsultarCliente.Textcolor = System.Drawing.Color.White;
             this.bntConsultarCliente.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -574,12 +441,12 @@
             this.bntCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntCadastrarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntCadastrarCliente.BorderRadius = 0;
-            this.bntCadastrarCliente.ButtonText = "                                      CADASTRAR";
+            this.bntCadastrarCliente.ButtonText = "                           CADASTRAR";
             this.bntCadastrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntCadastrarCliente.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.bntCadastrarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntCadastrarCliente.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntCadastrarCliente.Iconimage = null;
+            this.bntCadastrarCliente.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntCadastrarCliente.Iconimage")));
             this.bntCadastrarCliente.Iconimage_right = null;
             this.bntCadastrarCliente.Iconimage_right_Selected = null;
             this.bntCadastrarCliente.Iconimage_Selected = null;
@@ -588,7 +455,7 @@
             this.bntCadastrarCliente.IconRightVisible = true;
             this.bntCadastrarCliente.IconRightZoom = 0D;
             this.bntCadastrarCliente.IconVisible = true;
-            this.bntCadastrarCliente.IconZoom = 90D;
+            this.bntCadastrarCliente.IconZoom = 60D;
             this.bntCadastrarCliente.IsTab = false;
             this.bntCadastrarCliente.Location = new System.Drawing.Point(0, 0);
             this.bntCadastrarCliente.Name = "bntCadastrarCliente";
@@ -598,7 +465,7 @@
             this.bntCadastrarCliente.selected = false;
             this.bntCadastrarCliente.Size = new System.Drawing.Size(244, 40);
             this.bntCadastrarCliente.TabIndex = 0;
-            this.bntCadastrarCliente.Text = "                                      CADASTRAR";
+            this.bntCadastrarCliente.Text = "                           CADASTRAR";
             this.bntCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntCadastrarCliente.Textcolor = System.Drawing.Color.White;
             this.bntCadastrarCliente.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -613,12 +480,12 @@
             this.bntClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntClientes.BorderRadius = 0;
-            this.bntClientes.ButtonText = "                                              CLIENTES";
+            this.bntClientes.ButtonText = "                              CLIENTES";
             this.bntClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntClientes.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
             this.bntClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntClientes.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntClientes.Iconimage = null;
+            this.bntClientes.Iconimage = global::desktop_bitinvest_v1.Properties.Resources.Icon_material_people;
             this.bntClientes.Iconimage_right = null;
             this.bntClientes.Iconimage_right_Selected = null;
             this.bntClientes.Iconimage_Selected = null;
@@ -627,7 +494,8 @@
             this.bntClientes.IconRightVisible = true;
             this.bntClientes.IconRightZoom = 0D;
             this.bntClientes.IconVisible = true;
-            this.bntClientes.IconZoom = 90D;
+            this.bntClientes.IconZoom = 60D;
+            this.bntClientes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bntClientes.IsTab = false;
             this.bntClientes.Location = new System.Drawing.Point(0, 67);
             this.bntClientes.Name = "bntClientes";
@@ -637,7 +505,7 @@
             this.bntClientes.selected = false;
             this.bntClientes.Size = new System.Drawing.Size(244, 40);
             this.bntClientes.TabIndex = 1;
-            this.bntClientes.Text = "                                              CLIENTES";
+            this.bntClientes.Text = "                              CLIENTES";
             this.bntClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntClientes.Textcolor = System.Drawing.Color.White;
             this.bntClientes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -645,6 +513,7 @@
             // 
             // pnlNameFunc
             // 
+            this.pnlNameFunc.Controls.Add(this.lblFuncao);
             this.pnlNameFunc.Controls.Add(this.label1);
             this.pnlNameFunc.Controls.Add(this.lblNome);
             this.pnlNameFunc.Controls.Add(this.picUser);
@@ -667,11 +536,11 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Nirmala UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Nirmala UI Semilight", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(46, 17);
+            this.lblNome.Location = new System.Drawing.Point(52, 14);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(94, 25);
+            this.lblNome.Size = new System.Drawing.Size(103, 25);
             this.lblNome.TabIndex = 7;
             this.lblNome.Text = "Full Name";
             this.lblNome.Click += new System.EventHandler(this.lblEmail_Click);
@@ -691,9 +560,9 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 692);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 684);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(96, 37);
+            this.pictureBox6.Size = new System.Drawing.Size(96, 45);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -709,7 +578,7 @@
             this.panel3.Controls.Add(this.imgLogo);
             this.panel3.Location = new System.Drawing.Point(244, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1121, 699);
+            this.panel3.Size = new System.Drawing.Size(1121, 698);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -771,10 +640,22 @@
             this.optFAQ.Size = new System.Drawing.Size(96, 22);
             this.optFAQ.Text = "FAQ";
             // 
+            // lblFuncao
+            // 
+            this.lblFuncao.AutoSize = true;
+            this.lblFuncao.Font = new System.Drawing.Font("Nirmala UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuncao.ForeColor = System.Drawing.Color.White;
+            this.lblFuncao.Location = new System.Drawing.Point(54, 39);
+            this.lblFuncao.Name = "lblFuncao";
+            this.lblFuncao.Size = new System.Drawing.Size(45, 15);
+            this.lblFuncao.TabIndex = 9;
+            this.lblFuncao.Text = "Funçao";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1365, 730);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -787,15 +668,8 @@
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.pnlSlideMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picClientes)).EndInit();
             this.pnlSubFunc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPendentesFunc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picConsultarFunc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCadastrarFunc)).EndInit();
             this.pnlSubClientes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picConsultarCli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCadastrarCli)).EndInit();
             this.pnlNameFunc.ResumeLayout(false);
             this.pnlNameFunc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
@@ -835,17 +709,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton bntMonitoramento;
         private Bunifu.Framework.UI.BunifuFlatButton bntRelatorios;
         private Bunifu.Framework.UI.BunifuFlatButton bntTransacoes;
-        private Bunifu.Framework.UI.BunifuFlatButton bntFuncPendentes;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optOpcoes;
         private System.Windows.Forms.ToolStripMenuItem optSair;
         private System.Windows.Forms.ToolStripMenuItem optFAQ;
-        private System.Windows.Forms.PictureBox picClientes;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox picConsultarCli;
-        private System.Windows.Forms.PictureBox picCadastrarCli;
-        private System.Windows.Forms.PictureBox picPendentesFunc;
-        private System.Windows.Forms.PictureBox picConsultarFunc;
-        private System.Windows.Forms.PictureBox picCadastrarFunc;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblFuncao;
     }
 }
