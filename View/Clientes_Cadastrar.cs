@@ -37,9 +37,18 @@ namespace desktop_bitinvest_v1
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            CadastroPessoaFisica frmPeF = new CadastroPessoaFisica();
+            CadastroPessoaJuridica frmPeJ = new CadastroPessoaJuridica();
+
+            
+
             var tipoPessoa = this.cboTipoPessoa.SelectedItem;
 
             if (tipoPessoa == "               PESSOA FÍSICA") {
+                if (frmPeJ.Visible == true)
+                {
+                    frmPeJ.Visible = false;
+                }
                 CadastroPessoaFisica frm = new CadastroPessoaFisica()
                 {
                     TopLevel = false,
@@ -52,6 +61,11 @@ namespace desktop_bitinvest_v1
             }
             else if (tipoPessoa == "             PESSOA JURÍDICA")
             {
+                if (frmPeF.Visible == true)
+                {
+                    frmPeF.Visible = false;
+                }
+
                 CadastroPessoaJuridica frm = new CadastroPessoaJuridica()
                 {
                     TopLevel = false,

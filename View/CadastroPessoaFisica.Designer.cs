@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.picDocVerso = new System.Windows.Forms.PictureBox();
+            this.picSelfieDoc = new System.Windows.Forms.PictureBox();
+            this.picDocFrente = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
@@ -73,7 +83,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblContatoPeF = new System.Windows.Forms.Label();
-            this.bntUploadImage = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -85,20 +94,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDadosPeF = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.picDocFrente = new System.Windows.Forms.PictureBox();
-            this.picSelfieDoc = new System.Windows.Forms.PictureBox();
-            this.picDocVerso = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDocFrente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSelfieDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDocVerso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSelfieDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDocFrente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -160,7 +160,6 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.lblContatoPeF);
-            this.panel2.Controls.Add(this.bntUploadImage);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label5);
@@ -178,6 +177,133 @@
             this.panel2.Size = new System.Drawing.Size(865, 778);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label41.Location = new System.Drawing.Point(552, 703);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(159, 15);
+            this.label41.TabIndex = 84;
+            this.label41.Text = "SELFIE COM O DOCUMENTO";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label40.Location = new System.Drawing.Point(305, 703);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(189, 15);
+            this.label40.TabIndex = 83;
+            this.label40.Text = "FOTO DO VERSO DO DOCUMENTO";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label39.Location = new System.Drawing.Point(82, 703);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(193, 15);
+            this.label39.TabIndex = 82;
+            this.label39.Text = "FOTO DA FRENTE DO DOCUMENTO";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(370, 673);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 21);
+            this.label38.TabIndex = 81;
+            this.label38.Text = "VERSO";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(599, 673);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(55, 21);
+            this.label37.TabIndex = 80;
+            this.label37.Text = "SELFIE";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(142, 673);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(64, 21);
+            this.label36.TabIndex = 79;
+            this.label36.Text = "FRENTE";
+            // 
+            // picDocVerso
+            // 
+            this.picDocVerso.BackColor = System.Drawing.Color.Silver;
+            this.picDocVerso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDocVerso.Location = new System.Drawing.Point(356, 534);
+            this.picDocVerso.Name = "picDocVerso";
+            this.picDocVerso.Size = new System.Drawing.Size(89, 136);
+            this.picDocVerso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDocVerso.TabIndex = 78;
+            this.picDocVerso.TabStop = false;
+            this.picDocVerso.Click += new System.EventHandler(this.picDocVerso_Click);
+            // 
+            // picSelfieDoc
+            // 
+            this.picSelfieDoc.BackColor = System.Drawing.Color.Silver;
+            this.picSelfieDoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSelfieDoc.Location = new System.Drawing.Point(583, 534);
+            this.picSelfieDoc.Name = "picSelfieDoc";
+            this.picSelfieDoc.Size = new System.Drawing.Size(89, 136);
+            this.picSelfieDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSelfieDoc.TabIndex = 77;
+            this.picSelfieDoc.TabStop = false;
+            this.picSelfieDoc.Click += new System.EventHandler(this.picSelfieDoc_Click);
+            // 
+            // picDocFrente
+            // 
+            this.picDocFrente.BackColor = System.Drawing.Color.Silver;
+            this.picDocFrente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDocFrente.Location = new System.Drawing.Point(129, 534);
+            this.picDocFrente.Name = "picDocFrente";
+            this.picDocFrente.Size = new System.Drawing.Size(89, 136);
+            this.picDocFrente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDocFrente.TabIndex = 76;
+            this.picDocFrente.TabStop = false;
+            this.picDocFrente.Click += new System.EventHandler(this.picDocFrente_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(75, 497);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(144, 21);
+            this.label23.TabIndex = 75;
+            this.label23.Text = "ADICIONAR FOTOS";
             // 
             // label35
             // 
@@ -697,26 +823,6 @@
             this.lblContatoPeF.TabIndex = 15;
             this.lblContatoPeF.Text = "CONTATO";
             // 
-            // bntUploadImage
-            // 
-            this.bntUploadImage.BackColor = System.Drawing.Color.White;
-            this.bntUploadImage.BorderRadius = 18;
-            this.bntUploadImage.CheckedState.Parent = this.bntUploadImage;
-            this.bntUploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntUploadImage.CustomImages.Parent = this.bntUploadImage;
-            this.bntUploadImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.bntUploadImage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntUploadImage.ForeColor = System.Drawing.Color.White;
-            this.bntUploadImage.HoverState.Parent = this.bntUploadImage;
-            this.bntUploadImage.Location = new System.Drawing.Point(616, 146);
-            this.bntUploadImage.Name = "bntUploadImage";
-            this.bntUploadImage.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
-            this.bntUploadImage.ShadowDecoration.Parent = this.bntUploadImage;
-            this.bntUploadImage.Size = new System.Drawing.Size(164, 36);
-            this.bntUploadImage.TabIndex = 4;
-            this.bntUploadImage.Text = "ADICIONAR FOTOS";
-            this.bntUploadImage.Click += new System.EventHandler(this.bntUploadImage_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -852,127 +958,9 @@
             this.lblDadosPeF.TabIndex = 0;
             this.lblDadosPeF.Text = "DADOS PESSOAIS";
             // 
-            // label23
+            // openFileDialog1
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(75, 497);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(144, 21);
-            this.label23.TabIndex = 75;
-            this.label23.Text = "ADICIONAR FOTOS";
-            // 
-            // picDocFrente
-            // 
-            this.picDocFrente.BackColor = System.Drawing.Color.Silver;
-            this.picDocFrente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDocFrente.Location = new System.Drawing.Point(129, 534);
-            this.picDocFrente.Name = "picDocFrente";
-            this.picDocFrente.Size = new System.Drawing.Size(89, 136);
-            this.picDocFrente.TabIndex = 76;
-            this.picDocFrente.TabStop = false;
-            this.picDocFrente.Click += new System.EventHandler(this.picDocFrente_Click);
-            // 
-            // picSelfieDoc
-            // 
-            this.picSelfieDoc.BackColor = System.Drawing.Color.Silver;
-            this.picSelfieDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSelfieDoc.Location = new System.Drawing.Point(583, 534);
-            this.picSelfieDoc.Name = "picSelfieDoc";
-            this.picSelfieDoc.Size = new System.Drawing.Size(89, 136);
-            this.picSelfieDoc.TabIndex = 77;
-            this.picSelfieDoc.TabStop = false;
-            // 
-            // picDocVerso
-            // 
-            this.picDocVerso.BackColor = System.Drawing.Color.Silver;
-            this.picDocVerso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDocVerso.Location = new System.Drawing.Point(356, 534);
-            this.picDocVerso.Name = "picDocVerso";
-            this.picDocVerso.Size = new System.Drawing.Size(89, 136);
-            this.picDocVerso.TabIndex = 78;
-            this.picDocVerso.TabStop = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(142, 673);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(64, 21);
-            this.label36.TabIndex = 79;
-            this.label36.Text = "FRENTE";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(599, 673);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(55, 21);
-            this.label37.TabIndex = 80;
-            this.label37.Text = "SELFIE";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(370, 673);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(59, 21);
-            this.label38.TabIndex = 81;
-            this.label38.Text = "VERSO";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label39.Location = new System.Drawing.Point(82, 703);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(193, 15);
-            this.label39.TabIndex = 82;
-            this.label39.Text = "FOTO DA FRENTE DO DOCUMENTO";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label40.Location = new System.Drawing.Point(305, 703);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(189, 15);
-            this.label40.TabIndex = 83;
-            this.label40.Text = "FOTO DO VERSO DO DOCUMENTO";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label41.Location = new System.Drawing.Point(552, 703);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(159, 15);
-            this.label41.TabIndex = 84;
-            this.label41.Text = "SELFIE COM O DOCUMENTO";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CadastroPessoaFisica
             // 
@@ -985,9 +973,9 @@
             this.Text = "CadastroPessoaFisica";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDocFrente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSelfieDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDocVerso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSelfieDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDocFrente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1002,7 +990,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblContatoPeF;
-        private Guna.UI2.WinForms.Guna2Button bntUploadImage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNomePeF;
@@ -1061,5 +1048,6 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

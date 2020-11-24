@@ -34,16 +34,20 @@
             this.components = new System.ComponentModel.Container();
             this.pnlClientesCadastrar = new System.Windows.Forms.Panel();
             this.pnlInfos = new System.Windows.Forms.Panel();
+            this.txtPesquisaPendentes = new Guna.UI2.WinForms.Guna2TextBox();
             this.bitinvestDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bit_investDataSet = new desktop_bitinvest_v1.bit_investDataSet();
-            this.txtPesquisaPendentes = new Guna.UI2.WinForms.Guna2TextBox();
             this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet();
             this.bit_investDataSet2 = new desktop_bitinvest_v1.bit_investDataSet();
+            this.bit_investDataSet3 = new desktop_bitinvest_v1.bit_investDataSet();
+            this.dataTabelaClientes = new System.Windows.Forms.DataGridView();
             this.pnlClientesCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlClientesCadastrar
@@ -51,6 +55,7 @@
             this.pnlClientesCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlClientesCadastrar.AutoScroll = true;
             this.pnlClientesCadastrar.AutoSize = true;
+            this.pnlClientesCadastrar.Controls.Add(this.dataTabelaClientes);
             this.pnlClientesCadastrar.Controls.Add(this.pnlInfos);
             this.pnlClientesCadastrar.Controls.Add(this.txtPesquisaPendentes);
             this.pnlClientesCadastrar.Location = new System.Drawing.Point(0, -19);
@@ -66,20 +71,11 @@
             this.pnlInfos.Size = new System.Drawing.Size(347, 541);
             this.pnlInfos.TabIndex = 2;
             // 
-            // bitinvestDataSetBindingSource
-            // 
-            this.bitinvestDataSetBindingSource.DataSource = this.bit_investDataSet;
-            this.bitinvestDataSetBindingSource.Position = 0;
-            // 
-            // bit_investDataSet
-            // 
-            this.bit_investDataSet.DataSetName = "bit_investDataSet";
-            this.bit_investDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // txtPesquisaPendentes
             // 
             this.txtPesquisaPendentes.BorderRadius = 15;
             this.txtPesquisaPendentes.BorderThickness = 0;
+            this.txtPesquisaPendentes.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPesquisaPendentes.DefaultText = "";
             this.txtPesquisaPendentes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPesquisaPendentes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -101,6 +97,16 @@
             this.txtPesquisaPendentes.TextChanged += new System.EventHandler(this.txtPesquisaPendentes_TextChanged);
             this.txtPesquisaPendentes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pesquisa);
             // 
+            // bitinvestDataSetBindingSource
+            // 
+            this.bitinvestDataSetBindingSource.DataSource = this.bit_investDataSet;
+            this.bitinvestDataSetBindingSource.Position = 0;
+            // 
+            // bit_investDataSet
+            // 
+            this.bit_investDataSet.DataSetName = "bit_investDataSet";
+            this.bit_investDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bit_investDataSet1
             // 
             this.bit_investDataSet1.DataSetName = "bit_investDataSet";
@@ -110,6 +116,21 @@
             // 
             this.bit_investDataSet2.DataSetName = "bit_investDataSet";
             this.bit_investDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bit_investDataSet3
+            // 
+            this.bit_investDataSet3.DataSetName = "bit_investDataSet";
+            this.bit_investDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTabelaClientes
+            // 
+            this.dataTabelaClientes.AutoGenerateColumns = false;
+            this.dataTabelaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTabelaClientes.DataSource = this.bitinvestDataSetBindingSource;
+            this.dataTabelaClientes.Location = new System.Drawing.Point(33, 90);
+            this.dataTabelaClientes.Name = "dataTabelaClientes";
+            this.dataTabelaClientes.Size = new System.Drawing.Size(597, 260);
+            this.dataTabelaClientes.TabIndex = 3;
             // 
             // Clientes
             // 
@@ -128,6 +149,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +165,8 @@
         private bit_investDataSet bit_investDataSet;
         private bit_investDataSet bit_investDataSet1;
         private bit_investDataSet bit_investDataSet2;
+        private System.Windows.Forms.DataGridView dataTabelaClientes;
+        private bit_investDataSet bit_investDataSet3;
     }
 }
 

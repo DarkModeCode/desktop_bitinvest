@@ -120,12 +120,6 @@
     <Compile Include="View\EsqueceuSenha_RedefinindoSenha.Designer.cs">
       <DependentUpon>EsqueceuSenha_RedefinindoSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Fotos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Fotos.Designer.cs">
-      <DependentUpon>Fotos.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Funcionarios_Cadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EsqueceuSenha_RedefinindoSenha.resx">
       <DependentUpon>EsqueceuSenha_RedefinindoSenha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Fotos.resx">
-      <DependentUpon>Fotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios_Cadastrar.resx">
       <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>

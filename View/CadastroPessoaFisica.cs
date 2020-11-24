@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using desktop_bitinvest_v1.Controller;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace desktop_bitinvest_v1.View
 {
@@ -196,12 +197,7 @@ namespace desktop_bitinvest_v1.View
 
         }
 
-        private void bntUploadImage_Click(object sender, EventArgs e)
-        {
-            Fotos frm = new Fotos();
-            frm.Show();
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -210,6 +206,7 @@ namespace desktop_bitinvest_v1.View
 
 
         }
+        Bitmap bmp;
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -226,7 +223,55 @@ namespace desktop_bitinvest_v1.View
         }
         private void picDocFrente_Click(object sender, EventArgs e)
         {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
 
+                string nome = openFileDialog1.FileName;
+                bmp = new Bitmap(nome);
+                picDocFrente.Image = bmp;
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+                byte[] foto = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(foto, 0, foto.Length);
+                Cliente.Foto_Frente = foto;
+            }
+        }
+
+        private void picDocVerso_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                string nome = openFileDialog1.FileName;
+                bmp = new Bitmap(nome);
+                picDocVerso.Image = bmp;
+
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+                byte[] fotoT = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(fotoT, 0, fotoT.Length);
+                Cliente.Foto_Tras = fotoT;
+            }
+        }
+
+        private void picSelfieDoc_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                string nome = openFileDialog1.FileName;
+                bmp = new Bitmap(nome);
+                picSelfieDoc.Image = bmp;
+                MemoryStream memory = new MemoryStream();
+                bmp.Save(memory, ImageFormat.Jpeg);
+
+                byte[] fotoS = memory.ToArray();
+                memory.Position = 0;
+                memory.Read(fotoS, 0, fotoS.Length);
+                Cliente.Foto_Selfie = fotoS;
+            }
         }
     }
     }
