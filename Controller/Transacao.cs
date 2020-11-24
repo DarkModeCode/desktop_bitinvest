@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop_bitinvest_v1.Controller
 {
+//classe para salvar os dados da transacao
   public  class Transacao
     {
         public static int TotalTransacao { get; set; }
