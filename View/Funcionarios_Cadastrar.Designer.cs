@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dropBanco = new Bunifu.Framework.UI.BunifuDropdown();
-            this.dropCargo = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtConta = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -114,6 +112,12 @@
             this.bntCancelarFunc = new Guna.UI2.WinForms.Guna2Button();
             this.bntAvançar = new Guna.UI2.WinForms.Guna2Button();
             this.pnlFuncCadastrar = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCargo = new System.Windows.Forms.ComboBox();
+            this.txtPis_Paes = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtAdmissao = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,8 +125,12 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.dropBanco);
-            this.panel2.Controls.Add(this.dropCargo);
+            this.panel2.Controls.Add(this.label55);
+            this.panel2.Controls.Add(this.txtAdmissao);
+            this.panel2.Controls.Add(this.label54);
+            this.panel2.Controls.Add(this.txtPis_Paes);
+            this.panel2.Controls.Add(this.cmbCargo);
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.txtConta);
             this.panel2.Controls.Add(this.label37);
             this.panel2.Controls.Add(this.label38);
@@ -208,60 +216,6 @@
             this.panel2.Size = new System.Drawing.Size(865, 706);
             this.panel2.TabIndex = 1;
             // 
-            // dropBanco
-            // 
-            this.dropBanco.BackColor = System.Drawing.Color.Transparent;
-            this.dropBanco.BorderRadius = 3;
-            this.dropBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dropBanco.DisabledColor = System.Drawing.Color.Gray;
-            this.dropBanco.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dropBanco.ForeColor = System.Drawing.Color.Black;
-            this.dropBanco.Items = new string[] {
-        "Banco Santander Brasil",
-        "Banco Itaú Unibanco",
-        "Banco Bradesco",
-        "Caixa Econômica Federal",
-        "Banco do Brasil",
-        "Nubank",
-        "Banco Safra",
-        "Banco BTG Pactual",
-        "Sicoob",
-        "Banco Votorantim",
-        "Banrisul",
-        "Citibank Brasil"};
-            this.dropBanco.Location = new System.Drawing.Point(119, 512);
-            this.dropBanco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dropBanco.Name = "dropBanco";
-            this.dropBanco.NomalColor = System.Drawing.Color.Transparent;
-            this.dropBanco.onHoverColor = System.Drawing.Color.Transparent;
-            this.dropBanco.selectedIndex = -1;
-            this.dropBanco.Size = new System.Drawing.Size(170, 25);
-            this.dropBanco.TabIndex = 179;
-            // 
-            // dropCargo
-            // 
-            this.dropCargo.BackColor = System.Drawing.Color.Transparent;
-            this.dropCargo.BorderRadius = 3;
-            this.dropCargo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dropCargo.DisabledColor = System.Drawing.Color.Gray;
-            this.dropCargo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dropCargo.ForeColor = System.Drawing.Color.Black;
-            this.dropCargo.Items = new string[] {
-        "Gerente",
-        "Analista de sistemas",
-        "Analista de negocios",
-        "Analista Administrativo",
-        "Coordenador",
-        "Estagiario"};
-            this.dropCargo.Location = new System.Drawing.Point(119, 596);
-            this.dropCargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dropCargo.Name = "dropCargo";
-            this.dropCargo.NomalColor = System.Drawing.Color.Transparent;
-            this.dropCargo.onHoverColor = System.Drawing.Color.Transparent;
-            this.dropCargo.selectedIndex = -1;
-            this.dropCargo.Size = new System.Drawing.Size(203, 25);
-            this.dropCargo.TabIndex = 182;
-            // 
             // txtConta
             // 
             this.txtConta.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -269,6 +223,7 @@
             this.txtConta.Name = "txtConta";
             this.txtConta.Size = new System.Drawing.Size(156, 25);
             this.txtConta.TabIndex = 181;
+            this.txtConta.TextChanged += new System.EventHandler(this.txtConta_TextChanged);
             // 
             // label37
             // 
@@ -303,6 +258,7 @@
             this.txtAgencia.Name = "txtAgencia";
             this.txtAgencia.Size = new System.Drawing.Size(105, 25);
             this.txtAgencia.TabIndex = 180;
+            this.txtAgencia.TextChanged += new System.EventHandler(this.txtAgencia_TextChanged);
             // 
             // label35
             // 
@@ -376,6 +332,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(173, 25);
             this.textBox4.TabIndex = 188;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label52
             // 
@@ -410,6 +367,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(141, 25);
             this.textBox3.TabIndex = 187;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label50
             // 
@@ -444,6 +402,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(117, 25);
             this.textBox2.TabIndex = 185;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label48
             // 
@@ -478,6 +437,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(118, 25);
             this.textBox1.TabIndex = 186;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label46
             // 
@@ -512,6 +472,7 @@
             this.txtCTPS.Name = "txtCTPS";
             this.txtCTPS.Size = new System.Drawing.Size(107, 25);
             this.txtCTPS.TabIndex = 184;
+            this.txtCTPS.TextChanged += new System.EventHandler(this.txtCTPS_TextChanged);
             // 
             // label44
             // 
@@ -546,6 +507,7 @@
             this.txtTipoContrato.Name = "txtTipoContrato";
             this.txtTipoContrato.Size = new System.Drawing.Size(119, 25);
             this.txtTipoContrato.TabIndex = 183;
+            this.txtTipoContrato.TextChanged += new System.EventHandler(this.txtTipoContrato_TextChanged);
             // 
             // label42
             // 
@@ -619,6 +581,7 @@
             this.txtPaisFunc.Name = "txtPaisFunc";
             this.txtPaisFunc.Size = new System.Drawing.Size(195, 25);
             this.txtPaisFunc.TabIndex = 15;
+            this.txtPaisFunc.TextChanged += new System.EventHandler(this.txtPaisFunc_TextChanged);
             // 
             // txtBairroFunc
             // 
@@ -627,6 +590,7 @@
             this.txtBairroFunc.Name = "txtBairroFunc";
             this.txtBairroFunc.Size = new System.Drawing.Size(165, 25);
             this.txtBairroFunc.TabIndex = 12;
+            this.txtBairroFunc.TextChanged += new System.EventHandler(this.txtBairroFunc_TextChanged);
             // 
             // txtEstadoFunc
             // 
@@ -635,6 +599,7 @@
             this.txtEstadoFunc.Name = "txtEstadoFunc";
             this.txtEstadoFunc.Size = new System.Drawing.Size(241, 25);
             this.txtEstadoFunc.TabIndex = 14;
+            this.txtEstadoFunc.TextChanged += new System.EventHandler(this.txtEstadoFunc_TextChanged);
             // 
             // txtCidadeFunc
             // 
@@ -643,6 +608,7 @@
             this.txtCidadeFunc.Name = "txtCidadeFunc";
             this.txtCidadeFunc.Size = new System.Drawing.Size(170, 25);
             this.txtCidadeFunc.TabIndex = 13;
+            this.txtCidadeFunc.TextChanged += new System.EventHandler(this.txtCidadeFunc_TextChanged);
             // 
             // txtComplFunc
             // 
@@ -651,6 +617,7 @@
             this.txtComplFunc.Name = "txtComplFunc";
             this.txtComplFunc.Size = new System.Drawing.Size(256, 25);
             this.txtComplFunc.TabIndex = 11;
+            this.txtComplFunc.TextChanged += new System.EventHandler(this.txtComplFunc_TextChanged);
             // 
             // label32
             // 
@@ -685,6 +652,7 @@
             this.txtNumFunc.Name = "txtNumFunc";
             this.txtNumFunc.Size = new System.Drawing.Size(86, 25);
             this.txtNumFunc.TabIndex = 10;
+            this.txtNumFunc.TextChanged += new System.EventHandler(this.txtNumFunc_TextChanged);
             // 
             // label30
             // 
@@ -719,6 +687,7 @@
             this.txtRuaFunc.Name = "txtRuaFunc";
             this.txtRuaFunc.Size = new System.Drawing.Size(215, 25);
             this.txtRuaFunc.TabIndex = 9;
+            this.txtRuaFunc.TextChanged += new System.EventHandler(this.txtRuaFunc_TextChanged);
             // 
             // label28
             // 
@@ -782,6 +751,7 @@
             this.mskCepFunc.Size = new System.Drawing.Size(157, 25);
             this.mskCepFunc.TabIndex = 8;
             this.mskCepFunc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskCepFunc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCepFunc_MaskInputRejected);
             // 
             // label24
             // 
@@ -907,6 +877,7 @@
             this.txtTelefoneFunc.Name = "txtTelefoneFunc";
             this.txtTelefoneFunc.Size = new System.Drawing.Size(147, 25);
             this.txtTelefoneFunc.TabIndex = 6;
+            this.txtTelefoneFunc.TextChanged += new System.EventHandler(this.txtTelefoneFunc_TextChanged);
             // 
             // txtEmailFunc
             // 
@@ -915,6 +886,7 @@
             this.txtEmailFunc.Name = "txtEmailFunc";
             this.txtEmailFunc.Size = new System.Drawing.Size(280, 25);
             this.txtEmailFunc.TabIndex = 7;
+            this.txtEmailFunc.TextChanged += new System.EventHandler(this.txtEmailFunc_TextChanged);
             // 
             // label12
             // 
@@ -952,6 +924,7 @@
             this.mskCelularFunc.Size = new System.Drawing.Size(157, 25);
             this.mskCelularFunc.TabIndex = 5;
             this.mskCelularFunc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskCelularFunc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCelularFunc_MaskInputRejected);
             // 
             // label13
             // 
@@ -1026,6 +999,7 @@
             this.txtCpfFunc.Name = "txtCpfFunc";
             this.txtCpfFunc.Size = new System.Drawing.Size(126, 25);
             this.txtCpfFunc.TabIndex = 2;
+            this.txtCpfFunc.TextChanged += new System.EventHandler(this.txtCpfFunc_TextChanged);
             // 
             // label17
             // 
@@ -1047,6 +1021,7 @@
             this.txtDataNascFunc.Name = "txtDataNascFunc";
             this.txtDataNascFunc.Size = new System.Drawing.Size(147, 25);
             this.txtDataNascFunc.TabIndex = 4;
+            this.txtDataNascFunc.TextChanged += new System.EventHandler(this.txtDataNascFunc_TextChanged);
             // 
             // mskRGFunc
             // 
@@ -1058,6 +1033,7 @@
             this.mskRGFunc.Size = new System.Drawing.Size(127, 25);
             this.mskRGFunc.TabIndex = 3;
             this.mskRGFunc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskRGFunc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskRGFunc_MaskInputRejected);
             // 
             // label7
             // 
@@ -1118,6 +1094,7 @@
             this.txtSobrenomeFunc.Name = "txtSobrenomeFunc";
             this.txtSobrenomeFunc.Size = new System.Drawing.Size(266, 25);
             this.txtSobrenomeFunc.TabIndex = 1;
+            this.txtSobrenomeFunc.TextChanged += new System.EventHandler(this.txtSobrenomeFunc_TextChanged);
             // 
             // txtNomeFun
             // 
@@ -1126,6 +1103,7 @@
             this.txtNomeFun.Name = "txtNomeFun";
             this.txtNomeFun.Size = new System.Drawing.Size(215, 25);
             this.txtNomeFun.TabIndex = 0;
+            this.txtNomeFun.TextChanged += new System.EventHandler(this.txtNomeFun_TextChanged);
             // 
             // label3
             // 
@@ -1229,6 +1207,7 @@
             this.bntAvançar.Size = new System.Drawing.Size(206, 45);
             this.bntAvançar.TabIndex = 7;
             this.bntAvançar.Text = "AVANÇAR";
+            this.bntAvançar.Click += new System.EventHandler(this.bntAvançar_Click);
             // 
             // pnlFuncCadastrar
             // 
@@ -1236,6 +1215,88 @@
             this.pnlFuncCadastrar.Name = "pnlFuncCadastrar";
             this.pnlFuncCadastrar.Size = new System.Drawing.Size(1121, 788);
             this.pnlFuncCadastrar.TabIndex = 9;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Banco Santander Brasil",
+            "Banco Itaú Unibanco",
+            "Banco Bradesco",
+            "Caixa Econômica Federal",
+            "Banco do Brasil",
+            "Nubank",
+            "Banco Safra",
+            "Banco BTG Pactual",
+            "Sicoob",
+            "Banco Votorantim",
+            "Banrisul",
+            "Citibank Brasil"});
+            this.comboBox1.Location = new System.Drawing.Point(116, 512);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(158, 21);
+            this.comboBox1.TabIndex = 211;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // cmbCargo
+            // 
+            this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Analista de sistemas",
+            "Analista de negocios",
+            "Analista Administrativo",
+            "Coordenador",
+            "Estagiario"});
+            this.cmbCargo.Location = new System.Drawing.Point(129, 596);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.Size = new System.Drawing.Size(160, 21);
+            this.cmbCargo.TabIndex = 212;
+            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.cmbCargo_SelectedIndexChanged);
+            // 
+            // txtPis_Paes
+            // 
+            this.txtPis_Paes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtPis_Paes.Location = new System.Drawing.Point(678, 660);
+            this.txtPis_Paes.Name = "txtPis_Paes";
+            this.txtPis_Paes.Size = new System.Drawing.Size(173, 25);
+            this.txtPis_Paes.TabIndex = 213;
+            this.txtPis_Paes.TextChanged += new System.EventHandler(this.txtPis_Paes_TextChanged);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label54.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label54.Location = new System.Drawing.Point(685, 628);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(96, 21);
+            this.label54.TabIndex = 214;
+            this.label54.Text = "PIS/PAES     :";
+            // 
+            // txtAdmissao
+            // 
+            this.txtAdmissao.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtAdmissao.Location = new System.Drawing.Point(402, 558);
+            this.txtAdmissao.Name = "txtAdmissao";
+            this.txtAdmissao.Size = new System.Drawing.Size(173, 25);
+            this.txtAdmissao.TabIndex = 215;
+            this.txtAdmissao.TextChanged += new System.EventHandler(this.txtAdmissao_TextChanged);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label55.Location = new System.Drawing.Point(233, 558);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(176, 21);
+            this.label55.TabIndex = 216;
+            this.label55.Text = "DATA DE ADMISSÃO     :";
             // 
             // Funcionarios_Cadastrar
             // 
@@ -1309,8 +1370,6 @@
         private System.Windows.Forms.Label lblEndPeF;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private Bunifu.Framework.UI.BunifuDropdown dropBanco;
-        private Bunifu.Framework.UI.BunifuDropdown dropCargo;
         private System.Windows.Forms.TextBox txtConta;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
@@ -1344,5 +1403,11 @@
         private Guna.UI2.WinForms.Guna2Button bntCancelarFunc;
         private Guna.UI2.WinForms.Guna2Button bntAvançar;
         private System.Windows.Forms.Panel pnlFuncCadastrar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCargo;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txtPis_Paes;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox txtAdmissao;
     }
 }

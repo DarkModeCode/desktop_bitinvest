@@ -227,5 +227,15 @@ namespace desktop_bitinvest_v1
         private void picCadastrarFunc_Click(object sender, EventArgs e)
         {
                     }
+
+        private void bntCadastrarFunc_Click(object sender, EventArgs e)
+        {
+            Funcionarios_Cadastrar frm = new Funcionarios_Cadastrar()
+            {
+                //TopLevel = false,
+            };
+
+            chamarForm(frm);
+        }
     }
 }

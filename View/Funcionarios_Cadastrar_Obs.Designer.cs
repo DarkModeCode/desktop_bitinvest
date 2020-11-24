@@ -86,6 +86,7 @@
             this.bntCadastrarFunc.Size = new System.Drawing.Size(187, 45);
             this.bntCadastrarFunc.TabIndex = 7;
             this.bntCadastrarFunc.Text = "CADASTRAR";
+            this.bntCadastrarFunc.Click += new System.EventHandler(this.bntCadastrarFunc_Click);
             // 
             // lblObs
             // 
@@ -107,6 +108,7 @@
             this.txtObs.Size = new System.Drawing.Size(834, 239);
             this.txtObs.TabIndex = 0;
             this.txtObs.Text = "";
+            this.txtObs.TextChanged += new System.EventHandler(this.txtObs_TextChanged);
             // 
             // pnlCadastrarObsFunc
             // 

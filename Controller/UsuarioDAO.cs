@@ -27,9 +27,9 @@ namespace desktop_bitinvest_v1.Controller
             {
                 while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
                 {
-                 
+
                     Usuario.NomeFun = reader.GetString(3);
-                
+
 
                 }
                 return true;
@@ -38,8 +38,8 @@ namespace desktop_bitinvest_v1.Controller
                 return false;
 
 
-        } 
-        public bool ConfirmarCod(int id_usuario,int cod)
+        }
+        public bool ConfirmarCod(int id_usuario, int cod)
         {
             var connection = GetConnection();
             connection.Open();
@@ -58,7 +58,6 @@ namespace desktop_bitinvest_v1.Controller
             else
                 return false;
         }
-
         public bool Email(string email)
         {
             using (var connection = GetConnection())
@@ -82,10 +81,10 @@ namespace desktop_bitinvest_v1.Controller
                         return true;
                     }
                     else
-                    
-                       
+
+
                         return false;
-                    
+
                 }
             }
         }
@@ -113,8 +112,8 @@ namespace desktop_bitinvest_v1.Controller
                     command.Connection = connection;
                     SqlCommand cmd = new SqlCommand("inserir", connection);  //creating  SqlCommand  object  
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@nome", nome);          
-                    cmd.Parameters.AddWithValue("@email ", email);       
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@email ", email);
                     cmd.Parameters.AddWithValue("@senha ", strHex);
                     cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
                     cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
@@ -124,7 +123,7 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.Parameters.AddWithValue("@celular ", celular);
                     cmd.Parameters.AddWithValue("@foto_doc_frente ", foto_doc_frente);
                     cmd.Parameters.AddWithValue("@foto_doc_tras ", foto_doc_tras);
-                    cmd.Parameters.AddWithValue("@foto_doc_selfie ", foto_doc_selfie); 
+                    cmd.Parameters.AddWithValue("@foto_doc_selfie ", foto_doc_selfie);
                     cmd.Parameters.AddWithValue("@renda_mensal ", renda_mensal);
                     cmd.Parameters.AddWithValue("@tipo_pessoa ", tipo_pessoa);
                     SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //creating  SqlCommand  object  
@@ -136,18 +135,18 @@ namespace desktop_bitinvest_v1.Controller
                     cmmd.Parameters.AddWithValue("@numero", numero);
                     cmmd.Parameters.AddWithValue("@estado", estado);
                     cmmd.Parameters.AddWithValue("@pais", pais);
-                    cmmd.Parameters.AddWithValue("@cep", pais);
+                    cmmd.Parameters.AddWithValue("@cep", cep);
                     cmd.ExecuteNonQuery();                     //executing the sqlcommand  
                     cmmd.ExecuteNonQuery();                     //executing the sqlcommand  
 
-                  
+
 
                 }
 
                 return true;
             }
         }
-        
+
         public bool AtualizarSenha(int id_usuario, string senha)
         {
             UnicodeEncoding UE = new UnicodeEncoding();
@@ -204,18 +203,19 @@ namespace desktop_bitinvest_v1.Controller
             using (var con = GetConnection())
             {
                 con.Open();
-                string query =  "select u.id_usuario as ID, u.nome as NOME, u.cpf_cnpj as CPF_CNPJ, u.rg as RG from usuarios u inner join cliente c on u.id_usuario=c.id_usuario;";
+                string query = "select u.id_usuario as ID, u.nome as NOME, u.cpf_cnpj as CPF_CNPJ, u.rg as RG from usuarios u inner join cliente c on u.id_usuario=c.id_usuario;";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataSet dtset = new DataSet();
                 adapter.Fill(dtset);
                 return dtset;
             }
-        }public DataSet SelecionarClientesPendentes()
+        }
+        public DataSet SelecionarClientesPendentes()
         {
             using (var con = GetConnection())
             {
                 con.Open();
-                string query =  "select data_nasc_fund, nome,cpf_cnpj ,rg from analise;";
+                string query = "select data_nasc_fund, nome,cpf_cnpj ,rg from analise;";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataSet dtset = new DataSet();
                 adapter.Fill(dtset);
@@ -239,7 +239,7 @@ namespace desktop_bitinvest_v1.Controller
                     {
                         while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
                         {
-                          //  Usuario.Id = reader.GetString(0);
+                            //  Usuario.Id = reader.GetString(0);
                             Usuario.Nome = reader.GetString(1);
                             Usuario.cpf_cnpj = reader.GetString(2);
                             Usuario.rg = reader.GetString(3);
@@ -268,9 +268,9 @@ namespace desktop_bitinvest_v1.Controller
                     if (reader.HasRows)
                     {
                         while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
-                        {                           
+                        {
                             Transacao.TotalTransacao = reader.GetInt32(0);
-                            
+
                         }
                         return true;
                     }
@@ -279,7 +279,7 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
 
-            
+
         }
 
         public bool SelecionarRealBit(int id)
@@ -305,17 +305,18 @@ namespace desktop_bitinvest_v1.Controller
                         }
                         return true;
                     }
-                    else {
+                    else
+                    {
 
                         Transacao.TotalRealBit = 0;
                         return false;
                     }
 
-                
+
                 }
             }
         }
-        
+
         public bool SelecionarRealEt(int id)
         {
 
@@ -348,7 +349,6 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
-        
         public bool SelecionarEthereum(int id)
         {
 
@@ -380,7 +380,8 @@ namespace desktop_bitinvest_v1.Controller
                     }
                 }
             }
-        }public bool SelecionarBitcoin(int id)
+        }
+        public bool SelecionarBitcoin(int id)
         {
 
             using (var connection = GetConnection())
@@ -444,7 +445,7 @@ namespace desktop_bitinvest_v1.Controller
                 }
             }
         }
-        
+
         public bool SelecionarRealLite(int id)
         {
 
@@ -485,11 +486,11 @@ namespace desktop_bitinvest_v1.Controller
             {
                 connection.Open();
                 using (var command = new SqlCommand())
-            {
-                command.Connection = connection;
-                command.CommandText = "select u.id_usuario as ID, u.nome as NOME, u.cpf_cnpj as CPF_CNPJ, u.rg as RG from usuarios u inner join cliente c on u.id_usuario=c.id_usuario where nome LIKE @id_usu OR cpf_cnpj LIKE @id_usu OR rg Like @id_usu";
-                command.Parameters.AddWithValue("@id_usu","%" + id + "%");
-                command.CommandType = CommandType.Text;
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select u.id_usuario as ID, u.nome as NOME, u.cpf_cnpj as CPF_CNPJ, u.rg as RG from usuarios u inner join cliente c on u.id_usuario=c.id_usuario where nome LIKE @id_usu OR cpf_cnpj LIKE @id_usu OR rg Like @id_usu";
+                    command.Parameters.AddWithValue("@id_usu", "%" + id + "%");
+                    command.CommandType = CommandType.Text;
                     SqlDataAdapter adpt = new SqlDataAdapter(command);
                     adpt.Fill(dt);
                 }
@@ -497,7 +498,81 @@ namespace desktop_bitinvest_v1.Controller
                 return dt;
             }
 
-        }   
+        }
+
+
+        public bool CadastrarFuncionario(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
+            string celular, string CTPS, string data_de_demissao, string salario, string horario_de_trabalho, string concessao_de_ferias,
+string pis_paes, string obs, string data_de_admissao, string tipo_contrato, string dias_de_trabalho,
+int id_cargo, int id_perfil, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep, string n_conta_bancaria, string n_agencia, int cod_banco
+                )
+        {
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
+            SHA1Managed SHhash = new SHA1Managed();
+            string strHex = "";
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            foreach (byte b in HashValue)
+
+            {
+                strHex += String.Format("{0:x2}", b);
+
+            }
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("Cadastro_funcionario", connection);  //creating  SqlCommand  object  
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@email ", email);
+                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
+                    cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
+                    cmd.Parameters.AddWithValue("@rg ", rg);
+                    cmd.Parameters.AddWithValue("@cpf_cnpj ", cpf_cnpj);
+                    cmd.Parameters.AddWithValue("@telefone_residencial ", telefone_residencial);
+                    cmd.Parameters.AddWithValue("@celular ", celular);
+                    cmd.Parameters.AddWithValue("@CTPS ", CTPS);
+                    cmd.Parameters.AddWithValue("@data_de_demissao", data_de_demissao);
+                    cmd.Parameters.AddWithValue("@salario", salario);
+                    cmd.Parameters.AddWithValue("@horario_de_trabalho", horario_de_trabalho);
+                    cmd.Parameters.AddWithValue("@concessao_de_ferias", concessao_de_ferias);
+                    cmd.Parameters.AddWithValue("@pis_paes", pis_paes);
+                    cmd.Parameters.AddWithValue("@obs", obs);
+                    cmd.Parameters.AddWithValue("@data_de_admissao", data_de_admissao);
+                    cmd.Parameters.AddWithValue("@tipo_contrato", tipo_contrato);
+                    cmd.Parameters.AddWithValue("@dias_de_trabalho", dias_de_trabalho);
+                    cmd.Parameters.AddWithValue("@id_cargo ", id_cargo);
+                    cmd.Parameters.AddWithValue("@id_perfil ", id_perfil);
+                    SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //creating  SqlCommand  object  
+                    cmmd.CommandType = CommandType.StoredProcedure;                   
+                    cmmd.Parameters.AddWithValue("@rua", rua);
+                    cmmd.Parameters.AddWithValue("@bairro", bairro);
+                    cmmd.Parameters.AddWithValue("@complemento", complemento);
+                    cmmd.Parameters.AddWithValue("@cidade", cidade);
+                    cmmd.Parameters.AddWithValue("@numero", numero);
+                    cmmd.Parameters.AddWithValue("@estado", estado);
+                    cmmd.Parameters.AddWithValue("@pais", pais);
+                    cmmd.Parameters.AddWithValue("@cep", cep);
+                    SqlCommand commd = new SqlCommand("inserir_dados_bancarios", connection);  //creating  SqlCommand  object  
+                    commd.CommandType = CommandType.StoredProcedure;
+                    commd.Parameters.AddWithValue("@n_conta_bancaria", n_conta_bancaria);
+                    commd.Parameters.AddWithValue("@n_agencia", n_agencia);
+                    commd.Parameters.AddWithValue("@cod_banco", cod_banco);
+                    commd.ExecuteNonQuery();                     //executing the sqlcommand  
+                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
+                    cmmd.ExecuteNonQuery();                     //executing the sqlcommand  
+
+
+
+                }
+
+                return true;
+            }
         }
     }
 
+}

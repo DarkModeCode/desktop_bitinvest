@@ -73,6 +73,7 @@
       <DependentUpon>bit_investDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controller\Cliente.cs" />
+    <Compile Include="Controller\Funcionario.cs" />
     <Compile Include="View\CadastroPessoaFisica.cs">
       <SubType>Form</SubType>
     </Compile>

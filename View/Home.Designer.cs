@@ -44,6 +44,7 @@
             this.bntCadastrarCliente = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bntClientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlNameFunc = new System.Windows.Forms.Panel();
+            this.lblFuncao = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNome = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.picUser = new System.Windows.Forms.PictureBox();
@@ -55,7 +56,6 @@
             this.optOpcoes = new System.Windows.Forms.ToolStripMenuItem();
             this.optSair = new System.Windows.Forms.ToolStripMenuItem();
             this.optFAQ = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblFuncao = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlSlideMenu.SuspendLayout();
             this.pnlSubFunc.SuspendLayout();
             this.pnlSubClientes.SuspendLayout();
@@ -313,6 +313,7 @@
             this.bntCadastrarFunc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntCadastrarFunc.Textcolor = System.Drawing.Color.White;
             this.bntCadastrarFunc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntCadastrarFunc.Click += new System.EventHandler(this.bntCadastrarFunc_Click);
             // 
             // bntFuncionarios
             // 
@@ -523,6 +524,17 @@
             this.pnlNameFunc.Size = new System.Drawing.Size(244, 67);
             this.pnlNameFunc.TabIndex = 30;
             // 
+            // lblFuncao
+            // 
+            this.lblFuncao.AutoSize = true;
+            this.lblFuncao.Font = new System.Drawing.Font("Nirmala UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuncao.ForeColor = System.Drawing.Color.White;
+            this.lblFuncao.Location = new System.Drawing.Point(54, 39);
+            this.lblFuncao.Name = "lblFuncao";
+            this.lblFuncao.Size = new System.Drawing.Size(45, 15);
+            this.lblFuncao.TabIndex = 9;
+            this.lblFuncao.Text = "Funçao";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -639,17 +651,6 @@
             this.optFAQ.Name = "optFAQ";
             this.optFAQ.Size = new System.Drawing.Size(96, 22);
             this.optFAQ.Text = "FAQ";
-            // 
-            // lblFuncao
-            // 
-            this.lblFuncao.AutoSize = true;
-            this.lblFuncao.Font = new System.Drawing.Font("Nirmala UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncao.ForeColor = System.Drawing.Color.White;
-            this.lblFuncao.Location = new System.Drawing.Point(54, 39);
-            this.lblFuncao.Name = "lblFuncao";
-            this.lblFuncao.Size = new System.Drawing.Size(45, 15);
-            this.lblFuncao.TabIndex = 9;
-            this.lblFuncao.Text = "Funçao";
             // 
             // Home
             // 

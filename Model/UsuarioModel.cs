@@ -23,6 +23,17 @@ namespace desktop_bitinvest_v1.Model
          celular, foto_doc_frente,  foto_doc_tras,  foto_doc_selfie,  renda_mensal,  tipo_pessoa, rua, bairro, complemento, cidade, numero, estado, pais, cep
            );
         }
+        
+        public bool CadastrarFuncionarios(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
+            string celular, string CTPS, string data_de_demissao, string salario, string horario_de_trabalho, string concessao_de_ferias,
+string pis_paes, string obs, string data_de_admissao, string tipo_contrato, string dias_de_trabalho,
+int id_cargo, int id_perfil, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep, string n_conta_bancaria, string n_agencia, int cod_banco
+                )
+        {
+            return userDao.CadastrarFuncionario( nome,  email,  senha,  data_nasc_fund,  sobrenome,  rg,  cpf_cnpj,  telefone_residencial,
+             celular,  CTPS,  data_de_demissao,  salario,  horario_de_trabalho,  concessao_de_ferias, pis_paes,  obs,  data_de_admissao,  tipo_contrato,  dias_de_trabalho,
+                id_cargo,  id_perfil,  rua,  bairro,  complemento,  cidade,  numero,  estado,  pais,  cep,  n_conta_bancaria,  n_agencia,  cod_banco);
+        }
 
         public bool Email(string email)
         {
