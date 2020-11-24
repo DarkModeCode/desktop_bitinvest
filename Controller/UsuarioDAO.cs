@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,14 +11,16 @@ namespace desktop_bitinvest_v1.Controller
 {
     public class UsuarioDAO : Banco
     {
+    //OI ANY
+    //Classe para buscar os dados no banco e verificar se o usuario existe
         public bool Login(string email, string senha)
         {
-            var connection = GetConnection();
-            connection.Open();
+            var connection = GetConnection(); //chamando o metodo GetConnection da classe Banco
+            connection.Open(); // abrindo a conexão
             var command = new SqlCommand();
 
             command.Connection = connection;
-            command.CommandText = "select * from usuarios where (email=@email and senha=@senha)";
+            command.CommandText = "select * from usuarios where (email=@email and senha=@senha)"; //Selecionando os dados do usuario
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", senha);
             command.CommandType = CommandType.Text;
