@@ -38,7 +38,7 @@
             this.pnlRelatorioCadastros.Controls.Add(this.repviCadastros);
             this.pnlRelatorioCadastros.Location = new System.Drawing.Point(0, 0);
             this.pnlRelatorioCadastros.Name = "pnlRelatorioCadastros";
-            this.pnlRelatorioCadastros.Size = new System.Drawing.Size(644, 487);
+            this.pnlRelatorioCadastros.Size = new System.Drawing.Size(644, 603);
             this.pnlRelatorioCadastros.TabIndex = 0;
             // 
             // repviCadastros
@@ -48,14 +48,14 @@
             this.repviCadastros.Location = new System.Drawing.Point(0, 0);
             this.repviCadastros.Name = "repviCadastros";
             this.repviCadastros.ServerReport.BearerToken = null;
-            this.repviCadastros.Size = new System.Drawing.Size(643, 487);
+            this.repviCadastros.Size = new System.Drawing.Size(644, 603);
             this.repviCadastros.TabIndex = 0;
             // 
             // RelatorioCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 487);
+            this.ClientSize = new System.Drawing.Size(644, 603);
             this.Controls.Add(this.pnlRelatorioCadastros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RelatorioCadastros";

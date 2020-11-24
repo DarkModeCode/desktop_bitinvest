@@ -38,7 +38,7 @@
             this.pnlRelatorioTrans.Controls.Add(this.repviTransacoes);
             this.pnlRelatorioTrans.Location = new System.Drawing.Point(0, 1);
             this.pnlRelatorioTrans.Name = "pnlRelatorioTrans";
-            this.pnlRelatorioTrans.Size = new System.Drawing.Size(644, 487);
+            this.pnlRelatorioTrans.Size = new System.Drawing.Size(644, 603);
             this.pnlRelatorioTrans.TabIndex = 0;
             // 
             // repviTransacoes
@@ -48,14 +48,14 @@
             this.repviTransacoes.Location = new System.Drawing.Point(0, 0);
             this.repviTransacoes.Name = "repviTransacoes";
             this.repviTransacoes.ServerReport.BearerToken = null;
-            this.repviTransacoes.Size = new System.Drawing.Size(644, 487);
+            this.repviTransacoes.Size = new System.Drawing.Size(644, 603);
             this.repviTransacoes.TabIndex = 0;
             // 
             // RelatorioTransacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 490);
+            this.ClientSize = new System.Drawing.Size(644, 603);
             this.Controls.Add(this.pnlRelatorioTrans);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RelatorioTransacoes";

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlRelatorio = new System.Windows.Forms.Panel();
-            this.cboTipoRelatorio = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cboTipoRelatorio = new Guna.UI2.WinForms.Guna2ComboBox();
             this.bntHistorico = new Guna.UI2.WinForms.Guna2Button();
             this.bntSalvarRelatorio = new Guna.UI2.WinForms.Guna2Button();
             this.pnlRelatorio.SuspendLayout();
@@ -43,8 +43,18 @@
             this.pnlRelatorio.Controls.Add(this.label1);
             this.pnlRelatorio.Location = new System.Drawing.Point(12, 72);
             this.pnlRelatorio.Name = "pnlRelatorio";
-            this.pnlRelatorio.Size = new System.Drawing.Size(644, 487);
+            this.pnlRelatorio.Size = new System.Drawing.Size(644, 603);
             this.pnlRelatorio.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(227, 237);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Selecione uma das opções de relatório";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cboTipoRelatorio
             // 
@@ -70,16 +80,6 @@
             this.cboTipoRelatorio.ShadowDecoration.Parent = this.cboTipoRelatorio;
             this.cboTipoRelatorio.Size = new System.Drawing.Size(366, 36);
             this.cboTipoRelatorio.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Selecione uma das opções de relatório";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // bntHistorico
             // 
