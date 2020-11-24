@@ -97,7 +97,7 @@ namespace desktop_bitinvest_v1
         private void bntCadastrar_Click(object sender, EventArgs e)
         {
 
-            if (Cliente.Nome != null && Cliente.Email != null && Cliente.Senha != null && Cliente.Data_nasc_fund != null && Cliente.Sobrenome != null && Cliente.rg != null && Cliente.cpf_cnpj != null && Cliente.Foto_Frente != null && Cliente.Foto_Tras != null && Cliente.Foto_Selfie != null && Cliente.Rua != null && Cliente.Bairro != null && Cliente.Complemento != null && Cliente.Cidade != null && Cliente.Numero != null && Cliente.Estado != null && Cliente.Pais != null && Cliente.Cep != null)
+            if (Cliente.Nome != null && Cliente.Email != null && Cliente.Senha != null && Cliente.Data_nasc_fund != null && Cliente.Sobrenome != null && Cliente.rg != null && Cliente.cpf_cnpj != null && Cliente.Rua != null && Cliente.Bairro != null && Cliente.Complemento != null && Cliente.Cidade != null && Cliente.Numero != null && Cliente.Estado != null && Cliente.Pais != null && Cliente.Cep != null)
             {
                 if (Cliente.Senha.Length > 7)
                 {
@@ -106,7 +106,7 @@ namespace desktop_bitinvest_v1
 
                     if (tipoPessoa == "               PESSOA FÍSICA")
                     {
-                        if (Cliente.celular != null && Cliente.RendaMensal != null)
+                        if (Cliente.celular != null && Cliente.RendaMensal != null && Cliente.Foto_Frente != null && Cliente.Foto_Tras != null && Cliente.Foto_Selfie != null)
                         {
                             var perfil = 4;
                             var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, Cliente.rg, Cliente.cpf_cnpj, Cliente.telefone_residencial,
@@ -114,14 +114,17 @@ namespace desktop_bitinvest_v1
                             MessageBox.Show("Cadastrado com Sucesso!");
                           limparVariaveis();
 
-                        }
+                        }  else
+                            {
+                                  MessageBox.Show("Preencha ou celular ou renda mensal ou as fotos");
+                         }
                     }
                     else if (tipoPessoa == "             PESSOA JURÍDICA")
                     {
                         var nulo = "Nulo";
                         var perfil = 5;
                         var cadastro = user.CadastrarCliente(Cliente.Nome, Cliente.Email, Cliente.Senha, Cliente.Data_nasc_fund, Cliente.Sobrenome, nulo, Cliente.cpf_cnpj, Cliente.telefone_residencial,
-               nulo, Cliente.Foto_Frente, Cliente.Foto_Tras, Cliente.Foto_Selfie, nulo, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
+               nulo, nulo, nulo, nulo, nulo, perfil, Cliente.Rua, Cliente.Bairro, Cliente.Complemento, Cliente.Cidade, Cliente.Numero, Cliente.Estado, Cliente.Pais, Cliente.Cep);
                         MessageBox.Show("Cadastrado com Sucesso!");
                        limparVariaveis();
                     }
