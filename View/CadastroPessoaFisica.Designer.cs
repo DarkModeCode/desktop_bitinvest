@@ -337,7 +337,7 @@
             this.txtPais.Location = new System.Drawing.Point(499, 454);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(195, 25);
-            this.txtPais.TabIndex = 70;
+            this.txtPais.TabIndex = 17;
             this.txtPais.TextChanged += new System.EventHandler(this.txtPais_TextChanged);
             // 
             // txtTelefoneR
@@ -346,7 +346,7 @@
             this.txtTelefoneR.Location = new System.Drawing.Point(454, 206);
             this.txtTelefoneR.Name = "txtTelefoneR";
             this.txtTelefoneR.Size = new System.Drawing.Size(147, 25);
-            this.txtTelefoneR.TabIndex = 68;
+            this.txtTelefoneR.TabIndex = 7;
             this.txtTelefoneR.TextChanged += new System.EventHandler(this.txtTelefoneR_TextChanged);
             // 
             // txtCpf
@@ -364,7 +364,7 @@
             this.txtBairro.Location = new System.Drawing.Point(174, 421);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(165, 25);
-            this.txtBairro.TabIndex = 66;
+            this.txtBairro.TabIndex = 14;
             this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // txtEstado
@@ -373,7 +373,7 @@
             this.txtEstado.Location = new System.Drawing.Point(176, 454);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(241, 25);
-            this.txtEstado.TabIndex = 65;
+            this.txtEstado.TabIndex = 16;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // txtCidade
@@ -382,7 +382,7 @@
             this.txtCidade.Location = new System.Drawing.Point(444, 421);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(170, 25);
-            this.txtCidade.TabIndex = 64;
+            this.txtCidade.TabIndex = 15;
             this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // txtEmail
@@ -391,7 +391,7 @@
             this.txtEmail.Location = new System.Drawing.Point(168, 237);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(280, 25);
-            this.txtEmail.TabIndex = 63;
+            this.txtEmail.TabIndex = 8;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label34
@@ -413,7 +413,7 @@
             this.txtSenha.Location = new System.Drawing.Point(555, 237);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(147, 25);
-            this.txtSenha.TabIndex = 61;
+            this.txtSenha.TabIndex = 9;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // label17
@@ -435,7 +435,7 @@
             this.txtDataNasc.Location = new System.Drawing.Point(277, 127);
             this.txtDataNasc.Name = "txtDataNasc";
             this.txtDataNasc.Size = new System.Drawing.Size(147, 25);
-            this.txtDataNasc.TabIndex = 59;
+            this.txtDataNasc.TabIndex = 5;
             this.txtDataNasc.TextChanged += new System.EventHandler(this.txtDataNasc_TextChanged);
             // 
             // label9
@@ -467,7 +467,7 @@
             this.txtComplPeF.Location = new System.Drawing.Point(227, 389);
             this.txtComplPeF.Name = "txtComplPeF";
             this.txtComplPeF.Size = new System.Drawing.Size(256, 25);
-            this.txtComplPeF.TabIndex = 56;
+            this.txtComplPeF.TabIndex = 13;
             this.txtComplPeF.TextChanged += new System.EventHandler(this.txtComplPeF_TextChanged);
             // 
             // label32
@@ -502,7 +502,7 @@
             this.txtNumPeF.Location = new System.Drawing.Point(434, 358);
             this.txtNumPeF.Name = "txtNumPeF";
             this.txtNumPeF.Size = new System.Drawing.Size(86, 25);
-            this.txtNumPeF.TabIndex = 53;
+            this.txtNumPeF.TabIndex = 12;
             this.txtNumPeF.TextChanged += new System.EventHandler(this.txtNumPeF_TextChanged);
             // 
             // label30
@@ -537,7 +537,7 @@
             this.txtRuaPeF.Location = new System.Drawing.Point(150, 358);
             this.txtRuaPeF.Name = "txtRuaPeF";
             this.txtRuaPeF.Size = new System.Drawing.Size(215, 25);
-            this.txtRuaPeF.TabIndex = 14;
+            this.txtRuaPeF.TabIndex = 11;
             this.txtRuaPeF.TextChanged += new System.EventHandler(this.txtRuaPeF_TextChanged);
             // 
             // label28
@@ -600,7 +600,7 @@
             this.mskCepPeF.Mask = "###-#####";
             this.mskCepPeF.Name = "mskCepPeF";
             this.mskCepPeF.Size = new System.Drawing.Size(157, 25);
-            this.mskCepPeF.TabIndex = 12;
+            this.mskCepPeF.TabIndex = 10;
             this.mskCepPeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCepPeF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCepPeF_MaskInputRejected);
             // 
@@ -767,7 +767,7 @@
             this.mskCelularPeF.Mask = "(99) 00000-000";
             this.mskCelularPeF.Name = "mskCelularPeF";
             this.mskCelularPeF.Size = new System.Drawing.Size(157, 25);
-            this.mskCelularPeF.TabIndex = 5;
+            this.mskCelularPeF.TabIndex = 6;
             this.mskCelularPeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCelularPeF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCelularPeF_MaskInputRejected);
             // 

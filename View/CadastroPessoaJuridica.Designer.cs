@@ -134,7 +134,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblRazaoSocial);
             this.panel1.Controls.Add(this.lblDadosPeJ);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(862, 524);
             this.panel1.TabIndex = 0;
@@ -171,7 +171,7 @@
             this.txtBairro.Location = new System.Drawing.Point(455, 396);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(180, 25);
-            this.txtBairro.TabIndex = 93;
+            this.txtBairro.TabIndex = 11;
             this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // txtEstado
@@ -180,7 +180,7 @@
             this.txtEstado.Location = new System.Drawing.Point(150, 363);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(180, 25);
-            this.txtEstado.TabIndex = 92;
+            this.txtEstado.TabIndex = 9;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // txtCidade
@@ -189,7 +189,7 @@
             this.txtCidade.Location = new System.Drawing.Point(453, 324);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(180, 25);
-            this.txtCidade.TabIndex = 91;
+            this.txtCidade.TabIndex = 8;
             this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // txtPais
@@ -198,7 +198,7 @@
             this.txtPais.Location = new System.Drawing.Point(150, 324);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(180, 25);
-            this.txtPais.TabIndex = 90;
+            this.txtPais.TabIndex = 7;
             this.txtPais.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtEmailPeJ
@@ -207,7 +207,7 @@
             this.txtEmailPeJ.Location = new System.Drawing.Point(157, 240);
             this.txtEmailPeJ.Name = "txtEmailPeJ";
             this.txtEmailPeJ.Size = new System.Drawing.Size(180, 25);
-            this.txtEmailPeJ.TabIndex = 89;
+            this.txtEmailPeJ.TabIndex = 6;
             this.txtEmailPeJ.TextChanged += new System.EventHandler(this.txtEmailPeJ_TextChanged);
             // 
             // label4
@@ -244,7 +244,7 @@
             this.txtDataFun.Location = new System.Drawing.Point(237, 139);
             this.txtDataFun.Name = "txtDataFun";
             this.txtDataFun.Size = new System.Drawing.Size(180, 25);
-            this.txtDataFun.TabIndex = 86;
+            this.txtDataFun.TabIndex = 4;
             this.txtDataFun.TextChanged += new System.EventHandler(this.txtDataFun_TextChanged);
             // 
             // txtSenhaPeJ
@@ -253,7 +253,7 @@
             this.txtSenhaPeJ.Location = new System.Drawing.Point(355, 99);
             this.txtSenhaPeJ.Name = "txtSenhaPeJ";
             this.txtSenhaPeJ.Size = new System.Drawing.Size(180, 25);
-            this.txtSenhaPeJ.TabIndex = 85;
+            this.txtSenhaPeJ.TabIndex = 3;
             this.txtSenhaPeJ.TextChanged += new System.EventHandler(this.txtSenhaPeJ_TextChanged);
             // 
             // txtComplPeJ
@@ -262,7 +262,7 @@
             this.txtComplPeJ.Location = new System.Drawing.Point(364, 465);
             this.txtComplPeJ.Name = "txtComplPeJ";
             this.txtComplPeJ.Size = new System.Drawing.Size(309, 25);
-            this.txtComplPeJ.TabIndex = 84;
+            this.txtComplPeJ.TabIndex = 14;
             this.txtComplPeJ.TextChanged += new System.EventHandler(this.txtComplPeJ_TextChanged);
             // 
             // label32
@@ -297,7 +297,7 @@
             this.txtNumPeJ.Location = new System.Drawing.Point(114, 464);
             this.txtNumPeJ.Name = "txtNumPeJ";
             this.txtNumPeJ.Size = new System.Drawing.Size(86, 25);
-            this.txtNumPeJ.TabIndex = 81;
+            this.txtNumPeJ.TabIndex = 13;
             this.txtNumPeJ.TextChanged += new System.EventHandler(this.txtNumPeJ_TextChanged);
             // 
             // label30
@@ -332,7 +332,7 @@
             this.txtRuaPeJ.Location = new System.Drawing.Point(125, 431);
             this.txtRuaPeJ.Name = "txtRuaPeJ";
             this.txtRuaPeJ.Size = new System.Drawing.Size(215, 25);
-            this.txtRuaPeJ.TabIndex = 63;
+            this.txtRuaPeJ.TabIndex = 12;
             this.txtRuaPeJ.TextChanged += new System.EventHandler(this.txtRuaPeJ_TextChanged);
             // 
             // label28
@@ -395,7 +395,7 @@
             this.mskCepPeJ.Mask = "###-#####";
             this.mskCepPeJ.Name = "mskCepPeJ";
             this.mskCepPeJ.Size = new System.Drawing.Size(157, 25);
-            this.mskCepPeJ.TabIndex = 61;
+            this.mskCepPeJ.TabIndex = 10;
             this.mskCepPeJ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCepPeJ.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCepPeJ_MaskInputRejected);
             // 
@@ -563,7 +563,7 @@
             this.mskTelPeJ.Mask = "(99) 0000-000";
             this.mskTelPeJ.Name = "mskTelPeJ";
             this.mskTelPeJ.Size = new System.Drawing.Size(140, 25);
-            this.mskTelPeJ.TabIndex = 29;
+            this.mskTelPeJ.TabIndex = 5;
             this.mskTelPeJ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskTelPeJ.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTelPeJ_MaskInputRejected);
             // 
@@ -601,7 +601,7 @@
             this.mskCNPJPeF.Mask = "000.000.000-99";
             this.mskCNPJPeF.Name = "mskCNPJPeF";
             this.mskCNPJPeF.Size = new System.Drawing.Size(127, 25);
-            this.mskCNPJPeF.TabIndex = 16;
+            this.mskCNPJPeF.TabIndex = 2;
             this.mskCNPJPeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCNPJPeF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCNPJPeF_MaskInputRejected);
             // 
@@ -657,7 +657,7 @@
             this.txtNomeFantasia.Location = new System.Drawing.Point(541, 57);
             this.txtNomeFantasia.Name = "txtNomeFantasia";
             this.txtNomeFantasia.Size = new System.Drawing.Size(264, 25);
-            this.txtNomeFantasia.TabIndex = 14;
+            this.txtNomeFantasia.TabIndex = 1;
             this.txtNomeFantasia.TextChanged += new System.EventHandler(this.txtNomeFantasia_TextChanged);
             // 
             // txtNomePeJ
@@ -666,7 +666,7 @@
             this.txtNomePeJ.Location = new System.Drawing.Point(197, 57);
             this.txtNomePeJ.Name = "txtNomePeJ";
             this.txtNomePeJ.Size = new System.Drawing.Size(180, 25);
-            this.txtNomePeJ.TabIndex = 12;
+            this.txtNomePeJ.TabIndex = 0;
             this.txtNomePeJ.TextChanged += new System.EventHandler(this.txtNomePeJ_TextChanged);
             // 
             // label3
