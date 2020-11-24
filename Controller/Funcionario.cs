@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace desktop_bitinvest_v1.Controller
 {
+//classe para salvar os dados do funcionario
     class Funcionario
     {
         public static int Id { get; set; }
