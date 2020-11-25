@@ -56,6 +56,7 @@
             this.optOpcoes = new System.Windows.Forms.ToolStripMenuItem();
             this.optSair = new System.Windows.Forms.ToolStripMenuItem();
             this.optFAQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSlideMenu.SuspendLayout();
             this.pnlSubFunc.SuspendLayout();
             this.pnlSubClientes.SuspendLayout();
@@ -632,7 +633,8 @@
             this.optOpcoes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.optOpcoes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optSair,
-            this.optFAQ});
+            this.optFAQ,
+            this.editarPerfilToolStripMenuItem});
             this.optOpcoes.Image = ((System.Drawing.Image)(resources.GetObject("optOpcoes.Image")));
             this.optOpcoes.Name = "optOpcoes";
             this.optOpcoes.Size = new System.Drawing.Size(28, 20);
@@ -642,15 +644,21 @@
             // 
             this.optSair.Image = ((System.Drawing.Image)(resources.GetObject("optSair.Image")));
             this.optSair.Name = "optSair";
-            this.optSair.Size = new System.Drawing.Size(96, 22);
+            this.optSair.Size = new System.Drawing.Size(180, 22);
             this.optSair.Text = "Sair";
             this.optSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // optFAQ
             // 
             this.optFAQ.Name = "optFAQ";
-            this.optFAQ.Size = new System.Drawing.Size(96, 22);
+            this.optFAQ.Size = new System.Drawing.Size(180, 22);
             this.optFAQ.Text = "FAQ";
+            // 
+            // editarPerfilToolStripMenuItem
+            // 
+            this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
             // 
             // Home
             // 
@@ -715,5 +723,6 @@
         private System.Windows.Forms.ToolStripMenuItem optSair;
         private System.Windows.Forms.ToolStripMenuItem optFAQ;
         private Bunifu.Framework.UI.BunifuCustomLabel lblFuncao;
+        private System.Windows.Forms.ToolStripMenuItem editarPerfilToolStripMenuItem;
     }
 }

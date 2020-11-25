@@ -142,6 +142,12 @@
     <Compile Include="View\Clientes_Pendentes.Designer.cs">
       <DependentUpon>Clientes_Pendentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditarPerfil.Designer.cs">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Clientes_Pendentes.resx">
       <DependentUpon>Clientes_Pendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EsqueceuSenha.resx">
       <DependentUpon>EsqueceuSenha.cs</DependentUpon>
