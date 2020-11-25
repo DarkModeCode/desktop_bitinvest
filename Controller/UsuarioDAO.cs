@@ -21,7 +21,7 @@ namespace desktop_bitinvest_v1.Controller
 
             command.Connection = connection;
            // command.CommandText = "select * from usuarios where (email=@email and senha=@senha)"; //Selecionando os dados do usuario
-            command.CommandText = "select u.nome,c.nome_cargo,p.id_perfil from usuarios u inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario inner join perfil p on p.id_perfil=up.id_perfil full outer join funcionario f on f.id_usuario = u.id_usuario full outer join cargo c on c.id_cargo = f.id_cargo where (u.email='admin' and u.senha='b7bc3a1b04d9e16')"; 
+            command.CommandText = "select u.nome,c.nome_cargo,p.id_perfil from usuarios u inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario inner join perfil p on p.id_perfil=up.id_perfil full outer join funcionario f on f.id_usuario = u.id_usuario full outer join cargo c on c.id_cargo = f.id_cargo where (u.email='@email' and u.senha='@senha')"; 
 
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", senha);
