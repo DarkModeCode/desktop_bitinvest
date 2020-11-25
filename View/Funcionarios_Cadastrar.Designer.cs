@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txtAdmissao = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtPis_Paes = new System.Windows.Forms.TextBox();
+            this.cmbCargo = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtConta = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -112,12 +118,6 @@
             this.bntCancelarFunc = new Guna.UI2.WinForms.Guna2Button();
             this.bntAvançar = new Guna.UI2.WinForms.Guna2Button();
             this.pnlFuncCadastrar = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbCargo = new System.Windows.Forms.ComboBox();
-            this.txtPis_Paes = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.txtAdmissao = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +126,7 @@
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label55);
+            this.panel2.Controls.Add(this.bntAvançar);
             this.panel2.Controls.Add(this.txtAdmissao);
             this.panel2.Controls.Add(this.label54);
             this.panel2.Controls.Add(this.txtPis_Paes);
@@ -215,6 +216,88 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(865, 706);
             this.panel2.TabIndex = 1;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label55.Location = new System.Drawing.Point(233, 558);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(176, 21);
+            this.label55.TabIndex = 216;
+            this.label55.Text = "DATA DE ADMISSÃO     :";
+            // 
+            // txtAdmissao
+            // 
+            this.txtAdmissao.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtAdmissao.Location = new System.Drawing.Point(415, 558);
+            this.txtAdmissao.Name = "txtAdmissao";
+            this.txtAdmissao.Size = new System.Drawing.Size(173, 25);
+            this.txtAdmissao.TabIndex = 215;
+            this.txtAdmissao.TextChanged += new System.EventHandler(this.txtAdmissao_TextChanged);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label54.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label54.Location = new System.Drawing.Point(685, 628);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(96, 21);
+            this.label54.TabIndex = 214;
+            this.label54.Text = "PIS/PAES     :";
+            // 
+            // txtPis_Paes
+            // 
+            this.txtPis_Paes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtPis_Paes.Location = new System.Drawing.Point(678, 660);
+            this.txtPis_Paes.Name = "txtPis_Paes";
+            this.txtPis_Paes.Size = new System.Drawing.Size(173, 25);
+            this.txtPis_Paes.TabIndex = 213;
+            this.txtPis_Paes.TextChanged += new System.EventHandler(this.txtPis_Paes_TextChanged);
+            // 
+            // cmbCargo
+            // 
+            this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Analista de sistemas",
+            "Analista de negocios",
+            "Analista Administrativo",
+            "Coordenador",
+            "Estagiario"});
+            this.cmbCargo.Location = new System.Drawing.Point(129, 596);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.Size = new System.Drawing.Size(160, 21);
+            this.cmbCargo.TabIndex = 212;
+            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.cmbCargo_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Banco Santander Brasil",
+            "Banco Itaú Unibanco",
+            "Banco Bradesco",
+            "Caixa Econômica Federal",
+            "Banco do Brasil",
+            "Nubank",
+            "Banco Safra",
+            "Banco BTG Pactual",
+            "Sicoob",
+            "Banco Votorantim",
+            "Banrisul",
+            "Citibank Brasil"});
+            this.comboBox1.Location = new System.Drawing.Point(116, 512);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(158, 21);
+            this.comboBox1.TabIndex = 211;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtConta
             // 
@@ -1200,7 +1283,7 @@
             this.bntAvançar.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntAvançar.ForeColor = System.Drawing.Color.White;
             this.bntAvançar.HoverState.Parent = this.bntAvançar;
-            this.bntAvançar.Location = new System.Drawing.Point(151, 731);
+            this.bntAvançar.Location = new System.Drawing.Point(594, 384);
             this.bntAvançar.Name = "bntAvançar";
             this.bntAvançar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(10)))));
             this.bntAvançar.ShadowDecoration.Parent = this.bntAvançar;
@@ -1211,92 +1294,11 @@
             // 
             // pnlFuncCadastrar
             // 
+            this.pnlFuncCadastrar.AutoScroll = true;
             this.pnlFuncCadastrar.Location = new System.Drawing.Point(0, 1);
             this.pnlFuncCadastrar.Name = "pnlFuncCadastrar";
             this.pnlFuncCadastrar.Size = new System.Drawing.Size(1121, 788);
             this.pnlFuncCadastrar.TabIndex = 9;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Banco Santander Brasil",
-            "Banco Itaú Unibanco",
-            "Banco Bradesco",
-            "Caixa Econômica Federal",
-            "Banco do Brasil",
-            "Nubank",
-            "Banco Safra",
-            "Banco BTG Pactual",
-            "Sicoob",
-            "Banco Votorantim",
-            "Banrisul",
-            "Citibank Brasil"});
-            this.comboBox1.Location = new System.Drawing.Point(116, 512);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 21);
-            this.comboBox1.TabIndex = 211;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // cmbCargo
-            // 
-            this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Items.AddRange(new object[] {
-            "Gerente",
-            "Analista de sistemas",
-            "Analista de negocios",
-            "Analista Administrativo",
-            "Coordenador",
-            "Estagiario"});
-            this.cmbCargo.Location = new System.Drawing.Point(129, 596);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(160, 21);
-            this.cmbCargo.TabIndex = 212;
-            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.cmbCargo_SelectedIndexChanged);
-            // 
-            // txtPis_Paes
-            // 
-            this.txtPis_Paes.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtPis_Paes.Location = new System.Drawing.Point(678, 660);
-            this.txtPis_Paes.Name = "txtPis_Paes";
-            this.txtPis_Paes.Size = new System.Drawing.Size(173, 25);
-            this.txtPis_Paes.TabIndex = 213;
-            this.txtPis_Paes.TextChanged += new System.EventHandler(this.txtPis_Paes_TextChanged);
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.Color.Transparent;
-            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label54.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label54.Location = new System.Drawing.Point(685, 628);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(96, 21);
-            this.label54.TabIndex = 214;
-            this.label54.Text = "PIS/PAES     :";
-            // 
-            // txtAdmissao
-            // 
-            this.txtAdmissao.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtAdmissao.Location = new System.Drawing.Point(402, 558);
-            this.txtAdmissao.Name = "txtAdmissao";
-            this.txtAdmissao.Size = new System.Drawing.Size(173, 25);
-            this.txtAdmissao.TabIndex = 215;
-            this.txtAdmissao.TextChanged += new System.EventHandler(this.txtAdmissao_TextChanged);
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.Transparent;
-            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label55.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label55.Location = new System.Drawing.Point(233, 558);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(176, 21);
-            this.label55.TabIndex = 216;
-            this.label55.Text = "DATA DE ADMISSÃO     :";
             // 
             // Funcionarios_Cadastrar
             // 
@@ -1305,7 +1307,6 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1121, 788);
             this.Controls.Add(this.bntCancelarFunc);
-            this.Controls.Add(this.bntAvançar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlFuncCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

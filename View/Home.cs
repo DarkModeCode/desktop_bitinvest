@@ -18,6 +18,11 @@ namespace desktop_bitinvest_v1
         {
             InitializeComponent();
             customizeMenu();
+            bntFuncionarios.Hide();
+            if (Usuario.id_perfil == 1) {
+                bntFuncionarios.Show();
+            }
+
         }
 
         #region Slide menu
@@ -68,6 +73,7 @@ namespace desktop_bitinvest_v1
             #endregion
             showSubMenu(pnlSubClientes);
         }
+
         private void bntFuncionarios_Click_1(object sender, EventArgs e)
         {
             #region Cores
@@ -137,8 +143,9 @@ namespace desktop_bitinvest_v1
         private void Home_Load(object sender, EventArgs e)
         {
             lblNome.Text = Usuario.NomeFun;
-            lblFuncao.Text = Usuario.Cargo;
+            lblFuncao.Text = Usuario.cargo;
         }
+
 
         #region Eventos dos botoes
         private void bntTransacoes_Click(object sender, EventArgs e)
@@ -285,7 +292,7 @@ namespace desktop_bitinvest_v1
         {
             Funcionarios_Cadastrar frm = new Funcionarios_Cadastrar()
             {
-                //TopLevel = false,
+                TopLevel = false,
             };
 
             chamarForm(frm);

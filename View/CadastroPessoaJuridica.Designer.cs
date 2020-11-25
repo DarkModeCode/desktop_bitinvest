@@ -68,7 +68,6 @@
             this.lblTelPeJ = new System.Windows.Forms.Label();
             this.lblContatoPeJ = new System.Windows.Forms.Label();
             this.mskCNPJPeF = new System.Windows.Forms.MaskedTextBox();
-            this.bntUploadImage = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCNPJPeF = new System.Windows.Forms.Label();
             this.txtNomeFantasia = new System.Windows.Forms.TextBox();
@@ -124,7 +123,6 @@
             this.panel1.Controls.Add(this.lblTelPeJ);
             this.panel1.Controls.Add(this.lblContatoPeJ);
             this.panel1.Controls.Add(this.mskCNPJPeF);
-            this.panel1.Controls.Add(this.bntUploadImage);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblCNPJPeF);
             this.panel1.Controls.Add(this.txtNomeFantasia);
@@ -605,26 +603,6 @@
             this.mskCNPJPeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCNPJPeF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCNPJPeF_MaskInputRejected);
             // 
-            // bntUploadImage
-            // 
-            this.bntUploadImage.BackColor = System.Drawing.Color.White;
-            this.bntUploadImage.BorderRadius = 18;
-            this.bntUploadImage.CheckedState.Parent = this.bntUploadImage;
-            this.bntUploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntUploadImage.CustomImages.Parent = this.bntUploadImage;
-            this.bntUploadImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.bntUploadImage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntUploadImage.ForeColor = System.Drawing.Color.White;
-            this.bntUploadImage.HoverState.Parent = this.bntUploadImage;
-            this.bntUploadImage.Location = new System.Drawing.Point(641, 124);
-            this.bntUploadImage.Name = "bntUploadImage";
-            this.bntUploadImage.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
-            this.bntUploadImage.ShadowDecoration.Parent = this.bntUploadImage;
-            this.bntUploadImage.Size = new System.Drawing.Size(164, 36);
-            this.bntUploadImage.TabIndex = 20;
-            this.bntUploadImage.Text = "ADICIONAR FOTOS";
-            this.bntUploadImage.Click += new System.EventHandler(this.bntUploadImage_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -757,7 +735,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox mskCNPJPeF;
-        private Guna.UI2.WinForms.Guna2Button bntUploadImage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblCNPJPeF;
         private System.Windows.Forms.TextBox txtNomeFantasia;

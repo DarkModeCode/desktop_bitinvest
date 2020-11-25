@@ -20,11 +20,9 @@ namespace desktop_bitinvest_v1.Controller
             var command = new SqlCommand();
 
             command.Connection = connection;
-            command.CommandText = "select * from usuarios where (email=@email and senha=@senha)"; //Selecionando os dados do usuario
-     /*       command.CommandText = "select * from usuarios u  inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario
-inner join perfil p on p.id_perfil=up.id_perfil inner join cliente c on c.id_usuario = u.id_usuario
-where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usuario
-       
+           // command.CommandText = "select * from usuarios where (email=@email and senha=@senha)"; //Selecionando os dados do usuario
+            command.CommandText = "select u.nome,c.nome_cargo,p.id_perfil from usuarios u inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario inner join perfil p on p.id_perfil=up.id_perfil full outer join funcionario f on f.id_usuario = u.id_usuario full outer join cargo c on c.id_cargo = f.id_cargo where (u.email='admin' and u.senha='b7bc3a1b04d9e16')"; 
+
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", senha);
             command.CommandType = CommandType.Text;
@@ -33,10 +31,18 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
             {
                 while (reader.Read())//Salva os dados em cache na classe Usuario
                 {
+                    Usuario.id_perfil = reader.GetInt32(2);
 
-                    Usuario.NomeFun = reader.GetString(3);
-                  //Usuario.Cargo = reader.GetString(3);
-                  //Usuario.Id = reader.GetString(3);
+                    if (Usuario.id_perfil == 1)
+                    {
+                        Usuario.cargo = "Admin";
+
+                    }
+                    else {
+                        Usuario.cargo = reader.GetString(1);
+
+                    }
+                    Usuario.NomeFun = reader.GetString(0);
 
                 }
                 return true;
@@ -98,7 +104,7 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                 }
             }
         }
-//Classe para cadastrar clientes
+        //Classe para cadastrar clientes fisico
         public bool CadastrarClientes(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
         string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
             )
@@ -136,6 +142,57 @@ where (u.email='@email' and u.senha='@senha')"; *///Selecionando os dados do usu
                     cmd.Parameters.AddWithValue("@foto_doc_tras ", foto_doc_tras);
                     cmd.Parameters.AddWithValue("@foto_doc_selfie ", foto_doc_selfie);
                     cmd.Parameters.AddWithValue("@renda_mensal ", renda_mensal);
+                    cmd.Parameters.AddWithValue("@tipo_pessoa ", tipo_pessoa);
+                    SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //comando para inserir os dados na procedure de inserir dados na tabela endereço
+                    cmmd.CommandType = CommandType.StoredProcedure;
+                    cmmd.Parameters.AddWithValue("@rua", rua);
+                    cmmd.Parameters.AddWithValue("@bairro", bairro);
+                    cmmd.Parameters.AddWithValue("@complemento", complemento);
+                    cmmd.Parameters.AddWithValue("@cidade", cidade);
+                    cmmd.Parameters.AddWithValue("@numero", numero);
+                    cmmd.Parameters.AddWithValue("@estado", estado);
+                    cmmd.Parameters.AddWithValue("@pais", pais);
+                    cmmd.Parameters.AddWithValue("@cep", cep);
+                    cmd.ExecuteNonQuery();   //executando o comando sql  
+                    cmmd.ExecuteNonQuery();               
+                }
+
+                return true;
+            }
+        }  //Classe para cadastrar clientes juridico
+        public bool CadastrarClientesJuridico(string nome, string email, string senha, string data_nasc_fund, string sobrenome, string rg, string cpf_cnpj, string telefone_residencial,
+        string celular, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
+            )
+        {
+        //Convertendo a senha em uma hash sha1 criptografada para maior segurança
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
+            SHA1Managed SHhash = new SHA1Managed();
+            string strHex = "";
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            foreach (byte b in HashValue)
+
+            {
+                strHex += String.Format("{0:x2}", b);
+
+            }
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("inserir_juridico", connection);  //comando para inserir os dados na procedure de inserir dados na tabela usuario
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@email ", email);
+                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
+                    cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
+                    cmd.Parameters.AddWithValue("@rg ", rg);
+                    cmd.Parameters.AddWithValue("@cpf_cnpj ", cpf_cnpj);
+                    cmd.Parameters.AddWithValue("@telefone_residencial ", telefone_residencial);
+                    cmd.Parameters.AddWithValue("@celular ", celular);
                     cmd.Parameters.AddWithValue("@tipo_pessoa ", tipo_pessoa);
                     SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //comando para inserir os dados na procedure de inserir dados na tabela endereço
                     cmmd.CommandType = CommandType.StoredProcedure;
@@ -558,14 +615,15 @@ int id_cargo, int id_perfil, string rua, string bairro, string complemento, stri
                     cmd.Parameters.AddWithValue("@horario_de_trabalho", horario_de_trabalho);
                     cmd.Parameters.AddWithValue("@concessao_de_ferias", concessao_de_ferias);
                     cmd.Parameters.AddWithValue("@pis_paes", pis_paes);
-                    cmd.Parameters.AddWithValue("@obs", obs);
                     cmd.Parameters.AddWithValue("@data_de_admissao", data_de_admissao);
                     cmd.Parameters.AddWithValue("@tipo_contrato", tipo_contrato);
                     cmd.Parameters.AddWithValue("@dias_de_trabalho", dias_de_trabalho);
                     cmd.Parameters.AddWithValue("@id_cargo ", id_cargo);
                     cmd.Parameters.AddWithValue("@id_perfil ", id_perfil);
+                    cmd.Parameters.AddWithValue("@obs", obs);
                     SqlCommand cmmd = new SqlCommand("inserir_endereco", connection);  //creating  SqlCommand  object  
-                    cmmd.CommandType = CommandType.StoredProcedure;                   
+                    cmmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
                     cmmd.Parameters.AddWithValue("@rua", rua);
                     cmmd.Parameters.AddWithValue("@bairro", bairro);
                     cmmd.Parameters.AddWithValue("@complemento", complemento);
@@ -580,7 +638,6 @@ int id_cargo, int id_perfil, string rua, string bairro, string complemento, stri
                     commd.Parameters.AddWithValue("@n_agencia", n_agencia);
                     commd.Parameters.AddWithValue("@cod_banco", cod_banco);
                     commd.ExecuteNonQuery();                     //executing the sqlcommand  
-                    cmd.ExecuteNonQuery();                     //executing the sqlcommand  
                     cmmd.ExecuteNonQuery();                     //executing the sqlcommand  
 
 

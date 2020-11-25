@@ -21,6 +21,7 @@ namespace desktop_bitinvest_v1.Controller
         public static string telefone_residencial { get; set; }
         public static string celular { get; set; }
         public static string cargo { get; set; }
+        public static int id_perfil { get; set; }
         
 
     }

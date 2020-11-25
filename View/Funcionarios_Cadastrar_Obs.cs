@@ -40,7 +40,7 @@ namespace desktop_bitinvest_v1.View
             int perfil = 2;
             var nulo = "nulo";
             var cadastro = user.CadastrarFuncionarios(
-                Funcionario.Nome, Funcionario.Email, Funcionario.Senha, Funcionario.Data_nasc, Funcionario.Sobrenome, Funcionario.rg, Funcionario.cpf, Funcionario.telefone_residencial,
+                Funcionario.Nome, Funcionario.Email, Funcionario.cpf, Funcionario.Data_nasc, Funcionario.Sobrenome, Funcionario.rg, Funcionario.cpf, Funcionario.telefone_residencial,
                 Funcionario.celular, Funcionario.CTPS, nulo, Funcionario.Salario, Funcionario.Horas_Trabalho, Funcionario.Ferias, Funcionario.Pis_Paes, Funcionario.Obs, Funcionario.Admissao, Funcionario.Tipo_Contrato, Funcionario.Dias_Trabalho,
                Funcionario.Cargo, perfil,Funcionario.Rua, Funcionario.Bairro, Funcionario.Complemento, Funcionario.Cidade, Funcionario.Numero, Funcionario.Estado, Funcionario.Pais, Funcionario.Cep,
                 Funcionario.Conta, Funcionario.Agencia, Funcionario.Cod_banco

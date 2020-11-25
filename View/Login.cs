@@ -67,16 +67,17 @@ namespace desktop_bitinvest_v1
                     if (validLogin == true)
                     {
                 //verifica se o usuario é funcionario e abre as funções de funcionario
-                //if (Usuario.Id = 2){
-                        Home mainMenu = new Home();
-                        mainMenu.Show();
-                        this.Hide();
-                     //}
+                if (Usuario.id_perfil == 3){
+                            MessageBox.Show("Usuario sem permissão");
+                           
+                     }
                         //verifica se o usuario é cliente se for nega acesso
-                        //if (Usuario.Id = 3){ MessageBox.Show("Usuario sem permissão") }
-                         //verifica se o usuario é administrador se for abre as opções de administrador
-                         //if (Usuario.Id = 1){  }
-                         
+                        else{
+                            Home mainMenu = new Home();
+                            mainMenu.Show();
+                            this.Hide();
+                        }
+                                               
                     }
                     else
                     {
