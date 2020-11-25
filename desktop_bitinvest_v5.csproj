@@ -73,10 +73,14 @@
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Neo.SmartContract.Framework, Version=2.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Neo.SmartContract.Framework.2.10.0\lib\net40\Neo.SmartContract.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
       <Private>True</Private>
@@ -156,12 +160,6 @@
     <Compile Include="View\Funcionarios_Cadastrar.Designer.cs">
       <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Funcionarios_Cadastrar_Obs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Funcionarios_Cadastrar_Obs.Designer.cs">
-      <DependentUpon>Funcionarios_Cadastrar_Obs.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,11 +222,11 @@
     <Compile Include="View\RelatorioTransacoes.Designer.cs">
       <DependentUpon>RelatorioTransacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Transações.cs">
+    <Compile Include="View\Trans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Transações.Designer.cs">
-      <DependentUpon>Transações.cs</DependentUpon>
+    <Compile Include="View\Trans.Designer.cs">
+      <DependentUpon>Trans.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\CadastroPessoaFisica.resx">
       <DependentUpon>CadastroPessoaFisica.cs</DependentUpon>
@@ -253,9 +251,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios_Cadastrar.resx">
       <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Funcionarios_Cadastrar_Obs.resx">
-      <DependentUpon>Funcionarios_Cadastrar_Obs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -299,8 +294,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Report1.rdlc" />
     <EmbeddedResource Include="View\Report2.rdlc" />
-    <EmbeddedResource Include="View\Transações.resx">
-      <DependentUpon>Transações.cs</DependentUpon>
+    <EmbeddedResource Include="View\Trans.resx">
+      <DependentUpon>Trans.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bit_investDataSet.xsc">
       <DependentUpon>bit_investDataSet.xsd</DependentUpon>

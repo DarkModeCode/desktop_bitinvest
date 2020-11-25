@@ -150,61 +150,36 @@ namespace desktop_bitinvest_v1
         #region Eventos dos botoes
         private void bntTransacoes_Click(object sender, EventArgs e)
         {
-            #region Cores
-            if (bntTransacoes.Normalcolor == Color.FromArgb(62, 63, 77))
+            Trans frm = new Trans()
             {
-                bntTransacoes.Normalcolor = Color.FromArgb(31, 31, 38);
-            }
-            else if (bntTransacoes.Normalcolor == Color.FromArgb(31, 31, 38))
-            {
-                bntTransacoes.Normalcolor = Color.FromArgb(62, 63, 77);
-            }
-            #endregion
+                TopLevel = false,
+            };
+            chamarForm(frm);
             hideSubMenu();
         }
 
         private void bntRelatorios_Click(object sender, EventArgs e)
         {
-            #region Cores
-            if (bntRelatorios.Normalcolor == Color.FromArgb(62, 63, 77))
+            Relatorio frm = new Relatorio()
             {
-                bntRelatorios.Normalcolor = Color.FromArgb(31, 31, 38);
-            }
-            else if (bntRelatorios.Normalcolor == Color.FromArgb(31, 31, 38))
-            {
-                bntRelatorios.Normalcolor = Color.FromArgb(62, 63, 77);
-            }
-            #endregion
+                TopLevel = false,
+            };
+            chamarForm(frm);
             hideSubMenu();
         }
 
         private void bunifuFlatButton11_Click(object sender, EventArgs e)
         {
-            #region Cores
-            if (bntMonitoramento.Normalcolor == Color.FromArgb(62, 63, 77))
+            Monitoramento frm = new Monitoramento()
             {
-                bntMonitoramento.Normalcolor = Color.FromArgb(31, 31, 38);
-            }
-            else if (bntMonitoramento.Normalcolor == Color.FromArgb(31, 31, 38))
-            {
-                bntMonitoramento.Normalcolor = Color.FromArgb(62, 63, 77);
-            }
-            #endregion
+                TopLevel = false,
+            };
+            chamarForm(frm);
             hideSubMenu();
         }
 
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
         {
-            #region Cores
-            if (bntSmart.Normalcolor == Color.FromArgb(62, 63, 77))
-            {
-                bntSmart.Normalcolor = Color.FromArgb(31, 31, 38);
-            }
-            else if (bntSmart.Normalcolor == Color.FromArgb(31, 31, 38))
-            {
-                bntSmart.Normalcolor = Color.FromArgb(62, 63, 77);
-            }
-            #endregion
             hideSubMenu();
         }
         #endregion

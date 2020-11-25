@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace desktop_bitinvest_v1.View
 {
-    public partial class Transações : Form
+    public partial class Trans : Form
     {
-
+        public Trans()
+        {
+            InitializeComponent();
+        }
     }
 }

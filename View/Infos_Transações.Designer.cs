@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Infos_Transações));
             this.pnlInfosTrans = new System.Windows.Forms.Panel();
-            this.picTrans = new System.Windows.Forms.PictureBox();
-            this.lblComprador = new System.Windows.Forms.Label();
-            this.lblFavorecido = new System.Windows.Forms.Label();
             this.lblSaldoDin = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblSitu = new System.Windows.Forms.Label();
@@ -45,6 +42,9 @@
             this.lblRG = new System.Windows.Forms.Label();
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblVendedor = new System.Windows.Forms.Label();
+            this.lblFavorecido = new System.Windows.Forms.Label();
+            this.lblComprador = new System.Windows.Forms.Label();
+            this.picTrans = new System.Windows.Forms.PictureBox();
             this.pnlInfosTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTrans)).BeginInit();
             this.SuspendLayout();
@@ -67,42 +67,10 @@
             this.pnlInfosTrans.Controls.Add(this.lblFavorecido);
             this.pnlInfosTrans.Controls.Add(this.lblComprador);
             this.pnlInfosTrans.Controls.Add(this.picTrans);
-            this.pnlInfosTrans.Location = new System.Drawing.Point(3, 1);
+            this.pnlInfosTrans.Location = new System.Drawing.Point(1, 0);
             this.pnlInfosTrans.Name = "pnlInfosTrans";
             this.pnlInfosTrans.Size = new System.Drawing.Size(344, 541);
             this.pnlInfosTrans.TabIndex = 0;
-            // 
-            // picTrans
-            // 
-            this.picTrans.Image = ((System.Drawing.Image)(resources.GetObject("picTrans.Image")));
-            this.picTrans.Location = new System.Drawing.Point(9, 11);
-            this.picTrans.Name = "picTrans";
-            this.picTrans.Size = new System.Drawing.Size(50, 50);
-            this.picTrans.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTrans.TabIndex = 8;
-            this.picTrans.TabStop = false;
-            // 
-            // lblComprador
-            // 
-            this.lblComprador.AutoSize = true;
-            this.lblComprador.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComprador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.lblComprador.Location = new System.Drawing.Point(65, 11);
-            this.lblComprador.Name = "lblComprador";
-            this.lblComprador.Size = new System.Drawing.Size(94, 25);
-            this.lblComprador.TabIndex = 9;
-            this.lblComprador.Text = "Vendedor";
-            // 
-            // lblFavorecido
-            // 
-            this.lblFavorecido.AutoSize = true;
-            this.lblFavorecido.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFavorecido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.lblFavorecido.Location = new System.Drawing.Point(65, 36);
-            this.lblFavorecido.Name = "lblFavorecido";
-            this.lblFavorecido.Size = new System.Drawing.Size(103, 25);
-            this.lblFavorecido.TabIndex = 10;
-            this.lblFavorecido.Text = "Favorecido";
             // 
             // lblSaldoDin
             // 
@@ -235,6 +203,38 @@
             this.lblVendedor.Size = new System.Drawing.Size(102, 21);
             this.lblVendedor.TabIndex = 44;
             this.lblVendedor.Text = "VENDEDOR:";
+            // 
+            // lblFavorecido
+            // 
+            this.lblFavorecido.AutoSize = true;
+            this.lblFavorecido.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFavorecido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.lblFavorecido.Location = new System.Drawing.Point(65, 36);
+            this.lblFavorecido.Name = "lblFavorecido";
+            this.lblFavorecido.Size = new System.Drawing.Size(103, 25);
+            this.lblFavorecido.TabIndex = 10;
+            this.lblFavorecido.Text = "Favorecido";
+            // 
+            // lblComprador
+            // 
+            this.lblComprador.AutoSize = true;
+            this.lblComprador.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComprador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.lblComprador.Location = new System.Drawing.Point(65, 11);
+            this.lblComprador.Name = "lblComprador";
+            this.lblComprador.Size = new System.Drawing.Size(94, 25);
+            this.lblComprador.TabIndex = 9;
+            this.lblComprador.Text = "Vendedor";
+            // 
+            // picTrans
+            // 
+            this.picTrans.Image = ((System.Drawing.Image)(resources.GetObject("picTrans.Image")));
+            this.picTrans.Location = new System.Drawing.Point(9, 11);
+            this.picTrans.Name = "picTrans";
+            this.picTrans.Size = new System.Drawing.Size(50, 50);
+            this.picTrans.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTrans.TabIndex = 8;
+            this.picTrans.TabStop = false;
             // 
             // Infos_Transações
             // 

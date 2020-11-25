@@ -1,6 +1,6 @@
 ﻿namespace desktop_bitinvest_v1.View
 {
-    partial class Transações
+    partial class Trans
     {
         /// <summary>
         /// Required designer variable.
@@ -33,21 +33,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPesquisaTransaçoes = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPesquisaPendentes = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Moeda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlExibirInfosTrans = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pnlExibirInfosTrans);
             this.panel1.Controls.Add(this.gunaDataGridView1);
             this.panel1.Controls.Add(this.txtPesquisaTransaçoes);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 698);
             this.panel1.TabIndex = 0;
@@ -56,6 +57,7 @@
             // 
             this.txtPesquisaTransaçoes.BorderRadius = 15;
             this.txtPesquisaTransaçoes.BorderThickness = 0;
+            this.txtPesquisaTransaçoes.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPesquisaTransaçoes.DefaultText = "";
             this.txtPesquisaTransaçoes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPesquisaTransaçoes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -70,37 +72,14 @@
             this.txtPesquisaTransaçoes.IconLeftOffset = new System.Drawing.Point(6, 0);
             this.txtPesquisaTransaçoes.IconLeftSize = new System.Drawing.Size(15, 15);
             this.txtPesquisaTransaçoes.IconRightSize = new System.Drawing.Size(15, 15);
-            this.txtPesquisaTransaçoes.Location = new System.Drawing.Point(11, 10);
+            this.txtPesquisaTransaçoes.Location = new System.Drawing.Point(12, 16);
             this.txtPesquisaTransaçoes.Name = "txtPesquisaTransaçoes";
             this.txtPesquisaTransaçoes.PasswordChar = '\0';
             this.txtPesquisaTransaçoes.PlaceholderText = "    ID, NOME, CPF, RG";
             this.txtPesquisaTransaçoes.SelectedText = "";
             this.txtPesquisaTransaçoes.ShadowDecoration.Parent = this.txtPesquisaTransaçoes;
             this.txtPesquisaTransaçoes.Size = new System.Drawing.Size(459, 30);
-            this.txtPesquisaTransaçoes.TabIndex = 1;
-            // 
-            // txtPesquisaPendentes
-            // 
-            this.txtPesquisaPendentes.BorderRadius = 15;
-            this.txtPesquisaPendentes.BorderThickness = 0;
-            this.txtPesquisaPendentes.DefaultText = "";
-            this.txtPesquisaPendentes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPesquisaPendentes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPesquisaPendentes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisaPendentes.DisabledState.Parent = this.txtPesquisaPendentes;
-            this.txtPesquisaPendentes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisaPendentes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisaPendentes.FocusedState.Parent = this.txtPesquisaPendentes;
-            this.txtPesquisaPendentes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisaPendentes.HoverState.Parent = this.txtPesquisaPendentes;
-            this.txtPesquisaPendentes.Location = new System.Drawing.Point(331, 337);
-            this.txtPesquisaPendentes.Name = "txtPesquisaPendentes";
-            this.txtPesquisaPendentes.PasswordChar = '\0';
-            this.txtPesquisaPendentes.PlaceholderText = "ID, NOME, CPF, RG";
-            this.txtPesquisaPendentes.SelectedText = "";
-            this.txtPesquisaPendentes.ShadowDecoration.Parent = this.txtPesquisaPendentes;
-            this.txtPesquisaPendentes.Size = new System.Drawing.Size(459, 25);
-            this.txtPesquisaPendentes.TabIndex = 1;
+            this.txtPesquisaTransaçoes.TabIndex = 2;
             // 
             // gunaDataGridView1
             // 
@@ -122,7 +101,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.gunaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gunaDataGridView1.ColumnHeadersHeight = 21;
             this.gunaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tipo,
             this.Valor,
@@ -138,12 +117,12 @@
             this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.gunaDataGridView1.EnableHeadersVisualStyles = false;
             this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.Location = new System.Drawing.Point(11, 47);
+            this.gunaDataGridView1.Location = new System.Drawing.Point(12, 58);
             this.gunaDataGridView1.Name = "gunaDataGridView1";
             this.gunaDataGridView1.RowHeadersVisible = false;
             this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gunaDataGridView1.Size = new System.Drawing.Size(672, 599);
-            this.gunaDataGridView1.TabIndex = 2;
+            this.gunaDataGridView1.TabIndex = 3;
             this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -156,7 +135,7 @@
             this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 21;
             this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
             this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -191,15 +170,22 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
-            // Transações
+            // pnlExibirInfosTrans
+            // 
+            this.pnlExibirInfosTrans.Location = new System.Drawing.Point(702, 58);
+            this.pnlExibirInfosTrans.Name = "pnlExibirInfosTrans";
+            this.pnlExibirInfosTrans.Size = new System.Drawing.Size(344, 541);
+            this.pnlExibirInfosTrans.TabIndex = 4;
+            // 
+            // Trans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 698);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Transações";
-            this.Text = "Transações";
+            this.Name = "Trans";
+            this.Text = "Trans";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -210,11 +196,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisaTransaçoes;
-        private Guna.UI2.WinForms.Guna2TextBox txtPesquisaPendentes;
         private Guna.UI.WinForms.GunaDataGridView gunaDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Moeda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Panel pnlExibirInfosTrans;
     }
 }
