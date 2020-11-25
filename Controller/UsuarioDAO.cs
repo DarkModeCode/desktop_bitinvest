@@ -282,6 +282,26 @@ namespace desktop_bitinvest_v1.Controller
             }
         }
         
+        //Codigo para deletar os dados do cliente
+        public bool DeletarCliente(int id_usuario, string obs)
+        {
+           using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("excluir_conta", connection);   
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_usuario ", id_usuario);
+                    cmd.Parameters.AddWithValue("@obs ", obs);
+                    cmd.ExecuteNonQuery();                    
+                }
+
+                return true;
+            }
+        }
+        
         
 //Classe para inserir o código do esqueci a senha do usuario na tabela esqueci a senha
         public bool Esqueceu(int id_usuario, int cod)
