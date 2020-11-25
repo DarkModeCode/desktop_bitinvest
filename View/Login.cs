@@ -50,7 +50,7 @@ namespace desktop_bitinvest_v1
             {
                 if (txtSenha.Text != "Senha")
                 {
-                    UnicodeEncoding UE = new UnicodeEncoding();
+                   /* UnicodeEncoding UE = new UnicodeEncoding();
                     byte[] HashValue, MessageBytes = UE.GetBytes(txtSenha.Text);
                     SHA1Managed SHhash = new SHA1Managed();
                     string strHex = "";
@@ -60,9 +60,9 @@ namespace desktop_bitinvest_v1
                     {
                         strHex += String.Format("{0:x2}", b);
 
-                    }
+                    } */
                     UsuarioModel user = new UsuarioModel();
-                    var validLogin = user.LoginUser(txtEmail.Text, strHex);
+                    var validLogin = user.LoginUser(txtEmail.Text, txtSenha.Text);
                     
                     if (validLogin == true)
                     {
