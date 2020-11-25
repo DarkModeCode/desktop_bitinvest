@@ -241,6 +241,48 @@ namespace desktop_bitinvest_v1.Controller
                 return true;
             }
         }
+        
+        //Codigo para atualizar os dados do cliente
+        public bool AtualizarCliente(int id_usuario, string senha, string renda_mensal,string telefone_residencial,string sobrenome, string nome,string rg, string cpf_cnpj, string email, string celular, string data_nasc_fund)
+        {
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
+            SHA1Managed SHhash = new SHA1Managed();
+            string strHex = "";
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            foreach (byte b in HashValue)
+
+            {
+                strHex += String.Format("{0:x2}", b);
+
+            }
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("atualizar_cliente", connection);   
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_usuario ", id_usuario);
+                    cmd.Parameters.AddWithValue("@renda_mensal ", renda_mensal);
+                    cmd.Parameters.AddWithValue("@telefone_residencial ", telefone_residencial);
+                    cmd.Parameters.AddWithValue("@nome ", nome);
+                    cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
+                    cmd.Parameters.AddWithValue("@rg ", rg);
+                    cmd.Parameters.AddWithValue("@cpf_cnpj ", cpf_cnpj);
+                    cmd.Parameters.AddWithValue("@email ", email);
+                    cmd.Parameters.AddWithValue("@celular ", celular);
+                    cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
+                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.ExecuteNonQuery();                    
+                }
+
+                return true;
+            }
+        }
+        
+        
 //Classe para inserir o código do esqueci a senha do usuario na tabela esqueci a senha
         public bool Esqueceu(int id_usuario, int cod)
         {
