@@ -272,5 +272,15 @@ namespace desktop_bitinvest_v1
 
             chamarForm(frm);
         }
+
+        private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarPerfil frm = new EditarPerfil()
+            {
+                TopLevel = false,
+            };
+            chamarForm(frm);
+
+        }
     }
 }

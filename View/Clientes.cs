@@ -124,15 +124,14 @@ namespace desktop_bitinvest_v1
         {
             dataTabelaClientes.DataSource = usuario.SelecionarClientes();
        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void dataTabelaClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            dataTabelaClientes.DataSource = usuario.SelecionarClientes();
 
         }
 
-        private void dataTabelaClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void bntExibir_Click(object sender, EventArgs e)
         {
+            dataTabelaClientes.DataSource = usuario.SelecionarClientes();
 
         }
     }

@@ -33,6 +33,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlClientesCadastrar = new System.Windows.Forms.Panel();
+            this.bntExibir = new Guna.UI2.WinForms.Guna2Button();
             this.dataTabelaClientes = new System.Windows.Forms.DataGridView();
             this.bitinvestDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bit_investDataSet = new desktop_bitinvest_v1.bit_investDataSet();
@@ -41,7 +42,6 @@
             this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet();
             this.bit_investDataSet2 = new desktop_bitinvest_v1.bit_investDataSet();
             this.bit_investDataSet3 = new desktop_bitinvest_v1.bit_investDataSet();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlClientesCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSetBindingSource)).BeginInit();
@@ -56,24 +56,43 @@
             this.pnlClientesCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlClientesCadastrar.AutoScroll = true;
             this.pnlClientesCadastrar.AutoSize = true;
-            this.pnlClientesCadastrar.Controls.Add(this.button1);
+            this.pnlClientesCadastrar.Controls.Add(this.bntExibir);
             this.pnlClientesCadastrar.Controls.Add(this.dataTabelaClientes);
             this.pnlClientesCadastrar.Controls.Add(this.pnlInfos);
             this.pnlClientesCadastrar.Controls.Add(this.txtPesquisaPendentes);
-            this.pnlClientesCadastrar.Location = new System.Drawing.Point(0, -19);
+            this.pnlClientesCadastrar.Location = new System.Drawing.Point(0, 1);
             this.pnlClientesCadastrar.Name = "pnlClientesCadastrar";
-            this.pnlClientesCadastrar.Size = new System.Drawing.Size(1121, 739);
+            this.pnlClientesCadastrar.Size = new System.Drawing.Size(1121, 698);
             this.pnlClientesCadastrar.TabIndex = 0;
             this.pnlClientesCadastrar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClientesCadastrar_Paint);
+            // 
+            // bntExibir
+            // 
+            this.bntExibir.BackColor = System.Drawing.SystemColors.Control;
+            this.bntExibir.BorderRadius = 16;
+            this.bntExibir.CheckedState.Parent = this.bntExibir;
+            this.bntExibir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntExibir.CustomImages.Parent = this.bntExibir;
+            this.bntExibir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.bntExibir.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntExibir.ForeColor = System.Drawing.Color.White;
+            this.bntExibir.HoverState.Parent = this.bntExibir;
+            this.bntExibir.Location = new System.Drawing.Point(33, 62);
+            this.bntExibir.Name = "bntExibir";
+            this.bntExibir.ShadowDecoration.Parent = this.bntExibir;
+            this.bntExibir.Size = new System.Drawing.Size(115, 30);
+            this.bntExibir.TabIndex = 5;
+            this.bntExibir.Text = "Exibir";
+            this.bntExibir.Click += new System.EventHandler(this.bntExibir_Click);
             // 
             // dataTabelaClientes
             // 
             this.dataTabelaClientes.AutoGenerateColumns = false;
             this.dataTabelaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTabelaClientes.DataSource = this.bitinvestDataSetBindingSource;
-            this.dataTabelaClientes.Location = new System.Drawing.Point(33, 90);
+            this.dataTabelaClientes.Location = new System.Drawing.Point(33, 98);
             this.dataTabelaClientes.Name = "dataTabelaClientes";
-            this.dataTabelaClientes.Size = new System.Drawing.Size(597, 260);
+            this.dataTabelaClientes.Size = new System.Drawing.Size(650, 533);
             this.dataTabelaClientes.TabIndex = 3;
             this.dataTabelaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTabelaClientes_CellContentClick_1);
             // 
@@ -89,7 +108,7 @@
             // 
             // pnlInfos
             // 
-            this.pnlInfos.Location = new System.Drawing.Point(735, 90);
+            this.pnlInfos.Location = new System.Drawing.Point(736, 98);
             this.pnlInfos.Name = "pnlInfos";
             this.pnlInfos.Size = new System.Drawing.Size(347, 541);
             this.pnlInfos.TabIndex = 2;
@@ -135,16 +154,6 @@
             this.bit_investDataSet3.DataSetName = "bit_investDataSet";
             this.bit_investDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(49, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 20);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // Clientes
             // 
             this.AllowDrop = true;
@@ -180,7 +189,7 @@
         private bit_investDataSet bit_investDataSet2;
         private System.Windows.Forms.DataGridView dataTabelaClientes;
         private bit_investDataSet bit_investDataSet3;
-        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Button bntExibir;
     }
 }
 

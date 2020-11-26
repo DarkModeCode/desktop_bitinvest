@@ -659,6 +659,7 @@
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
             this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
+            this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
             // 
             // Home
             // 
