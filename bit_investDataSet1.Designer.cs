@@ -21292,13 +21292,20 @@ SELECT Rua, Bairro, Complemento, Cidade, Numero, Estado, Pais, Id_endereco, Id_u
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CTPS, Data_de_demissao, Salario, Horario_de_trabalho, Concessao_de_ferias," +
                 " Pis_Pasep, Observacao, Data_de_admissao, tipo_contrato, dias_de_trabalho, Id_us" +
                 "uario, id_cargo FROM dbo.Funcionario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Funcionario.CTPS, Funcionario.Data_de_demissao, Funcionario.Salario, Funcionario.Horario_de_trabalho, Funcionario.Concessao_de_ferias, Funcionario.Pis_Pasep, Funcionario.Observacao, Funcionario.Data_de_admissao, 
+                         Funcionario.tipo_contrato, Funcionario.dias_de_trabalho, Funcionario.Id_usuario, Funcionario.id_cargo
+FROM            Funcionario CROSS JOIN
+                         exibir_funcionarios";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21323,6 +21330,19 @@ SELECT Rua, Bairro, Complemento, Cidade, Numero, Estado, Pais, Id_endereco, Id_u
             bit_investDataSet1.FuncionarioDataTable dataTable = new bit_investDataSet1.FuncionarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(bit_investDataSet1.FuncionarioDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -24123,12 +24143,19 @@ SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnp
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnpj" +
                 ", Id_usuario, telefone_residencial, celular FROM dbo.Usuarios";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Usuarios.data_nasc_fund, Usuarios.senha, Usuarios.email, Usuarios.nome, Usuarios.data_cadastro, Usuarios.sobrenome, Usuarios.rg, Usuarios.cpf_cnpj, Usuarios.Id_usuario, Usuarios.telefone_residencial, 
+                         Usuarios.celular
+FROM            Usuarios INNER JOIN
+                         exibir_funcionarios ON Usuarios.Id_usuario = exibir_funcionarios.id_usuario";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -24153,6 +24180,19 @@ SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnp
             bit_investDataSet1.UsuariosDataTable dataTable = new bit_investDataSet1.UsuariosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(bit_investDataSet1.UsuariosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

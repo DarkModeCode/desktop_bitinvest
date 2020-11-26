@@ -108,9 +108,9 @@
             // 
             // pnlInfos
             // 
-            this.pnlInfos.Location = new System.Drawing.Point(736, 98);
+            this.pnlInfos.Location = new System.Drawing.Point(730, 26);
             this.pnlInfos.Name = "pnlInfos";
-            this.pnlInfos.Size = new System.Drawing.Size(347, 541);
+            this.pnlInfos.Size = new System.Drawing.Size(347, 605);
             this.pnlInfos.TabIndex = 2;
             // 
             // txtPesquisaPendentes

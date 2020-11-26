@@ -80,6 +80,7 @@
             this.cboTipoRelatorio.ShadowDecoration.Parent = this.cboTipoRelatorio;
             this.cboTipoRelatorio.Size = new System.Drawing.Size(366, 36);
             this.cboTipoRelatorio.TabIndex = 1;
+            this.cboTipoRelatorio.SelectedIndexChanged += new System.EventHandler(this.cboTipoRelatorio_SelectedIndexChanged);
             // 
             // bntHistorico
             // 

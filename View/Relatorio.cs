@@ -26,5 +26,49 @@ namespace desktop_bitinvest_v1.View
         {
 
         }
+
+        private void cboTipoRelatorio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RelatorioCadastros frmReCad = new RelatorioCadastros();
+            RelatorioTransacoes frmReTran = new RelatorioTransacoes();
+
+
+
+            var tipoRelatorio = this.cboTipoRelatorio.SelectedItem;
+
+            if (tipoRelatorio == "               RELATÓRIO DE CADASTROS")
+            {
+                if (frmReCad.Visible == true)
+                {
+                    frmReCad.Visible = false;
+                }
+                RelatorioCadastros frm = new RelatorioCadastros()
+                {
+                    TopLevel = false,
+                };
+
+                this.pnlRelatorio.Controls.Add(frm);
+
+                frm.Show();
+                frm.BringToFront();
+            }
+            else if (tipoRelatorio == "             RELATÓRIO DE TRANSAÇÕES")
+            {
+                if (frmReTran.Visible == true)
+                {
+                    frmReTran.Visible = false;
+                }
+
+                RelatorioTransacoes frm = new RelatorioTransacoes()
+                {
+                    TopLevel = false,
+                };
+
+                this.pnlRelatorio.Controls.Add(frm);
+
+                frm.Show();
+                frm.BringToFront();
+            }
+        }
     }
 }

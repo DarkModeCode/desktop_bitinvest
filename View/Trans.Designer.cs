@@ -28,30 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPesquisaTransaçoes = new Guna.UI2.WinForms.Guna2TextBox();
-            this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moeda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlExibirInfosTrans = new System.Windows.Forms.Panel();
+            this.dataTransacoes = new Guna.UI.WinForms.GunaDataGridView();
+            this.tipo_transacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtn_moeda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
+            this.txtPesquisaTransaçoes = new Guna.UI2.WinForms.Guna2TextBox();
+            this.transacaoTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.TransacaoTableAdapter();
+            this.idmoedasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moedasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moedasTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.MoedasTableAdapter();
+            this.consultartransacoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultar_transacoesTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.consultar_transacoesTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTransacoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moedasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultartransacoesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pnlExibirInfosTrans);
-            this.panel1.Controls.Add(this.gunaDataGridView1);
+            this.panel1.Controls.Add(this.dataTransacoes);
             this.panel1.Controls.Add(this.txtPesquisaTransaçoes);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 698);
             this.panel1.TabIndex = 0;
+            // 
+            // pnlExibirInfosTrans
+            // 
+            this.pnlExibirInfosTrans.Location = new System.Drawing.Point(702, 58);
+            this.pnlExibirInfosTrans.Name = "pnlExibirInfosTrans";
+            this.pnlExibirInfosTrans.Size = new System.Drawing.Size(344, 541);
+            this.pnlExibirInfosTrans.TabIndex = 4;
+            // 
+            // dataTransacoes
+            // 
+            this.dataTransacoes.AllowUserToAddRows = false;
+            this.dataTransacoes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.dataTransacoes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataTransacoes.AutoGenerateColumns = false;
+            this.dataTransacoes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataTransacoes.BackgroundColor = System.Drawing.Color.White;
+            this.dataTransacoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataTransacoes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataTransacoes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTransacoes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataTransacoes.ColumnHeadersHeight = 21;
+            this.dataTransacoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tipo_transacao,
+            this.qtn_moeda,
+            this.idmoedasDataGridViewTextBoxColumn,
+            this.Column1});
+            this.dataTransacoes.DataSource = this.consultartransacoesBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataTransacoes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataTransacoes.EnableHeadersVisualStyles = false;
+            this.dataTransacoes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataTransacoes.Location = new System.Drawing.Point(12, 58);
+            this.dataTransacoes.Name = "dataTransacoes";
+            this.dataTransacoes.RowHeadersVisible = false;
+            this.dataTransacoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataTransacoes.Size = new System.Drawing.Size(672, 599);
+            this.dataTransacoes.TabIndex = 3;
+            this.dataTransacoes.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dataTransacoes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataTransacoes.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataTransacoes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataTransacoes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.dataTransacoes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataTransacoes.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataTransacoes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataTransacoes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.dataTransacoes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataTransacoes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataTransacoes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataTransacoes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataTransacoes.ThemeStyle.HeaderStyle.Height = 21;
+            this.dataTransacoes.ThemeStyle.ReadOnly = false;
+            this.dataTransacoes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataTransacoes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataTransacoes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataTransacoes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataTransacoes.ThemeStyle.RowsStyle.Height = 22;
+            this.dataTransacoes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataTransacoes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // tipo_transacao
+            // 
+            this.tipo_transacao.DataPropertyName = "tipo_transacao";
+            this.tipo_transacao.HeaderText = "Tipo";
+            this.tipo_transacao.Name = "tipo_transacao";
+            // 
+            // qtn_moeda
+            // 
+            this.qtn_moeda.DataPropertyName = "qtn_moeda";
+            this.qtn_moeda.HeaderText = "Moeda";
+            this.qtn_moeda.Name = "qtn_moeda";
+            // 
+            // transacaoBindingSource
+            // 
+            this.transacaoBindingSource.DataMember = "Transacao";
+            this.transacaoBindingSource.DataSource = this.bit_investDataSet1;
+            // 
+            // bit_investDataSet1
+            // 
+            this.bit_investDataSet1.DataSetName = "bit_investDataSet1";
+            this.bit_investDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtPesquisaTransaçoes
             // 
@@ -81,101 +189,40 @@
             this.txtPesquisaTransaçoes.Size = new System.Drawing.Size(459, 30);
             this.txtPesquisaTransaçoes.TabIndex = 2;
             // 
-            // gunaDataGridView1
+            // transacaoTableAdapter
             // 
-            this.gunaDataGridView1.AllowUserToAddRows = false;
-            this.gunaDataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.gunaDataGridView1.ColumnHeadersHeight = 21;
-            this.gunaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tipo,
-            this.Valor,
-            this.Moeda,
-            this.Total});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.Location = new System.Drawing.Point(12, 58);
-            this.gunaDataGridView1.Name = "gunaDataGridView1";
-            this.gunaDataGridView1.RowHeadersVisible = false;
-            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(672, 599);
-            this.gunaDataGridView1.TabIndex = 3;
-            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 21;
-            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.transacaoTableAdapter.ClearBeforeFill = true;
             // 
-            // Tipo
+            // idmoedasDataGridViewTextBoxColumn
             // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
+            this.idmoedasDataGridViewTextBoxColumn.DataPropertyName = "id_moedas";
+            this.idmoedasDataGridViewTextBoxColumn.HeaderText = "id_moedas";
+            this.idmoedasDataGridViewTextBoxColumn.Name = "idmoedasDataGridViewTextBoxColumn";
+            this.idmoedasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Valor
+            // moedasBindingSource
             // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
+            this.moedasBindingSource.DataMember = "Moedas";
+            this.moedasBindingSource.DataSource = this.bit_investDataSet1;
             // 
-            // Moeda
+            // moedasTableAdapter
             // 
-            this.Moeda.HeaderText = "Moeda";
-            this.Moeda.Name = "Moeda";
-            this.Moeda.ReadOnly = true;
+            this.moedasTableAdapter.ClearBeforeFill = true;
             // 
-            // Total
+            // consultartransacoesBindingSource
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
+            this.consultartransacoesBindingSource.DataMember = "consultar_transacoes";
+            this.consultartransacoesBindingSource.DataSource = this.bit_investDataSet1;
             // 
-            // pnlExibirInfosTrans
+            // consultar_transacoesTableAdapter
             // 
-            this.pnlExibirInfosTrans.Location = new System.Drawing.Point(702, 58);
-            this.pnlExibirInfosTrans.Name = "pnlExibirInfosTrans";
-            this.pnlExibirInfosTrans.Size = new System.Drawing.Size(344, 541);
-            this.pnlExibirInfosTrans.TabIndex = 4;
+            this.consultar_transacoesTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tipo_transacao";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
             // 
             // Trans
             // 
@@ -186,8 +233,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Trans";
             this.Text = "Trans";
+            this.Load += new System.EventHandler(this.Trans_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTransacoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moedasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultartransacoesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,11 +248,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisaTransaçoes;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Moeda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private Guna.UI.WinForms.GunaDataGridView dataTransacoes;
         private System.Windows.Forms.Panel pnlExibirInfosTrans;
+        private bit_investDataSet1 bit_investDataSet1;
+        private System.Windows.Forms.BindingSource transacaoBindingSource;
+        private bit_investDataSet1TableAdapters.TransacaoTableAdapter transacaoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_transacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtn_moeda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmoedasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource moedasBindingSource;
+        private bit_investDataSet1TableAdapters.MoedasTableAdapter moedasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.BindingSource consultartransacoesBindingSource;
+        private bit_investDataSet1TableAdapters.consultar_transacoesTableAdapter consultar_transacoesTableAdapter;
     }
 }

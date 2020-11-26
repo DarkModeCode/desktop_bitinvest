@@ -16,5 +16,14 @@ namespace desktop_bitinvest_v1.View
         {
             InitializeComponent();
         }
+
+        private void Trans_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet1.Moedas'. Você pode movê-la ou removê-la conforme necessário.
+            this.moedasTableAdapter.Fill(this.bit_investDataSet1.Moedas);
+            // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet1.Transacao'. Você pode movê-la ou removê-la conforme necessário.
+            this.transacaoTableAdapter.Fill(this.bit_investDataSet1.Transacao);
+
+        }
     }
 }

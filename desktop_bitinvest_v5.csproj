@@ -171,6 +171,12 @@
     <Compile Include="View\Funcionarios_Cadastrar.Designer.cs">
       <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Funcionários.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionários.Designer.cs">
+      <DependentUpon>Funcionários.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios_Cadastrar.resx">
       <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionários.resx">
+      <DependentUpon>Funcionários.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
