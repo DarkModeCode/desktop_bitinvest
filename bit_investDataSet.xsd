@@ -37,7 +37,18 @@
               <Mapping SourceColumn="Foto_documento_frente" DataSetColumn="Foto_documento_frente" />
               <Mapping SourceColumn="Id_usuario" DataSetColumn="Id_usuario" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="bit_investConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        c.Id_usuario, u.nome, u.email, u.rg
+FROM            Cliente AS c INNER JOIN
+                         Usuarios AS u ON u.Id_usuario = c.Id_usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MoedasTableAdapter" GeneratorDataComponentClassName="MoedasTableAdapter" Name="Moedas" UserDataComponentName="MoedasTableAdapter">
             <MainSource>
@@ -206,7 +217,7 @@ SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnp
   <xs:element name="bit_investDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bit_investDataSet" msprop:Generator_UserDSName="bit_investDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_RowClassName="ClienteRow">
+        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowEvArgName="ClienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="foto_documento_tras" msprop:Generator_ColumnVarNameInTable="columnfoto_documento_tras" msprop:Generator_ColumnPropNameInRow="foto_documento_tras" msprop:Generator_ColumnPropNameInTable="foto_documento_trasColumn" msprop:Generator_UserColumnName="foto_documento_tras" type="xs:base64Binary" minOccurs="0" />
@@ -223,7 +234,7 @@ SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnp
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Moedas" msprop:Generator_TableClassName="MoedasDataTable" msprop:Generator_TableVarName="tableMoedas" msprop:Generator_TablePropName="Moedas" msprop:Generator_RowDeletingName="MoedasRowDeleting" msprop:Generator_RowChangingName="MoedasRowChanging" msprop:Generator_RowEvHandlerName="MoedasRowChangeEventHandler" msprop:Generator_RowDeletedName="MoedasRowDeleted" msprop:Generator_UserTableName="Moedas" msprop:Generator_RowChangedName="MoedasRowChanged" msprop:Generator_RowEvArgName="MoedasRowChangeEvent" msprop:Generator_RowClassName="MoedasRow">
+        <xs:element name="Moedas" msprop:Generator_TableClassName="MoedasDataTable" msprop:Generator_TableVarName="tableMoedas" msprop:Generator_RowChangedName="MoedasRowChanged" msprop:Generator_TablePropName="Moedas" msprop:Generator_RowDeletingName="MoedasRowDeleting" msprop:Generator_RowChangingName="MoedasRowChanging" msprop:Generator_RowEvHandlerName="MoedasRowChangeEventHandler" msprop:Generator_RowDeletedName="MoedasRowDeleted" msprop:Generator_RowClassName="MoedasRow" msprop:Generator_UserTableName="Moedas" msprop:Generator_RowEvArgName="MoedasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_moedas" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_moedas" msprop:Generator_ColumnPropNameInRow="id_moedas" msprop:Generator_ColumnPropNameInTable="id_moedasColumn" msprop:Generator_UserColumnName="id_moedas" type="xs:int" />
@@ -237,7 +248,7 @@ SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnp
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_RowClassName="UsuariosRow" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="data_nasc_fund" msprop:Generator_ColumnVarNameInTable="columndata_nasc_fund" msprop:Generator_ColumnPropNameInRow="data_nasc_fund" msprop:Generator_ColumnPropNameInTable="data_nasc_fundColumn" msprop:Generator_UserColumnName="data_nasc_fund" minOccurs="0">
@@ -321,7 +332,7 @@ SELECT data_nasc_fund, senha, email, nome, data_cadastro, sobrenome, rg, cpf_cnp
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Cliente__Id_usua__75A278F5" msdata:parent="Usuarios" msdata:child="Cliente" msdata:parentkey="Id_usuario" msdata:childkey="Id_usuario" msprop:Generator_UserChildTable="Cliente" msprop:Generator_ChildPropName="GetClienteRows" msprop:Generator_UserRelationName="FK__Cliente__Id_usua__75A278F5" msprop:Generator_RelationVarName="relationFK__Cliente__Id_usua__75A278F5" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRow" />
+      <msdata:Relationship name="FK__Cliente__Id_usua__75A278F5" msdata:parent="Usuarios" msdata:child="Cliente" msdata:parentkey="Id_usuario" msdata:childkey="Id_usuario" msprop:Generator_UserChildTable="Cliente" msprop:Generator_ChildPropName="GetClienteRows" msprop:Generator_UserRelationName="FK__Cliente__Id_usua__75A278F5" msprop:Generator_ParentPropName="UsuariosRow" msprop:Generator_RelationVarName="relationFK__Cliente__Id_usua__75A278F5" msprop:Generator_UserParentTable="Usuarios" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

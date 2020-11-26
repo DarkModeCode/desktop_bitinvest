@@ -324,17 +324,21 @@ namespace desktop_bitinvest_v1.Controller
 
             }
         }
-//Codigo para selecionar os clientes cadastrados
-        public DataSet SelecionarClientes()
+        //Codigo para selecionar os clientes cadastrados
+        public DataTable SelecionarClientes()
         {
             using (var con = GetConnection())
             {
+                DataTable dt = new DataTable();
                 con.Open();
-                string query = "select u.id_usuario as ID, u.nome as NOME, u.cpf_cnpj as CPF_CNPJ, u.rg as RG from usuarios u inner join cliente c on u.id_usuario=c.id_usuario;";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                DataSet dtset = new DataSet();
-                adapter.Fill(dtset);
-                return dtset;
+                using (SqlCommand cmd = new SqlCommand("select id_usuario as ID, nome as NOME, cpf_cnpj as CPF_CNPJ, rg as RG from usuarios ", con))
+                {
+
+                    SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                    adpt.Fill(dt);
+                }
+
+                return dt;
             }
         }
         //Codigo para selecionar os clientes pendentes

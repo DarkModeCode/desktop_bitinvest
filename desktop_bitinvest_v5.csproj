@@ -105,6 +105,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bit_investDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bit_investDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bit_investDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Cliente.cs" />
     <Compile Include="Controller\Funcionario.cs" />
     <Compile Include="View\CadastroPessoaFisica.cs">
@@ -316,6 +321,17 @@
     </None>
     <None Include="bit_investDataSet.xss">
       <DependentUpon>bit_investDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bit_investDataSet1.xsc">
+      <DependentUpon>bit_investDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bit_investDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bit_investDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bit_investDataSet1.xss">
+      <DependentUpon>bit_investDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

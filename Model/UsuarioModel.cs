@@ -1,6 +1,7 @@
 ﻿using desktop_bitinvest_v1.Controller;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +61,10 @@ int id_cargo, int id_perfil, string rua, string bairro, string complemento, stri
         public bool Atualizar_senha(int id_usuario, string senha)
         {
             return userDao.AtualizarSenha(id_usuario, senha);
+        }
+        public bool AtualizarCliente(int id_usuario, string senha, string renda_mensal, string telefone_residencial, string sobrenome, string nome, string rg, string cpf_cnpj, string email, string celular, string data_nasc_fund)
+        {
+            return userDao.AtualizarCliente(id_usuario, senha, renda_mensal, telefone_residencial,  sobrenome, nome, rg, cpf_cnpj, email, celular, data_nasc_fund);
         }
         public object SelecionarClientes() {
 

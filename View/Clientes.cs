@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using desktop_bitinvest_v1.bit_investDataSetTableAdapters;
 using desktop_bitinvest_v1.Controller;
 using desktop_bitinvest_v1.Model;
 
@@ -122,6 +123,16 @@ namespace desktop_bitinvest_v1
         private void button1_Click(object sender, EventArgs e)
         {
             dataTabelaClientes.DataSource = usuario.SelecionarClientes();
+       }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dataTabelaClientes.DataSource = usuario.SelecionarClientes();
+
+        }
+
+        private void dataTabelaClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

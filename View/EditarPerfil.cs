@@ -21,5 +21,10 @@ namespace desktop_bitinvest_v1.View
         {
 
         }
+
+        private void bntSalvarAlterações_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
