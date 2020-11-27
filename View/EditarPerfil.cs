@@ -27,8 +27,8 @@ namespace desktop_bitinvest_v1.View
 
         private void bntSalvarAlterações_Click(object sender, EventArgs e)
         {
-            /*UsuarioModel user = new UsuarioModel();
-            user.AtualizarFuncionarios(Funcionario.Id, textBox8.Text, textBox9.Text, textBox7.Text);*/
+            UsuarioModel user = new UsuarioModel();
+            user.AtualizarFuncionario(Funcionario.Id, textBox8.Text, textBox9.Text, textBox7.Text);
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)

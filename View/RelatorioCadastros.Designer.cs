@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.consultar_clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
             this.perfilBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -73,23 +72,20 @@
             this.pnlRelatorioCadastros.Controls.Add(this.repviCadastros);
             this.pnlRelatorioCadastros.Location = new System.Drawing.Point(0, 0);
             this.pnlRelatorioCadastros.Name = "pnlRelatorioCadastros";
-            this.pnlRelatorioCadastros.Size = new System.Drawing.Size(644, 603);
+            this.pnlRelatorioCadastros.Size = new System.Drawing.Size(714, 603);
             this.pnlRelatorioCadastros.TabIndex = 0;
             // 
             // repviCadastros
             // 
             this.repviCadastros.AutoScroll = true;
             reportDataSource1.Name = "Clientes";
-            reportDataSource1.Value = this.consultar_clientesBindingSource;
-            reportDataSource2.Name = "cli";
-            reportDataSource2.Value = this.perfilBindingSource;
+            reportDataSource1.Value = this.clienteBindingSource;
             this.repviCadastros.LocalReport.DataSources.Add(reportDataSource1);
-            this.repviCadastros.LocalReport.DataSources.Add(reportDataSource2);
             this.repviCadastros.LocalReport.ReportEmbeddedResource = "desktop_bitinvest_v1.View.Report2.rdlc";
             this.repviCadastros.Location = new System.Drawing.Point(0, 0);
             this.repviCadastros.Name = "repviCadastros";
             this.repviCadastros.ServerReport.BearerToken = null;
-            this.repviCadastros.Size = new System.Drawing.Size(644, 603);
+            this.repviCadastros.Size = new System.Drawing.Size(711, 603);
             this.repviCadastros.TabIndex = 0;
             // 
             // clienteBindingSource
@@ -109,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 603);
+            this.ClientSize = new System.Drawing.Size(714, 603);
             this.Controls.Add(this.pnlRelatorioCadastros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RelatorioCadastros";

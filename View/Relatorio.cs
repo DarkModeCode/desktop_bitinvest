@@ -32,8 +32,6 @@ namespace desktop_bitinvest_v1.View
             RelatorioCadastros frmReCad = new RelatorioCadastros();
             RelatorioTransacoes frmReTran = new RelatorioTransacoes();
 
-
-
             var tipoRelatorio = this.cboTipoRelatorio.SelectedItem;
 
             if (tipoRelatorio == "                RELATÓRIO DE TRANSAÇÕES")

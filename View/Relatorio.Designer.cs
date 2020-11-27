@@ -43,7 +43,7 @@
             this.pnlRelatorio.Controls.Add(this.label1);
             this.pnlRelatorio.Location = new System.Drawing.Point(12, 72);
             this.pnlRelatorio.Name = "pnlRelatorio";
-            this.pnlRelatorio.Size = new System.Drawing.Size(644, 603);
+            this.pnlRelatorio.Size = new System.Drawing.Size(720, 603);
             this.pnlRelatorio.TabIndex = 0;
             // 
             // label1
