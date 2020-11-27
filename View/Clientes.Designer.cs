@@ -42,6 +42,15 @@
             this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet();
             this.bit_investDataSet2 = new desktop_bitinvest_v1.bit_investDataSet();
             this.bit_investDataSet3 = new desktop_bitinvest_v1.bit_investDataSet();
+            this.bit_investDataSet11 = new desktop_bitinvest_v1.bit_investDataSet1();
+            this.consultarclientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultar_clientesTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.consultar_clientesTableAdapter();
+            this.Id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sobrenomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfcnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto_documento_tras = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlClientesCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSetBindingSource)).BeginInit();
@@ -49,6 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultarclientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlClientesCadastrar
@@ -89,12 +100,19 @@
             // 
             this.dataTabelaClientes.AutoGenerateColumns = false;
             this.dataTabelaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTabelaClientes.DataSource = this.bitinvestDataSetBindingSource;
+            this.dataTabelaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_usuario,
+            this.nomeDataGridViewTextBoxColumn,
+            this.sobrenomeDataGridViewTextBoxColumn,
+            this.rgDataGridViewTextBoxColumn,
+            this.cpfcnpjDataGridViewTextBoxColumn,
+            this.foto_documento_tras});
+            this.dataTabelaClientes.DataSource = this.consultarclientesBindingSource;
             this.dataTabelaClientes.Location = new System.Drawing.Point(33, 98);
             this.dataTabelaClientes.Name = "dataTabelaClientes";
             this.dataTabelaClientes.Size = new System.Drawing.Size(650, 533);
             this.dataTabelaClientes.TabIndex = 3;
-            this.dataTabelaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTabelaClientes_CellContentClick_1);
+            this.dataTabelaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
             // 
             // bitinvestDataSetBindingSource
             // 
@@ -154,6 +172,58 @@
             this.bit_investDataSet3.DataSetName = "bit_investDataSet";
             this.bit_investDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // bit_investDataSet11
+            // 
+            this.bit_investDataSet11.DataSetName = "bit_investDataSet1";
+            this.bit_investDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consultarclientesBindingSource
+            // 
+            this.consultarclientesBindingSource.DataMember = "consultar_clientes";
+            this.consultarclientesBindingSource.DataSource = this.bit_investDataSet11;
+            // 
+            // consultar_clientesTableAdapter
+            // 
+            this.consultar_clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // Id_usuario
+            // 
+            this.Id_usuario.DataPropertyName = "Id_usuario";
+            this.Id_usuario.HeaderText = "Id_usuario";
+            this.Id_usuario.Name = "Id_usuario";
+            this.Id_usuario.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // sobrenomeDataGridViewTextBoxColumn
+            // 
+            this.sobrenomeDataGridViewTextBoxColumn.DataPropertyName = "sobrenome";
+            this.sobrenomeDataGridViewTextBoxColumn.HeaderText = "sobrenome";
+            this.sobrenomeDataGridViewTextBoxColumn.Name = "sobrenomeDataGridViewTextBoxColumn";
+            // 
+            // rgDataGridViewTextBoxColumn
+            // 
+            this.rgDataGridViewTextBoxColumn.DataPropertyName = "rg";
+            this.rgDataGridViewTextBoxColumn.HeaderText = "rg";
+            this.rgDataGridViewTextBoxColumn.Name = "rgDataGridViewTextBoxColumn";
+            // 
+            // cpfcnpjDataGridViewTextBoxColumn
+            // 
+            this.cpfcnpjDataGridViewTextBoxColumn.DataPropertyName = "cpf_cnpj";
+            this.cpfcnpjDataGridViewTextBoxColumn.HeaderText = "cpf_cnpj";
+            this.cpfcnpjDataGridViewTextBoxColumn.Name = "cpfcnpjDataGridViewTextBoxColumn";
+            // 
+            // foto_documento_tras
+            // 
+            this.foto_documento_tras.DataPropertyName = "foto_documento_tras";
+            this.foto_documento_tras.HeaderText = "foto_documento_tras";
+            this.foto_documento_tras.Name = "foto_documento_tras";
+            this.foto_documento_tras.ReadOnly = true;
+            // 
             // Clientes
             // 
             this.AllowDrop = true;
@@ -166,6 +236,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clientes";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
             this.pnlClientesCadastrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSetBindingSource)).EndInit();
@@ -173,6 +244,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultarclientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +263,15 @@
         private System.Windows.Forms.DataGridView dataTabelaClientes;
         private bit_investDataSet bit_investDataSet3;
         private Guna.UI2.WinForms.Guna2Button bntExibir;
+        private bit_investDataSet1 bit_investDataSet11;
+        private System.Windows.Forms.BindingSource consultarclientesBindingSource;
+        private bit_investDataSet1TableAdapters.consultar_clientesTableAdapter consultar_clientesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sobrenomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfcnpjDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn foto_documento_tras;
     }
 }
 

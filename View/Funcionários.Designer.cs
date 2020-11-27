@@ -34,6 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtPesquisaFunc = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataFuncionarios = new Guna.UI.WinForms.GunaDataGridView();
+            this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf_cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consultarfuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bitinvestDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
@@ -46,11 +51,6 @@
             this.fKusuariotIdus6477ECF3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKFuncionarIdus797309D9BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultar_funcionarioTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.consultar_funcionarioTableAdapter();
-            this.cpf_cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultarfuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSet1BindingSource)).BeginInit();
@@ -162,6 +162,41 @@
             this.dataFuncionarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataFuncionarios_CellContentClick);
             // 
+            // idusuarioDataGridViewTextBoxColumn
+            // 
+            this.idusuarioDataGridViewTextBoxColumn.DataPropertyName = "Id_usuario";
+            this.idusuarioDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idusuarioDataGridViewTextBoxColumn.Name = "idusuarioDataGridViewTextBoxColumn";
+            this.idusuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // sobrenome
+            // 
+            this.sobrenome.DataPropertyName = "sobrenome";
+            this.sobrenome.HeaderText = "Sobrenome";
+            this.sobrenome.Name = "sobrenome";
+            this.sobrenome.ReadOnly = true;
+            // 
+            // rg
+            // 
+            this.rg.DataPropertyName = "rg";
+            this.rg.HeaderText = "RG";
+            this.rg.Name = "rg";
+            this.rg.ReadOnly = true;
+            // 
+            // cpf_cnpj
+            // 
+            this.cpf_cnpj.DataPropertyName = "cpf_cnpj";
+            this.cpf_cnpj.HeaderText = "CPF";
+            this.cpf_cnpj.Name = "cpf_cnpj";
+            this.cpf_cnpj.ReadOnly = true;
+            // 
             // consultarfuncionarioBindingSource
             // 
             this.consultarfuncionarioBindingSource.DataMember = "consultar_funcionario";
@@ -236,41 +271,6 @@
             // consultar_funcionarioTableAdapter
             // 
             this.consultar_funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // cpf_cnpj
-            // 
-            this.cpf_cnpj.DataPropertyName = "cpf_cnpj";
-            this.cpf_cnpj.HeaderText = "CPF";
-            this.cpf_cnpj.Name = "cpf_cnpj";
-            this.cpf_cnpj.ReadOnly = true;
-            // 
-            // rg
-            // 
-            this.rg.DataPropertyName = "rg";
-            this.rg.HeaderText = "RG";
-            this.rg.Name = "rg";
-            this.rg.ReadOnly = true;
-            // 
-            // sobrenome
-            // 
-            this.sobrenome.DataPropertyName = "sobrenome";
-            this.sobrenome.HeaderText = "Sobrenome";
-            this.sobrenome.Name = "sobrenome";
-            this.sobrenome.ReadOnly = true;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // idusuarioDataGridViewTextBoxColumn
-            // 
-            this.idusuarioDataGridViewTextBoxColumn.DataPropertyName = "Id_usuario";
-            this.idusuarioDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idusuarioDataGridViewTextBoxColumn.Name = "idusuarioDataGridViewTextBoxColumn";
-            this.idusuarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Funcionários
             // 

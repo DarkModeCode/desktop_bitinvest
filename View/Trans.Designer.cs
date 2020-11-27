@@ -35,24 +35,25 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlExibirInfosTrans = new System.Windows.Forms.Panel();
             this.dataTransacoes = new Guna.UI.WinForms.GunaDataGridView();
-            this.tipo_transacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtn_moeda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
             this.txtPesquisaTransaçoes = new Guna.UI2.WinForms.Guna2TextBox();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.consultartransacoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
+            this.transacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transacaoTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.TransacaoTableAdapter();
-            this.idmoedasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moedasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.moedasTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.MoedasTableAdapter();
-            this.consultartransacoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultar_transacoesTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.consultar_transacoesTableAdapter();
+            this.tipo_transacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtnmoedaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_moeda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTransacoes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transacaoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moedasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultartransacoesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moedasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +65,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 698);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnlExibirInfosTrans
             // 
@@ -96,9 +98,9 @@
             this.dataTransacoes.ColumnHeadersHeight = 21;
             this.dataTransacoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo_transacao,
-            this.qtn_moeda,
-            this.idmoedasDataGridViewTextBoxColumn,
-            this.Column1});
+            this.Column1,
+            this.qtnmoedaDataGridViewTextBoxColumn,
+            this.nome_moeda});
             this.dataTransacoes.DataSource = this.consultartransacoesBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -139,28 +141,6 @@
             this.dataTransacoes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataTransacoes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // tipo_transacao
-            // 
-            this.tipo_transacao.DataPropertyName = "tipo_transacao";
-            this.tipo_transacao.HeaderText = "Tipo";
-            this.tipo_transacao.Name = "tipo_transacao";
-            // 
-            // qtn_moeda
-            // 
-            this.qtn_moeda.DataPropertyName = "qtn_moeda";
-            this.qtn_moeda.HeaderText = "Moeda";
-            this.qtn_moeda.Name = "qtn_moeda";
-            // 
-            // transacaoBindingSource
-            // 
-            this.transacaoBindingSource.DataMember = "Transacao";
-            this.transacaoBindingSource.DataSource = this.bit_investDataSet1;
-            // 
-            // bit_investDataSet1
-            // 
-            this.bit_investDataSet1.DataSetName = "bit_investDataSet1";
-            this.bit_investDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // txtPesquisaTransaçoes
             // 
             this.txtPesquisaTransaçoes.BorderRadius = 15;
@@ -189,16 +169,32 @@
             this.txtPesquisaTransaçoes.Size = new System.Drawing.Size(459, 30);
             this.txtPesquisaTransaçoes.TabIndex = 2;
             // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1141, 25);
+            this.fillByToolStrip.TabIndex = 1;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // consultartransacoesBindingSource
+            // 
+            this.consultartransacoesBindingSource.DataMember = "consultar_transacoes";
+            this.consultartransacoesBindingSource.DataSource = this.bit_investDataSet1;
+            // 
+            // bit_investDataSet1
+            // 
+            this.bit_investDataSet1.DataSetName = "bit_investDataSet1";
+            this.bit_investDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // transacaoBindingSource
+            // 
+            this.transacaoBindingSource.DataMember = "Transacao";
+            this.transacaoBindingSource.DataSource = this.bit_investDataSet1;
+            // 
             // transacaoTableAdapter
             // 
             this.transacaoTableAdapter.ClearBeforeFill = true;
-            // 
-            // idmoedasDataGridViewTextBoxColumn
-            // 
-            this.idmoedasDataGridViewTextBoxColumn.DataPropertyName = "id_moedas";
-            this.idmoedasDataGridViewTextBoxColumn.HeaderText = "id_moedas";
-            this.idmoedasDataGridViewTextBoxColumn.Name = "idmoedasDataGridViewTextBoxColumn";
-            this.idmoedasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // moedasBindingSource
             // 
@@ -209,26 +205,40 @@
             // 
             this.moedasTableAdapter.ClearBeforeFill = true;
             // 
-            // consultartransacoesBindingSource
-            // 
-            this.consultartransacoesBindingSource.DataMember = "consultar_transacoes";
-            this.consultartransacoesBindingSource.DataSource = this.bit_investDataSet1;
-            // 
             // consultar_transacoesTableAdapter
             // 
             this.consultar_transacoesTableAdapter.ClearBeforeFill = true;
             // 
+            // tipo_transacao
+            // 
+            this.tipo_transacao.DataPropertyName = "Saldo_BitCoin";
+            this.tipo_transacao.HeaderText = "Tipo";
+            this.tipo_transacao.Name = "tipo_transacao";
+            // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "tipo_transacao";
+            this.Column1.DataPropertyName = "Id_usuario";
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
+            // 
+            // qtnmoedaDataGridViewTextBoxColumn
+            // 
+            this.qtnmoedaDataGridViewTextBoxColumn.DataPropertyName = "qtn_moeda";
+            this.qtnmoedaDataGridViewTextBoxColumn.HeaderText = "qtn_moeda";
+            this.qtnmoedaDataGridViewTextBoxColumn.Name = "qtnmoedaDataGridViewTextBoxColumn";
+            // 
+            // nome_moeda
+            // 
+            this.nome_moeda.DataPropertyName = "nome_moeda";
+            this.nome_moeda.HeaderText = "nome_moeda";
+            this.nome_moeda.Name = "nome_moeda";
             // 
             // Trans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 698);
+            this.ClientSize = new System.Drawing.Size(1141, 718);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Trans";
@@ -236,11 +246,12 @@
             this.Load += new System.EventHandler(this.Trans_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataTransacoes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transacaoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moedasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultartransacoesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moedasBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,13 +264,14 @@
         private bit_investDataSet1 bit_investDataSet1;
         private System.Windows.Forms.BindingSource transacaoBindingSource;
         private bit_investDataSet1TableAdapters.TransacaoTableAdapter transacaoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_transacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtn_moeda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmoedasDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource moedasBindingSource;
         private bit_investDataSet1TableAdapters.MoedasTableAdapter moedasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.BindingSource consultartransacoesBindingSource;
         private bit_investDataSet1TableAdapters.consultar_transacoesTableAdapter consultar_transacoesTableAdapter;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_transacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtnmoedaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome_moeda;
     }
 }
