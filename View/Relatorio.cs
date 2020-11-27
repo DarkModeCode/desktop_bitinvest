@@ -36,13 +36,13 @@ namespace desktop_bitinvest_v1.View
 
             var tipoRelatorio = this.cboTipoRelatorio.SelectedItem;
 
-            if (tipoRelatorio == "               RELATÓRIO DE CADASTROS")
+            if (tipoRelatorio == "                RELATÓRIO DE TRANSAÇÕES")
             {
-                if (frmReCad.Visible == true)
+                if (frmReTran.Visible == true)
                 {
-                    frmReCad.Visible = false;
+                    frmReTran.Visible = false;
                 }
-                RelatorioCadastros frm = new RelatorioCadastros()
+                RelatorioTransacoes frm = new RelatorioTransacoes()
                 {
                     TopLevel = false,
                 };
@@ -52,14 +52,14 @@ namespace desktop_bitinvest_v1.View
                 frm.Show();
                 frm.BringToFront();
             }
-            else if (tipoRelatorio == "             RELATÓRIO DE TRANSAÇÕES")
+            else if (tipoRelatorio == "              RELATÓRIO DE CADASTROS")
             {
-                if (frmReTran.Visible == true)
+                if (frmReCad.Visible == true)
                 {
-                    frmReTran.Visible = false;
+                    frmReCad.Visible = false;
                 }
 
-                RelatorioTransacoes frm = new RelatorioTransacoes()
+                RelatorioCadastros frm = new RelatorioCadastros()
                 {
                     TopLevel = false,
                 };

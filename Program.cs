@@ -17,7 +17,7 @@ namespace desktop_bitinvest_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Relatorio());
+            Application.Run(new Home());
         }
     }
 }
