@@ -27,8 +27,8 @@ namespace desktop_bitinvest_v1.View
 
         private void bntSalvarAlterações_Click(object sender, EventArgs e)
         {
-            UsuarioModel user = new UsuarioModel();
-            user.AtualizarFuncionario(Funcionario.Id, textBox8.Text, textBox9.Text, textBox7.Text);
+            /*UsuarioModel user = new UsuarioModel();
+            user.AtualizarFuncionarios(Funcionario.Id, textBox8.Text, textBox9.Text, textBox7.Text);*/
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace desktop_bitinvest_v1.View
             textBox3.Text = Funcionario.Data_nasc;
             textBox4.Text = Funcionario.cpf;
             textBox5.Text = Funcionario.rg;
-            textBox6.Text = Funcionario.CargoNome;
+            /*textBox6.Text = Funcionario.CargoNome;*/
             textBox7.Text = Funcionario.celular;
             textBox8.Text = Funcionario.telefone_residencial;
             textBox9.Text = Funcionario.Email;

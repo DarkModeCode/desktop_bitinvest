@@ -48,7 +48,7 @@ namespace desktop_bitinvest_v1.View
                 var id = (int)row.Cells[0].Value;
                 UsuarioModel user = new UsuarioModel();
 
-                user.SelecionarFuncionario(id);
+                /*user.SelecionarFuncionario(id);*/
 
                 EditarPerfil infos = new EditarPerfil();
                 infos.Show();

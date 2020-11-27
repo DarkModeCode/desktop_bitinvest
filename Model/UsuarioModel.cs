@@ -70,13 +70,13 @@ int id_cargo, int id_perfil, string rua, string bairro, string complemento, stri
 
             return userDao.SelecionarClientes();
         }
-        public object SelecionarFuncionario(int id) {
+        /*public object SelecionarFuncionario(int id) {
 
             return userDao.SelecionarFuncionario(id);
         }public bool AtualizarFuncionario(int id_usuario, string telefone_residencial, string email, string celular)
         {
             return userDao.AtualizarFuncionario(id_usuario, telefone_residencial, email, celular);
-        }
+        }*/
         public object SelecionarClientesPendetes() {
 
             return userDao.SelecionarClientesPendentes();
