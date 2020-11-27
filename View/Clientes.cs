@@ -124,14 +124,17 @@ namespace desktop_bitinvest_v1
         {
             dataTabelaClientes.DataSource = usuario.SelecionarClientes();
        }
-        private void dataTabelaClientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void bntExibir_Click(object sender, EventArgs e)
         {
             dataTabelaClientes.DataSource = usuario.SelecionarClientes();
+
+        }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet11.consultar_clientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.consultar_clientesTableAdapter.Fill(this.bit_investDataSet11.consultar_clientes);
 
         }
     }

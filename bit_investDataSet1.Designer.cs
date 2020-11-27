@@ -9651,6 +9651,16 @@ namespace desktop_bitinvest_v1 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class consultar_transacoesDataTable : global::System.Data.TypedTableBase<consultar_transacoesRow> {
             
+            private global::System.Data.DataColumn columnId_usuario;
+            
+            private global::System.Data.DataColumn columnqtn_moeda;
+            
+            private global::System.Data.DataColumn columnColumn1;
+            
+            private global::System.Data.DataColumn columnnome_moeda;
+            
+            private global::System.Data.DataColumn columnSaldo_BitCoin;
+            
             private global::System.Data.DataColumn columntipo_transacao;
             
             private global::System.Data.DataColumn columncotacao_moeda;
@@ -9663,35 +9673,9 @@ namespace desktop_bitinvest_v1 {
             
             private global::System.Data.DataColumn columnsmart_contract;
             
-            private global::System.Data.DataColumn columnId_usuario;
-            
             private global::System.Data.DataColumn columnId_usuario_favorecido;
             
             private global::System.Data.DataColumn columnid_moedas;
-            
-            private global::System.Data.DataColumn columnqtn_moeda;
-            
-            private global::System.Data.DataColumn columndata_nasc_fund;
-            
-            private global::System.Data.DataColumn columnsenha;
-            
-            private global::System.Data.DataColumn columnemail;
-            
-            private global::System.Data.DataColumn columnnome;
-            
-            private global::System.Data.DataColumn columndata_cadastro;
-            
-            private global::System.Data.DataColumn columnsobrenome;
-            
-            private global::System.Data.DataColumn columnrg;
-            
-            private global::System.Data.DataColumn columncpf_cnpj;
-            
-            private global::System.Data.DataColumn columnId_usuario1;
-            
-            private global::System.Data.DataColumn columntelefone_residencial;
-            
-            private global::System.Data.DataColumn columncelular;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -9724,6 +9708,46 @@ namespace desktop_bitinvest_v1 {
             protected consultar_transacoesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Id_usuarioColumn {
+                get {
+                    return this.columnId_usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn qtn_moedaColumn {
+                get {
+                    return this.columnqtn_moeda;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Column1Column {
+                get {
+                    return this.columnColumn1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nome_moedaColumn {
+                get {
+                    return this.columnnome_moeda;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Saldo_BitCoinColumn {
+                get {
+                    return this.columnSaldo_BitCoin;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9776,14 +9800,6 @@ namespace desktop_bitinvest_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_usuarioColumn {
-                get {
-                    return this.columnId_usuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Id_usuario_favorecidoColumn {
                 get {
                     return this.columnId_usuario_favorecido;
@@ -9795,102 +9811,6 @@ namespace desktop_bitinvest_v1 {
             public global::System.Data.DataColumn id_moedasColumn {
                 get {
                     return this.columnid_moedas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn qtn_moedaColumn {
-                get {
-                    return this.columnqtn_moeda;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn data_nasc_fundColumn {
-                get {
-                    return this.columndata_nasc_fund;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn senhaColumn {
-                get {
-                    return this.columnsenha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn emailColumn {
-                get {
-                    return this.columnemail;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nomeColumn {
-                get {
-                    return this.columnnome;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn data_cadastroColumn {
-                get {
-                    return this.columndata_cadastro;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn sobrenomeColumn {
-                get {
-                    return this.columnsobrenome;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn rgColumn {
-                get {
-                    return this.columnrg;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cpf_cnpjColumn {
-                get {
-                    return this.columncpf_cnpj;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_usuario1Column {
-                get {
-                    return this.columnId_usuario1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn telefone_residencialColumn {
-                get {
-                    return this.columntelefone_residencial;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn celularColumn {
-                get {
-                    return this.columncelular;
                 }
             }
             
@@ -9931,49 +9851,22 @@ namespace desktop_bitinvest_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public consultar_transacoesRow Addconsultar_transacoesRow(
-                        string tipo_transacao, 
-                        double cotacao_moeda, 
-                        System.DateTime data_hora, 
-                        string hash_blockchain, 
-                        byte[] smart_contract, 
-                        int Id_usuario, 
-                        int Id_usuario_favorecido, 
-                        int id_moedas, 
-                        int qtn_moeda, 
-                        string data_nasc_fund, 
-                        string senha, 
-                        string email, 
-                        string nome, 
-                        System.DateTime data_cadastro, 
-                        string sobrenome, 
-                        string rg, 
-                        string cpf_cnpj, 
-                        string telefone_residencial, 
-                        string celular) {
+            public consultar_transacoesRow Addconsultar_transacoesRow(int Id_usuario, int qtn_moeda, double Column1, string nome_moeda, string Saldo_BitCoin, string tipo_transacao, double cotacao_moeda, System.DateTime data_hora, string hash_blockchain, byte[] smart_contract, int Id_usuario_favorecido, int id_moedas) {
                 consultar_transacoesRow rowconsultar_transacoesRow = ((consultar_transacoesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Id_usuario,
+                        qtn_moeda,
+                        Column1,
+                        nome_moeda,
+                        Saldo_BitCoin,
                         tipo_transacao,
                         cotacao_moeda,
                         data_hora,
                         null,
                         hash_blockchain,
                         smart_contract,
-                        Id_usuario,
                         Id_usuario_favorecido,
-                        id_moedas,
-                        qtn_moeda,
-                        data_nasc_fund,
-                        senha,
-                        email,
-                        nome,
-                        data_cadastro,
-                        sobrenome,
-                        rg,
-                        cpf_cnpj,
-                        null,
-                        telefone_residencial,
-                        celular};
+                        id_moedas};
                 rowconsultar_transacoesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowconsultar_transacoesRow);
                 return rowconsultar_transacoesRow;
@@ -9981,10 +9874,9 @@ namespace desktop_bitinvest_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public consultar_transacoesRow FindByid_transacaoId_usuario1(int id_transacao, int Id_usuario1) {
+            public consultar_transacoesRow FindById_usuario(int Id_usuario) {
                 return ((consultar_transacoesRow)(this.Rows.Find(new object[] {
-                            id_transacao,
-                            Id_usuario1})));
+                            Id_usuario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10004,32 +9896,34 @@ namespace desktop_bitinvest_v1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnId_usuario = base.Columns["Id_usuario"];
+                this.columnqtn_moeda = base.Columns["qtn_moeda"];
+                this.columnColumn1 = base.Columns["Column1"];
+                this.columnnome_moeda = base.Columns["nome_moeda"];
+                this.columnSaldo_BitCoin = base.Columns["Saldo_BitCoin"];
                 this.columntipo_transacao = base.Columns["tipo_transacao"];
                 this.columncotacao_moeda = base.Columns["cotacao_moeda"];
                 this.columndata_hora = base.Columns["data_hora"];
                 this.columnid_transacao = base.Columns["id_transacao"];
                 this.columnhash_blockchain = base.Columns["hash_blockchain"];
                 this.columnsmart_contract = base.Columns["smart_contract"];
-                this.columnId_usuario = base.Columns["Id_usuario"];
                 this.columnId_usuario_favorecido = base.Columns["Id_usuario_favorecido"];
                 this.columnid_moedas = base.Columns["id_moedas"];
-                this.columnqtn_moeda = base.Columns["qtn_moeda"];
-                this.columndata_nasc_fund = base.Columns["data_nasc_fund"];
-                this.columnsenha = base.Columns["senha"];
-                this.columnemail = base.Columns["email"];
-                this.columnnome = base.Columns["nome"];
-                this.columndata_cadastro = base.Columns["data_cadastro"];
-                this.columnsobrenome = base.Columns["sobrenome"];
-                this.columnrg = base.Columns["rg"];
-                this.columncpf_cnpj = base.Columns["cpf_cnpj"];
-                this.columnId_usuario1 = base.Columns["Id_usuario1"];
-                this.columntelefone_residencial = base.Columns["telefone_residencial"];
-                this.columncelular = base.Columns["celular"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnId_usuario = new global::System.Data.DataColumn("Id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_usuario);
+                this.columnqtn_moeda = new global::System.Data.DataColumn("qtn_moeda", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqtn_moeda);
+                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn1);
+                this.columnnome_moeda = new global::System.Data.DataColumn("nome_moeda", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnome_moeda);
+                this.columnSaldo_BitCoin = new global::System.Data.DataColumn("Saldo_BitCoin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaldo_BitCoin);
                 this.columntipo_transacao = new global::System.Data.DataColumn("tipo_transacao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipo_transacao);
                 this.columncotacao_moeda = new global::System.Data.DataColumn("cotacao_moeda", typeof(double), null, global::System.Data.MappingType.Element);
@@ -10042,61 +9936,33 @@ namespace desktop_bitinvest_v1 {
                 base.Columns.Add(this.columnhash_blockchain);
                 this.columnsmart_contract = new global::System.Data.DataColumn("smart_contract", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsmart_contract);
-                this.columnId_usuario = new global::System.Data.DataColumn("Id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_usuario);
                 this.columnId_usuario_favorecido = new global::System.Data.DataColumn("Id_usuario_favorecido", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId_usuario_favorecido);
                 this.columnid_moedas = new global::System.Data.DataColumn("id_moedas", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_moedas);
-                this.columnqtn_moeda = new global::System.Data.DataColumn("qtn_moeda", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnqtn_moeda);
-                this.columndata_nasc_fund = new global::System.Data.DataColumn("data_nasc_fund", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndata_nasc_fund);
-                this.columnsenha = new global::System.Data.DataColumn("senha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsenha);
-                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemail);
-                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnome);
-                this.columndata_cadastro = new global::System.Data.DataColumn("data_cadastro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndata_cadastro);
-                this.columnsobrenome = new global::System.Data.DataColumn("sobrenome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsobrenome);
-                this.columnrg = new global::System.Data.DataColumn("rg", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrg);
-                this.columncpf_cnpj = new global::System.Data.DataColumn("cpf_cnpj", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncpf_cnpj);
-                this.columnId_usuario1 = new global::System.Data.DataColumn("Id_usuario1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_usuario1);
-                this.columntelefone_residencial = new global::System.Data.DataColumn("telefone_residencial", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntelefone_residencial);
-                this.columncelular = new global::System.Data.DataColumn("celular", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncelular);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_transacao,
-                                this.columnId_usuario1}, true));
+                                this.columnId_usuario}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnid_transacao}, false));
+                this.columnId_usuario.AllowDBNull = false;
+                this.columnId_usuario.Unique = true;
+                this.columnColumn1.ReadOnly = true;
+                this.columnnome_moeda.AllowDBNull = false;
+                this.columnnome_moeda.MaxLength = 25;
+                this.columnSaldo_BitCoin.AllowDBNull = false;
+                this.columnSaldo_BitCoin.MaxLength = 25;
                 this.columntipo_transacao.AllowDBNull = false;
                 this.columntipo_transacao.MaxLength = 25;
                 this.columndata_hora.AllowDBNull = false;
                 this.columnid_transacao.AutoIncrement = true;
+                this.columnid_transacao.AutoIncrementSeed = -1;
+                this.columnid_transacao.AutoIncrementStep = -1;
                 this.columnid_transacao.AllowDBNull = false;
                 this.columnid_transacao.ReadOnly = true;
+                this.columnid_transacao.Unique = true;
                 this.columnhash_blockchain.AllowDBNull = false;
                 this.columnhash_blockchain.MaxLength = 25;
-                this.columnId_usuario.AllowDBNull = false;
                 this.columnid_moedas.AllowDBNull = false;
-                this.columndata_nasc_fund.MaxLength = 15;
-                this.columnsenha.MaxLength = 100;
-                this.columnemail.MaxLength = 25;
-                this.columnnome.MaxLength = 15;
-                this.columnsobrenome.MaxLength = 50;
-                this.columnrg.MaxLength = 15;
-                this.columncpf_cnpj.MaxLength = 15;
-                this.columnId_usuario1.AutoIncrement = true;
-                this.columnId_usuario1.AllowDBNull = false;
-                this.columnId_usuario1.ReadOnly = true;
-                this.columntelefone_residencial.MaxLength = 15;
-                this.columncelular.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15530,6 +15396,71 @@ namespace desktop_bitinvest_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id_usuario {
+                get {
+                    return ((int)(this[this.tableconsultar_transacoes.Id_usuarioColumn]));
+                }
+                set {
+                    this[this.tableconsultar_transacoes.Id_usuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int qtn_moeda {
+                get {
+                    try {
+                        return ((int)(this[this.tableconsultar_transacoes.qtn_moedaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'qtn_moeda\' na tabela \'consultar_transacoes\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableconsultar_transacoes.qtn_moedaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Column1 {
+                get {
+                    try {
+                        return ((double)(this[this.tableconsultar_transacoes.Column1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Column1\' na tabela \'consultar_transacoes\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableconsultar_transacoes.Column1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nome_moeda {
+                get {
+                    return ((string)(this[this.tableconsultar_transacoes.nome_moedaColumn]));
+                }
+                set {
+                    this[this.tableconsultar_transacoes.nome_moedaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Saldo_BitCoin {
+                get {
+                    return ((string)(this[this.tableconsultar_transacoes.Saldo_BitCoinColumn]));
+                }
+                set {
+                    this[this.tableconsultar_transacoes.Saldo_BitCoinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string tipo_transacao {
                 get {
                     return ((string)(this[this.tableconsultar_transacoes.tipo_transacaoColumn]));
@@ -15606,17 +15537,6 @@ namespace desktop_bitinvest_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id_usuario {
-                get {
-                    return ((int)(this[this.tableconsultar_transacoes.Id_usuarioColumn]));
-                }
-                set {
-                    this[this.tableconsultar_transacoes.Id_usuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Id_usuario_favorecido {
                 get {
                     try {
@@ -15645,190 +15565,26 @@ namespace desktop_bitinvest_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int qtn_moeda {
-                get {
-                    try {
-                        return ((int)(this[this.tableconsultar_transacoes.qtn_moedaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'qtn_moeda\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.qtn_moedaColumn] = value;
-                }
+            public bool Isqtn_moedaNull() {
+                return this.IsNull(this.tableconsultar_transacoes.qtn_moedaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string data_nasc_fund {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.data_nasc_fundColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'data_nasc_fund\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.data_nasc_fundColumn] = value;
-                }
+            public void Setqtn_moedaNull() {
+                this[this.tableconsultar_transacoes.qtn_moedaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string senha {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.senhaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'senha\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.senhaColumn] = value;
-                }
+            public bool IsColumn1Null() {
+                return this.IsNull(this.tableconsultar_transacoes.Column1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string email {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.emailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'email\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.emailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nome {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.nomeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'nome\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.nomeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime data_cadastro {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableconsultar_transacoes.data_cadastroColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'data_cadastro\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.data_cadastroColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string sobrenome {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.sobrenomeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'sobrenome\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.sobrenomeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string rg {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.rgColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'rg\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.rgColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cpf_cnpj {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.cpf_cnpjColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cpf_cnpj\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.cpf_cnpjColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id_usuario1 {
-                get {
-                    return ((int)(this[this.tableconsultar_transacoes.Id_usuario1Column]));
-                }
-                set {
-                    this[this.tableconsultar_transacoes.Id_usuario1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string telefone_residencial {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.telefone_residencialColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'telefone_residencial\' na tabela \'consultar_transacoes\' é DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.telefone_residencialColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string celular {
-                get {
-                    try {
-                        return ((string)(this[this.tableconsultar_transacoes.celularColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'celular\' na tabela \'consultar_transacoes\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableconsultar_transacoes.celularColumn] = value;
-                }
+            public void SetColumn1Null() {
+                this[this.tableconsultar_transacoes.Column1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15865,138 +15621,6 @@ namespace desktop_bitinvest_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetId_usuario_favorecidoNull() {
                 this[this.tableconsultar_transacoes.Id_usuario_favorecidoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isqtn_moedaNull() {
-                return this.IsNull(this.tableconsultar_transacoes.qtn_moedaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setqtn_moedaNull() {
-                this[this.tableconsultar_transacoes.qtn_moedaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isdata_nasc_fundNull() {
-                return this.IsNull(this.tableconsultar_transacoes.data_nasc_fundColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setdata_nasc_fundNull() {
-                this[this.tableconsultar_transacoes.data_nasc_fundColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IssenhaNull() {
-                return this.IsNull(this.tableconsultar_transacoes.senhaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetsenhaNull() {
-                this[this.tableconsultar_transacoes.senhaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsemailNull() {
-                return this.IsNull(this.tableconsultar_transacoes.emailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetemailNull() {
-                this[this.tableconsultar_transacoes.emailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsnomeNull() {
-                return this.IsNull(this.tableconsultar_transacoes.nomeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetnomeNull() {
-                this[this.tableconsultar_transacoes.nomeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isdata_cadastroNull() {
-                return this.IsNull(this.tableconsultar_transacoes.data_cadastroColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setdata_cadastroNull() {
-                this[this.tableconsultar_transacoes.data_cadastroColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IssobrenomeNull() {
-                return this.IsNull(this.tableconsultar_transacoes.sobrenomeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetsobrenomeNull() {
-                this[this.tableconsultar_transacoes.sobrenomeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsrgNull() {
-                return this.IsNull(this.tableconsultar_transacoes.rgColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetrgNull() {
-                this[this.tableconsultar_transacoes.rgColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iscpf_cnpjNull() {
-                return this.IsNull(this.tableconsultar_transacoes.cpf_cnpjColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setcpf_cnpjNull() {
-                this[this.tableconsultar_transacoes.cpf_cnpjColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Istelefone_residencialNull() {
-                return this.IsNull(this.tableconsultar_transacoes.telefone_residencialColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Settelefone_residencialNull() {
-                this[this.tableconsultar_transacoes.telefone_residencialColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscelularNull() {
-                return this.IsNull(this.tableconsultar_transacoes.celularColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcelularNull() {
-                this[this.tableconsultar_transacoes.celularColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -25682,27 +25306,19 @@ FROM            Usuarios INNER JOIN
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "consultar_transacoes";
+            tableMapping.ColumnMappings.Add("Id_usuario", "Id_usuario");
+            tableMapping.ColumnMappings.Add("qtn_moeda", "qtn_moeda");
+            tableMapping.ColumnMappings.Add("Column1", "Column1");
+            tableMapping.ColumnMappings.Add("nome_moeda", "nome_moeda");
+            tableMapping.ColumnMappings.Add("Saldo_BitCoin", "Saldo_BitCoin");
             tableMapping.ColumnMappings.Add("tipo_transacao", "tipo_transacao");
             tableMapping.ColumnMappings.Add("cotacao_moeda", "cotacao_moeda");
             tableMapping.ColumnMappings.Add("data_hora", "data_hora");
             tableMapping.ColumnMappings.Add("id_transacao", "id_transacao");
             tableMapping.ColumnMappings.Add("hash_blockchain", "hash_blockchain");
             tableMapping.ColumnMappings.Add("smart_contract", "smart_contract");
-            tableMapping.ColumnMappings.Add("Id_usuario", "Id_usuario");
             tableMapping.ColumnMappings.Add("Id_usuario_favorecido", "Id_usuario_favorecido");
             tableMapping.ColumnMappings.Add("id_moedas", "id_moedas");
-            tableMapping.ColumnMappings.Add("qtn_moeda", "qtn_moeda");
-            tableMapping.ColumnMappings.Add("data_nasc_fund", "data_nasc_fund");
-            tableMapping.ColumnMappings.Add("senha", "senha");
-            tableMapping.ColumnMappings.Add("email", "email");
-            tableMapping.ColumnMappings.Add("nome", "nome");
-            tableMapping.ColumnMappings.Add("data_cadastro", "data_cadastro");
-            tableMapping.ColumnMappings.Add("sobrenome", "sobrenome");
-            tableMapping.ColumnMappings.Add("rg", "rg");
-            tableMapping.ColumnMappings.Add("cpf_cnpj", "cpf_cnpj");
-            tableMapping.ColumnMappings.Add("Id_usuario1", "Id_usuario1");
-            tableMapping.ColumnMappings.Add("telefone_residencial", "telefone_residencial");
-            tableMapping.ColumnMappings.Add("celular", "celular");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -25716,27 +25332,27 @@ FROM            Usuarios INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.consultar_transacoes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        t.qtn_moeda, m.nome_moeda, u.Id_usuario, t.tipo_transacao AS Saldo_BitCoin
+FROM            Transacao AS t INNER JOIN
+                         Moedas AS m ON m.id_moedas = t.id_moedas INNER JOIN
+                         Usuarios AS u ON u.Id_usuario = t.Id_usuario";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bit_investDataSet1.consultar_transacoesDataTable dataTable, global::System.Nullable<int> id_usuario) {
+        public virtual int Fill(bit_investDataSet1.consultar_transacoesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((id_usuario.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(id_usuario.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -25748,17 +25364,24 @@ FROM            Usuarios INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bit_investDataSet1.consultar_transacoesDataTable GetData(global::System.Nullable<int> id_usuario) {
+        public virtual bit_investDataSet1.consultar_transacoesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((id_usuario.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(id_usuario.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             bit_investDataSet1.consultar_transacoesDataTable dataTable = new bit_investDataSet1.consultar_transacoesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(bit_investDataSet1.consultar_transacoesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     

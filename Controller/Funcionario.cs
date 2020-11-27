@@ -33,6 +33,7 @@ namespace desktop_bitinvest_v1.Controller
         public static string Agencia { get; set; }
         public static string Conta { get; set; }
         public static int Cargo { get; set; }
+        public static string CargoNome { get; set; }
        public static string Tipo_Contrato { get; set; }
        public static string CTPS { get; set; }
        public static string Dias_Trabalho { get; set; }

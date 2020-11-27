@@ -1,4 +1,6 @@
-﻿using System;
+﻿using desktop_bitinvest_v1.Controller;
+using desktop_bitinvest_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +41,20 @@ namespace desktop_bitinvest_v1.View
 
         private void dataFuncionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataFuncionarios.Rows[e.RowIndex];
 
+                var id = (int)row.Cells[0].Value;
+                UsuarioModel user = new UsuarioModel();
+
+                user.SelecionarFuncionario(id);
+
+                EditarPerfil infos = new EditarPerfil();
+                infos.Show();
+                infos.BringToFront();
+
+            }
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)

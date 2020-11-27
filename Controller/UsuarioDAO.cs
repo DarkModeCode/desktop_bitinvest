@@ -280,6 +280,27 @@ namespace desktop_bitinvest_v1.Controller
 
                 return true;
             }
+        }public bool AtualizarFuncionario(int id_usuario,string telefone_residencial, string email, string celular)
+        {
+          
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    SqlCommand cmd = new SqlCommand("atualizar_funcionario", connection);   
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_usuario ", id_usuario);
+                    cmd.Parameters.AddWithValue("@telefone_residencial ", telefone_residencial);
+                    cmd.Parameters.AddWithValue("@email ", email);
+                    cmd.Parameters.AddWithValue("@celular ", celular);
+                 
+                    cmd.ExecuteNonQuery();                    
+                }
+
+                return true;
+            }
         }
         
         //Codigo para deletar os dados do cliente
@@ -331,7 +352,7 @@ namespace desktop_bitinvest_v1.Controller
             {
                 DataTable dt = new DataTable();
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("select id_usuario as ID, nome as NOME, cpf_cnpj as CPF_CNPJ, rg as RG from usuarios ", con))
+                using (SqlCommand cmd = new SqlCommand("select u.id_usuario as ID, u.nome as NOME, u.cpf_cnpj as CPF_CNPJ, u.rg as RG from usuarios u inner join Cliente c on c.Id_usuario=u.id_usuario;", con))
                 {
 
                     SqlDataAdapter adpt = new SqlDataAdapter(cmd);
@@ -340,7 +361,7 @@ namespace desktop_bitinvest_v1.Controller
 
                 return dt;
             }
-        }
+        }   
         //Codigo para selecionar os clientes pendentes
         public DataSet SelecionarClientesPendentes()
         {
@@ -503,6 +524,48 @@ namespace desktop_bitinvest_v1.Controller
                         {
 
                             Transacao.TotalEthereum = reader.GetInt32(0);
+
+                        }
+                        return true;
+                    }
+                    else
+                    {
+
+                        Transacao.TotalEthereum = 0;
+                        return false;
+                    }
+                }
+            }
+        }public bool SelecionarFuncionario(int id)
+        {
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from usuarios u inner join funcionario f on u.id_usuario=f.id_usuario inner join cargo c on c.id_cargo=f.id_cargo where u.id_usuario = @id_usu";
+                    command.Parameters.AddWithValue("@id_usu", id);
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())//Obtemos os dados das colunas e salvamos no cache do Usuario
+                        {
+
+
+                            Funcionario.Id = reader.GetInt32(8);
+                            Funcionario.Nome = reader.GetString(3);
+                            Funcionario.Sobrenome = reader.GetString(5); 
+                            Funcionario.Data_nasc = reader.GetString(0); 
+                            Funcionario.cpf = reader.GetString(7); 
+                            Funcionario.rg = reader.GetString(6); 
+                            Funcionario.CargoNome = reader.GetString(23); 
+                            Funcionario.celular = reader.GetString(10); 
+                            Funcionario.telefone_residencial = reader.GetString(9); 
+                            Funcionario.Email = reader.GetString(2); 
+                            Funcionario.Senha = reader.GetString(1); 
 
                         }
                         return true;
