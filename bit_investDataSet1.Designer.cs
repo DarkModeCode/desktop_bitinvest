@@ -112,6 +112,8 @@ namespace desktop_bitinvest_v1 {
         
         private global::System.Data.DataRelation relationFK__usuario_t__Id_us__6477ECF3;
         
+        private global::System.Data.DataRelation relationCliente_consultar_clientes;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -890,6 +892,7 @@ namespace desktop_bitinvest_v1 {
             this.relationFK__Transacao__Id_us__778AC167 = this.Relations["FK__Transacao__Id_us__778AC167"];
             this.relationFK__usuario_t__id_pe__6383C8BA = this.Relations["FK__usuario_t__id_pe__6383C8BA"];
             this.relationFK__usuario_t__Id_us__6477ECF3 = this.Relations["FK__usuario_t__Id_us__6477ECF3"];
+            this.relationCliente_consultar_clientes = this.Relations["Cliente_consultar_clientes"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1020,6 +1023,10 @@ namespace desktop_bitinvest_v1 {
                         this.tableUsuarios.Id_usuarioColumn}, new global::System.Data.DataColumn[] {
                         this.tableusuario_tem_perfil.Id_usuarioColumn}, false);
             this.Relations.Add(this.relationFK__usuario_t__Id_us__6477ECF3);
+            this.relationCliente_consultar_clientes = new global::System.Data.DataRelation("Cliente_consultar_clientes", new global::System.Data.DataColumn[] {
+                        this.tableCliente.Id_usuarioColumn}, new global::System.Data.DataColumn[] {
+                        this.tableconsultar_clientes.Id_usuario3Column}, false);
+            this.Relations.Add(this.relationCliente_consultar_clientes);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8051,7 +8058,7 @@ namespace desktop_bitinvest_v1 {
                         string Numero, 
                         string Estado, 
                         string Pais, 
-                        int Id_usuario3, 
+                        ClienteRow parentClienteRowByCliente_consultar_clientes, 
                         string cep, 
                         string n_conta_bancaria, 
                         string n_agencia, 
@@ -8087,13 +8094,16 @@ namespace desktop_bitinvest_v1 {
                         Estado,
                         Pais,
                         null,
-                        Id_usuario3,
+                        null,
                         cep,
                         n_conta_bancaria,
                         n_agencia,
                         null,
                         Id_usuario4,
                         cod_banco};
+                if ((parentClienteRowByCliente_consultar_clientes != null)) {
+                    columnValuesArray[28] = parentClienteRowByCliente_consultar_clientes[4];
+                }
                 rowconsultar_clientesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowconsultar_clientesRow);
                 return rowconsultar_clientesRow;
@@ -12146,6 +12156,17 @@ namespace desktop_bitinvest_v1 {
             public void SetId_usuarioNull() {
                 this[this.tableCliente.Id_usuarioColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public consultar_clientesRow[] Getconsultar_clientesRows() {
+                if ((this.Table.ChildRelations["Cliente_consultar_clientes"] == null)) {
+                    return new consultar_clientesRow[0];
+                }
+                else {
+                    return ((consultar_clientesRow[])(base.GetChildRows(this.Table.ChildRelations["Cliente_consultar_clientes"])));
+                }
+            }
         }
         
         /// <summary>
@@ -14512,6 +14533,17 @@ namespace desktop_bitinvest_v1 {
                 }
                 set {
                     this[this.tableconsultar_clientes.cod_bancoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ClienteRow ClienteRow {
+                get {
+                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["Cliente_consultar_clientes"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Cliente_consultar_clientes"]);
                 }
             }
             
@@ -28427,6 +28459,15 @@ FROM            Transacao AS t INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(bit_investDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._usuariosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._usuariosTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._analiseTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Analise.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -28454,6 +28495,15 @@ FROM            Transacao AS t INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._clienteTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._moedasTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Moedas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -28469,15 +28519,6 @@ FROM            Transacao AS t INNER JOIN
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._perfilTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -28553,15 +28594,6 @@ FROM            Transacao AS t INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._clienteTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._clienteTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._cadastros_excluidosTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Cadastros_excluidos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -28599,6 +28631,14 @@ FROM            Transacao AS t INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(bit_investDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._usuariosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._usuariosTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._analiseTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Analise.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -28623,6 +28663,14 @@ FROM            Transacao AS t INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._clienteTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._moedasTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Moedas.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -28636,14 +28684,6 @@ FROM            Transacao AS t INNER JOIN
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._perfilTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -28711,14 +28751,6 @@ FROM            Transacao AS t INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._clienteTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._clienteTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._cadastros_excluidosTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Cadastros_excluidos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -28774,14 +28806,6 @@ FROM            Transacao AS t INNER JOIN
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cadastros_excluidosTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._clienteTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._clienteTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -28849,14 +28873,6 @@ FROM            Transacao AS t INNER JOIN
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._perfilTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Perfil.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -28870,6 +28886,14 @@ FROM            Transacao AS t INNER JOIN
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._moedasTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._clienteTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -28894,6 +28918,14 @@ FROM            Transacao AS t INNER JOIN
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._analiseTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._usuariosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._usuariosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

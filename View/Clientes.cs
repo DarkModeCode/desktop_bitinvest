@@ -30,7 +30,7 @@ namespace desktop_bitinvest_v1
 
         private void btnTudo_Click(object sender, EventArgs e)
         {
-            dataTabelaClientes.DataSource = usuario.SelecionarClientes();
+            dataClientes.DataSource = usuario.SelecionarClientes();
         }
 
         public void CellClick(object sender, DataGridViewCellEventArgs e)
@@ -45,7 +45,7 @@ namespace desktop_bitinvest_v1
                 infos.Show();
                 infos.BringToFront();
 
-                DataGridViewRow row = dataTabelaClientes.Rows[e.RowIndex];
+                DataGridViewRow row = dataClientes.Rows[e.RowIndex];
 
                 var id = (int)row.Cells[0].Value;
 
@@ -94,7 +94,7 @@ namespace desktop_bitinvest_v1
         private void pesquisa(object sender, KeyPressEventArgs e)
         {
             var id = txtPesquisaPendentes.Text;
-            dataTabelaClientes.DataSource = usuario.Pesquisa(id);
+            dataClientes.DataSource = usuario.Pesquisa(id);
 
         }
 
@@ -122,20 +122,21 @@ namespace desktop_bitinvest_v1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataTabelaClientes.DataSource = usuario.SelecionarClientes();
+            dataClientes.DataSource = usuario.SelecionarClientes();
        }
 
         private void bntExibir_Click(object sender, EventArgs e)
         {
-            dataTabelaClientes.DataSource = usuario.SelecionarClientes();
+            dataClientes.DataSource = usuario.SelecionarClientes();
 
         }
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet11.consultar_clientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.consultar_clientesTableAdapter.Fill(this.bit_investDataSet11.consultar_clientes);
-
+            // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet1.consultar_clientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.consultar_clientesTableAdapter.Fill(this.bit_investDataSet1.consultar_clientes);
+            // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet1.consultar_clientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.consultar_clientesTableAdapter.Fill(this.bit_investDataSet1.consultar_clientes);
         }
     }
 }
