@@ -109,18 +109,7 @@ namespace desktop_bitinvest_v1.Controller
         string celular, byte[] foto_doc_frente, byte[] foto_doc_tras, byte[] foto_doc_selfie, string renda_mensal, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
             )
         {
-        //Convertendo a senha em uma hash sha1 criptografada para maior segurança
-            UnicodeEncoding UE = new UnicodeEncoding();
-            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
-            SHA1Managed SHhash = new SHA1Managed();
-            string strHex = "";
-            HashValue = SHhash.ComputeHash(MessageBytes);
-            foreach (byte b in HashValue)
-
-            {
-                strHex += String.Format("{0:x2}", b);
-
-            }
+        
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -131,7 +120,7 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@email ", email);
-                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@senha ", senha);
                     cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
                     cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
                     cmd.Parameters.AddWithValue("@rg ", rg);
@@ -164,18 +153,7 @@ namespace desktop_bitinvest_v1.Controller
         string celular, int tipo_pessoa, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep
             )
         {
-        //Convertendo a senha em uma hash sha1 criptografada para maior segurança
-            UnicodeEncoding UE = new UnicodeEncoding();
-            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
-            SHA1Managed SHhash = new SHA1Managed();
-            string strHex = "";
-            HashValue = SHhash.ComputeHash(MessageBytes);
-            foreach (byte b in HashValue)
-
-            {
-                strHex += String.Format("{0:x2}", b);
-
-            }
+        
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -186,7 +164,7 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@email ", email);
-                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@senha ", senha);
                     cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
                     cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
                     cmd.Parameters.AddWithValue("@rg ", rg);
@@ -214,17 +192,7 @@ namespace desktop_bitinvest_v1.Controller
 //Codigo para atualizar a senha do usuario
         public bool AtualizarSenha(int id_usuario, string senha)
         {
-            UnicodeEncoding UE = new UnicodeEncoding();
-            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
-            SHA1Managed SHhash = new SHA1Managed();
-            string strHex = "";
-            HashValue = SHhash.ComputeHash(MessageBytes);
-            foreach (byte b in HashValue)
-
-            {
-                strHex += String.Format("{0:x2}", b);
-
-            }
+           
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -234,7 +202,7 @@ namespace desktop_bitinvest_v1.Controller
                     SqlCommand cmd = new SqlCommand("atualizar_senha", connection);   
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_usuario ", id_usuario);
-                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@senha ", senha);
                     cmd.ExecuteNonQuery();                    
                 }
 
@@ -245,17 +213,7 @@ namespace desktop_bitinvest_v1.Controller
         //Codigo para atualizar os dados do cliente
         public bool AtualizarCliente(int id_usuario, string senha, string renda_mensal,string telefone_residencial,string sobrenome, string nome,string rg, string cpf_cnpj, string email, string celular, string data_nasc_fund)
         {
-            UnicodeEncoding UE = new UnicodeEncoding();
-            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
-            SHA1Managed SHhash = new SHA1Managed();
-            string strHex = "";
-            HashValue = SHhash.ComputeHash(MessageBytes);
-            foreach (byte b in HashValue)
-
-            {
-                strHex += String.Format("{0:x2}", b);
-
-            }
+           
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -274,7 +232,7 @@ namespace desktop_bitinvest_v1.Controller
                     cmd.Parameters.AddWithValue("@email ", email);
                     cmd.Parameters.AddWithValue("@celular ", celular);
                     cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
-                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@senha ", senha);
                     cmd.ExecuteNonQuery();                    
                 }
 
