@@ -33,7 +33,6 @@
             this.bntLogin = new Guna.UI2.WinForms.Guna2Button();
             this.linkEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cboxLembrar = new System.Windows.Forms.CheckBox();
             this.lblSenha = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.picSenha = new System.Windows.Forms.PictureBox();
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,7 +56,6 @@
             this.pnlCamposLogin.Controls.Add(this.bntLogin);
             this.pnlCamposLogin.Controls.Add(this.linkEsqueceuSenha);
             this.pnlCamposLogin.Controls.Add(this.txtEmail);
-            this.pnlCamposLogin.Controls.Add(this.cboxLembrar);
             this.pnlCamposLogin.Controls.Add(this.lblSenha);
             this.pnlCamposLogin.Controls.Add(this.picSenha);
             this.pnlCamposLogin.Controls.Add(this.txtSenha);
@@ -125,18 +123,6 @@
             this.txtEmail.Size = new System.Drawing.Size(311, 29);
             this.txtEmail.TabIndex = 0;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged_1);
-            // 
-            // cboxLembrar
-            // 
-            this.cboxLembrar.AutoSize = true;
-            this.cboxLembrar.BackColor = System.Drawing.Color.White;
-            this.cboxLembrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxLembrar.Location = new System.Drawing.Point(251, 178);
-            this.cboxLembrar.Name = "cboxLembrar";
-            this.cboxLembrar.Size = new System.Drawing.Size(64, 17);
-            this.cboxLembrar.TabIndex = 1;
-            this.cboxLembrar.Text = "Lembrar";
-            this.cboxLembrar.UseVisualStyleBackColor = false;
             // 
             // lblSenha
             // 
@@ -288,7 +274,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblSenha;
         private System.Windows.Forms.PictureBox picSenha;
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
-        private System.Windows.Forms.CheckBox cboxLembrar;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2Button bntLogin;
         private System.Windows.Forms.LinkLabel linkEsqueceuSenha;

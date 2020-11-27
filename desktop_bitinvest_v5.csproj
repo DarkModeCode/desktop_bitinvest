@@ -233,12 +233,6 @@
     <Compile Include="View\RelatorioCadastros.Designer.cs">
       <DependentUpon>RelatorioCadastros.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\RelatorioTransacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\RelatorioTransacoes.Designer.cs">
-      <DependentUpon>RelatorioTransacoes.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Trans.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,10 +306,6 @@
     <EmbeddedResource Include="View\RelatorioCadastros.resx">
       <DependentUpon>RelatorioCadastros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\RelatorioTransacoes.resx">
-      <DependentUpon>RelatorioTransacoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Report1.rdlc" />
     <EmbeddedResource Include="View\Report2.rdlc" />
     <EmbeddedResource Include="View\Trans.resx">
       <DependentUpon>Trans.cs</DependentUpon>

@@ -282,5 +282,14 @@ namespace desktop_bitinvest_v1
             chamarForm(frm);
 
         }
+
+        private void bntConsultarFunc_Click(object sender, EventArgs e)
+        {
+            Funcionários frm = new Funcionários()
+            {
+                TopLevel = false,
+            };
+            chamarForm(frm);
+        }
     }
 }

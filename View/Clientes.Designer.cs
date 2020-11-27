@@ -31,35 +31,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlClientesCadastrar = new System.Windows.Forms.Panel();
             this.bntExibir = new Guna.UI2.WinForms.Guna2Button();
-            this.dataTabelaClientes = new System.Windows.Forms.DataGridView();
-            this.bitinvestDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bit_investDataSet = new desktop_bitinvest_v1.bit_investDataSet();
             this.pnlInfos = new System.Windows.Forms.Panel();
             this.txtPesquisaPendentes = new Guna.UI2.WinForms.Guna2TextBox();
-            this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet();
-            this.bit_investDataSet2 = new desktop_bitinvest_v1.bit_investDataSet();
-            this.bit_investDataSet3 = new desktop_bitinvest_v1.bit_investDataSet();
-            this.bit_investDataSet11 = new desktop_bitinvest_v1.bit_investDataSet1();
-            this.consultarclientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultar_clientesTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.consultar_clientesTableAdapter();
-            this.Id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sobrenomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfcnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto_documento_tras = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataClientes = new Guna.UI.WinForms.GunaDataGridView();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf_cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlClientesCadastrar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultarclientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlClientesCadastrar
@@ -67,13 +52,13 @@
             this.pnlClientesCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlClientesCadastrar.AutoScroll = true;
             this.pnlClientesCadastrar.AutoSize = true;
+            this.pnlClientesCadastrar.Controls.Add(this.dataClientes);
             this.pnlClientesCadastrar.Controls.Add(this.bntExibir);
-            this.pnlClientesCadastrar.Controls.Add(this.dataTabelaClientes);
             this.pnlClientesCadastrar.Controls.Add(this.pnlInfos);
             this.pnlClientesCadastrar.Controls.Add(this.txtPesquisaPendentes);
             this.pnlClientesCadastrar.Location = new System.Drawing.Point(0, 1);
             this.pnlClientesCadastrar.Name = "pnlClientesCadastrar";
-            this.pnlClientesCadastrar.Size = new System.Drawing.Size(1121, 698);
+            this.pnlClientesCadastrar.Size = new System.Drawing.Size(1121, 701);
             this.pnlClientesCadastrar.TabIndex = 0;
             this.pnlClientesCadastrar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClientesCadastrar_Paint);
             // 
@@ -95,34 +80,6 @@
             this.bntExibir.TabIndex = 5;
             this.bntExibir.Text = "Exibir";
             this.bntExibir.Click += new System.EventHandler(this.bntExibir_Click);
-            // 
-            // dataTabelaClientes
-            // 
-            this.dataTabelaClientes.AutoGenerateColumns = false;
-            this.dataTabelaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTabelaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_usuario,
-            this.nomeDataGridViewTextBoxColumn,
-            this.sobrenomeDataGridViewTextBoxColumn,
-            this.rgDataGridViewTextBoxColumn,
-            this.cpfcnpjDataGridViewTextBoxColumn,
-            this.foto_documento_tras});
-            this.dataTabelaClientes.DataSource = this.consultarclientesBindingSource;
-            this.dataTabelaClientes.Location = new System.Drawing.Point(33, 98);
-            this.dataTabelaClientes.Name = "dataTabelaClientes";
-            this.dataTabelaClientes.Size = new System.Drawing.Size(650, 533);
-            this.dataTabelaClientes.TabIndex = 3;
-            this.dataTabelaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
-            // 
-            // bitinvestDataSetBindingSource
-            // 
-            this.bitinvestDataSetBindingSource.DataSource = this.bit_investDataSet;
-            this.bitinvestDataSetBindingSource.Position = 0;
-            // 
-            // bit_investDataSet
-            // 
-            this.bit_investDataSet.DataSetName = "bit_investDataSet";
-            this.bit_investDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnlInfos
             // 
@@ -157,72 +114,102 @@
             this.txtPesquisaPendentes.TextChanged += new System.EventHandler(this.txtPesquisaPendentes_TextChanged);
             this.txtPesquisaPendentes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pesquisa);
             // 
-            // bit_investDataSet1
+            // dataClientes
             // 
-            this.bit_investDataSet1.DataSetName = "bit_investDataSet";
-            this.bit_investDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataClientes.AllowUserToAddRows = false;
+            this.dataClientes.AllowUserToDeleteRows = false;
+            this.dataClientes.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataClientes.BackgroundColor = System.Drawing.Color.White;
+            this.dataClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataClientes.ColumnHeadersHeight = 21;
+            this.dataClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nome,
+            this.sobrenome,
+            this.rg,
+            this.cpf_cnpj});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataClientes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataClientes.EnableHeadersVisualStyles = false;
+            this.dataClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataClientes.Location = new System.Drawing.Point(33, 99);
+            this.dataClientes.Name = "dataClientes";
+            this.dataClientes.ReadOnly = true;
+            this.dataClientes.RowHeadersVisible = false;
+            this.dataClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataClientes.Size = new System.Drawing.Size(672, 599);
+            this.dataClientes.TabIndex = 6;
+            this.dataClientes.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dataClientes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.Empty;
+            this.dataClientes.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataClientes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataClientes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.dataClientes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dataClientes.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataClientes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataClientes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.dataClientes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataClientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataClientes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataClientes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataClientes.ThemeStyle.HeaderStyle.Height = 21;
+            this.dataClientes.ThemeStyle.ReadOnly = true;
+            this.dataClientes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataClientes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataClientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataClientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataClientes.ThemeStyle.RowsStyle.Height = 22;
+            this.dataClientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.dataClientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // bit_investDataSet2
+            // nome
             // 
-            this.bit_investDataSet2.DataSetName = "bit_investDataSet";
-            this.bit_investDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
             // 
-            // bit_investDataSet3
+            // sobrenome
             // 
-            this.bit_investDataSet3.DataSetName = "bit_investDataSet";
-            this.bit_investDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sobrenome.DataPropertyName = "sobrenome";
+            this.sobrenome.HeaderText = "Sobrenome";
+            this.sobrenome.Name = "sobrenome";
+            this.sobrenome.ReadOnly = true;
             // 
-            // bit_investDataSet11
+            // rg
             // 
-            this.bit_investDataSet11.DataSetName = "bit_investDataSet1";
-            this.bit_investDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.rg.DataPropertyName = "rg";
+            this.rg.HeaderText = "RG";
+            this.rg.Name = "rg";
+            this.rg.ReadOnly = true;
             // 
-            // consultarclientesBindingSource
+            // cpf_cnpj
             // 
-            this.consultarclientesBindingSource.DataMember = "consultar_clientes";
-            this.consultarclientesBindingSource.DataSource = this.bit_investDataSet11;
-            // 
-            // consultar_clientesTableAdapter
-            // 
-            this.consultar_clientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // Id_usuario
-            // 
-            this.Id_usuario.DataPropertyName = "Id_usuario";
-            this.Id_usuario.HeaderText = "Id_usuario";
-            this.Id_usuario.Name = "Id_usuario";
-            this.Id_usuario.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // sobrenomeDataGridViewTextBoxColumn
-            // 
-            this.sobrenomeDataGridViewTextBoxColumn.DataPropertyName = "sobrenome";
-            this.sobrenomeDataGridViewTextBoxColumn.HeaderText = "sobrenome";
-            this.sobrenomeDataGridViewTextBoxColumn.Name = "sobrenomeDataGridViewTextBoxColumn";
-            // 
-            // rgDataGridViewTextBoxColumn
-            // 
-            this.rgDataGridViewTextBoxColumn.DataPropertyName = "rg";
-            this.rgDataGridViewTextBoxColumn.HeaderText = "rg";
-            this.rgDataGridViewTextBoxColumn.Name = "rgDataGridViewTextBoxColumn";
-            // 
-            // cpfcnpjDataGridViewTextBoxColumn
-            // 
-            this.cpfcnpjDataGridViewTextBoxColumn.DataPropertyName = "cpf_cnpj";
-            this.cpfcnpjDataGridViewTextBoxColumn.HeaderText = "cpf_cnpj";
-            this.cpfcnpjDataGridViewTextBoxColumn.Name = "cpfcnpjDataGridViewTextBoxColumn";
-            // 
-            // foto_documento_tras
-            // 
-            this.foto_documento_tras.DataPropertyName = "foto_documento_tras";
-            this.foto_documento_tras.HeaderText = "foto_documento_tras";
-            this.foto_documento_tras.Name = "foto_documento_tras";
-            this.foto_documento_tras.ReadOnly = true;
+            this.cpf_cnpj.DataPropertyName = "cpf_cnpj";
+            this.cpf_cnpj.HeaderText = "CPF";
+            this.cpf_cnpj.Name = "cpf_cnpj";
+            this.cpf_cnpj.ReadOnly = true;
             // 
             // Clientes
             // 
@@ -238,14 +225,7 @@
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.pnlClientesCadastrar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTabelaClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bitinvestDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultarclientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,22 +236,12 @@
         private System.Windows.Forms.Panel pnlClientesCadastrar;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisaPendentes;
         private System.Windows.Forms.Panel pnlInfos;
-        private System.Windows.Forms.BindingSource bitinvestDataSetBindingSource;
-        private bit_investDataSet bit_investDataSet;
-        private bit_investDataSet bit_investDataSet1;
-        private bit_investDataSet bit_investDataSet2;
-        private System.Windows.Forms.DataGridView dataTabelaClientes;
-        private bit_investDataSet bit_investDataSet3;
         private Guna.UI2.WinForms.Guna2Button bntExibir;
-        private bit_investDataSet1 bit_investDataSet11;
-        private System.Windows.Forms.BindingSource consultarclientesBindingSource;
-        private bit_investDataSet1TableAdapters.consultar_clientesTableAdapter consultar_clientesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sobrenomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpfcnpjDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn foto_documento_tras;
+        private Guna.UI.WinForms.GunaDataGridView dataClientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sobrenome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpf_cnpj;
     }
 }
 

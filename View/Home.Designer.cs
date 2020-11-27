@@ -279,6 +279,7 @@
             this.bntConsultarFunc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntConsultarFunc.Textcolor = System.Drawing.Color.White;
             this.bntConsultarFunc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntConsultarFunc.Click += new System.EventHandler(this.bntConsultarFunc_Click);
             // 
             // bntCadastrarFunc
             // 
@@ -644,20 +645,20 @@
             // 
             this.optSair.Image = ((System.Drawing.Image)(resources.GetObject("optSair.Image")));
             this.optSair.Name = "optSair";
-            this.optSair.Size = new System.Drawing.Size(180, 22);
+            this.optSair.Size = new System.Drawing.Size(134, 22);
             this.optSair.Text = "Sair";
             this.optSair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // optFAQ
             // 
             this.optFAQ.Name = "optFAQ";
-            this.optFAQ.Size = new System.Drawing.Size(180, 22);
+            this.optFAQ.Size = new System.Drawing.Size(134, 22);
             this.optFAQ.Text = "FAQ";
             // 
             // editarPerfilToolStripMenuItem
             // 
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
             this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
             // 

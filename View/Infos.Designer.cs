@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Infos));
             this.pnlInfosClientes = new System.Windows.Forms.Panel();
+            this.bntApagar = new Guna.UI2.WinForms.Guna2Button();
             this.lblSaldoDin = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblNomeCompleto = new System.Windows.Forms.Label();
             this.picAtivo = new System.Windows.Forms.PictureBox();
-            this.bntApagarCli = new Guna.UI2.WinForms.Guna2Button();
+            this.bntEditar = new Guna.UI2.WinForms.Guna2Button();
             this.pnlInfosClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -84,7 +85,8 @@
             this.pnlInfosClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInfosClientes.BackColor = System.Drawing.Color.White;
-            this.pnlInfosClientes.Controls.Add(this.bntApagarCli);
+            this.pnlInfosClientes.Controls.Add(this.bntEditar);
+            this.pnlInfosClientes.Controls.Add(this.bntApagar);
             this.pnlInfosClientes.Controls.Add(this.lblSaldoDin);
             this.pnlInfosClientes.Controls.Add(this.label8);
             this.pnlInfosClientes.Controls.Add(this.label1);
@@ -130,6 +132,25 @@
             this.pnlInfosClientes.Size = new System.Drawing.Size(347, 605);
             this.pnlInfosClientes.TabIndex = 0;
             this.pnlInfosClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInfosClientes_Paint);
+            // 
+            // bntApagar
+            // 
+            this.bntApagar.BackColor = System.Drawing.Color.White;
+            this.bntApagar.BorderRadius = 18;
+            this.bntApagar.CheckedState.Parent = this.bntApagar;
+            this.bntApagar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntApagar.CustomImages.Parent = this.bntApagar;
+            this.bntApagar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bntApagar.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntApagar.ForeColor = System.Drawing.Color.White;
+            this.bntApagar.HoverState.Parent = this.bntApagar;
+            this.bntApagar.Location = new System.Drawing.Point(76, 558);
+            this.bntApagar.Name = "bntApagar";
+            this.bntApagar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            this.bntApagar.ShadowDecoration.Parent = this.bntApagar;
+            this.bntApagar.Size = new System.Drawing.Size(192, 36);
+            this.bntApagar.TabIndex = 44;
+            this.bntApagar.Text = "EXCLUIR CLIENTE";
             // 
             // lblSaldoDin
             // 
@@ -593,24 +614,24 @@
             this.picAtivo.TabIndex = 0;
             this.picAtivo.TabStop = false;
             // 
-            // bntApagarCli
+            // bntEditar
             // 
-            this.bntApagarCli.BackColor = System.Drawing.Color.White;
-            this.bntApagarCli.BorderRadius = 23;
-            this.bntApagarCli.CheckedState.Parent = this.bntApagarCli;
-            this.bntApagarCli.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntApagarCli.CustomImages.Parent = this.bntApagarCli;
-            this.bntApagarCli.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bntApagarCli.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntApagarCli.ForeColor = System.Drawing.Color.White;
-            this.bntApagarCli.HoverState.Parent = this.bntApagarCli;
-            this.bntApagarCli.Location = new System.Drawing.Point(70, 537);
-            this.bntApagarCli.Name = "bntApagarCli";
-            this.bntApagarCli.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            this.bntApagarCli.ShadowDecoration.Parent = this.bntApagarCli;
-            this.bntApagarCli.Size = new System.Drawing.Size(206, 45);
-            this.bntApagarCli.TabIndex = 44;
-            this.bntApagarCli.Text = "EXCLUIR CLIENTE";
+            this.bntEditar.BackColor = System.Drawing.Color.White;
+            this.bntEditar.BorderRadius = 18;
+            this.bntEditar.CheckedState.Parent = this.bntEditar;
+            this.bntEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntEditar.CustomImages.Parent = this.bntEditar;
+            this.bntEditar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.bntEditar.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntEditar.ForeColor = System.Drawing.Color.White;
+            this.bntEditar.HoverState.Parent = this.bntEditar;
+            this.bntEditar.Location = new System.Drawing.Point(76, 516);
+            this.bntEditar.Name = "bntEditar";
+            this.bntEditar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
+            this.bntEditar.ShadowDecoration.Parent = this.bntEditar;
+            this.bntEditar.Size = new System.Drawing.Size(192, 36);
+            this.bntEditar.TabIndex = 45;
+            this.bntEditar.Text = "EDITAR CLIENTE";
             // 
             // Infos
             // 
@@ -675,6 +696,7 @@
         public System.Windows.Forms.Label lblSaldoDin;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button bntApagarCli;
+        private Guna.UI2.WinForms.Guna2Button bntApagar;
+        private Guna.UI2.WinForms.Guna2Button bntEditar;
     }
 }
