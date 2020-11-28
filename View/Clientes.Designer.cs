@@ -37,21 +37,42 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlClientesCadastrar = new System.Windows.Forms.Panel();
             this.dataClientes = new Guna.UI.WinForms.GunaDataGridView();
+            this.consultarclientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
             this.bntExibir = new Guna.UI2.WinForms.Guna2Button();
             this.pnlInfos = new System.Windows.Forms.Panel();
             this.txtPesquisaPendentes = new Guna.UI2.WinForms.Guna2TextBox();
-            this.bit_investDataSet1 = new desktop_bitinvest_v1.bit_investDataSet1();
-            this.consultarclientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultar_clientesTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.consultar_clientesTableAdapter();
+            this.Cliente = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter1 = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.ClienteTableAdapter();
+            this.usuario_tem_perfilTableAdapter1 = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.usuario_tem_perfilTableAdapter();
+            this.usuariosTableAdapter1 = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.UsuariosTableAdapter();
+            this.clienteconsultarclientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuario_tem_perfilTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.usuario_tem_perfilTableAdapter();
+            this.usuariosTableAdapter = new desktop_bitinvest_v1.bit_investDataSet1TableAdapters.UsuariosTableAdapter();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bit_investDataSet2 = new desktop_bitinvest_v1.bit_investDataSet2();
+            this.clienteTableAdapter = new desktop_bitinvest_v1.bit_investDataSet2TableAdapters.ClienteTableAdapter();
+            this.tableAdapterManager = new desktop_bitinvest_v1.bit_investDataSet2TableAdapters.TableAdapterManager();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sobrenomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfcnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlClientesCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultarclientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteconsultarclientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlClientesCadastrar
@@ -63,7 +84,7 @@
             this.pnlClientesCadastrar.Controls.Add(this.bntExibir);
             this.pnlClientesCadastrar.Controls.Add(this.pnlInfos);
             this.pnlClientesCadastrar.Controls.Add(this.txtPesquisaPendentes);
-            this.pnlClientesCadastrar.Location = new System.Drawing.Point(0, 1);
+            this.pnlClientesCadastrar.Location = new System.Drawing.Point(10, 12);
             this.pnlClientesCadastrar.Name = "pnlClientesCadastrar";
             this.pnlClientesCadastrar.Size = new System.Drawing.Size(1121, 701);
             this.pnlClientesCadastrar.TabIndex = 0;
@@ -97,7 +118,6 @@
             this.dataClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idusuarioDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
-            this.sobrenomeDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.cpfcnpjDataGridViewTextBoxColumn});
             this.dataClientes.DataSource = this.consultarclientesBindingSource;
@@ -140,6 +160,18 @@
             this.dataClientes.ThemeStyle.RowsStyle.Height = 22;
             this.dataClientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(26)))));
             this.dataClientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataClientes_CellContentClick);
+            // 
+            // consultarclientesBindingSource
+            // 
+            this.consultarclientesBindingSource.DataMember = "consultar_clientes";
+            this.consultarclientesBindingSource.DataSource = this.bit_investDataSet1;
+            this.consultarclientesBindingSource.CurrentChanged += new System.EventHandler(this.consultarclientesBindingSource_CurrentChanged);
+            // 
+            // bit_investDataSet1
+            // 
+            this.bit_investDataSet1.DataSetName = "bit_investDataSet1";
+            this.bit_investDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bntExibir
             // 
@@ -193,19 +225,104 @@
             this.txtPesquisaPendentes.TextChanged += new System.EventHandler(this.txtPesquisaPendentes_TextChanged);
             this.txtPesquisaPendentes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pesquisa);
             // 
-            // bit_investDataSet1
-            // 
-            this.bit_investDataSet1.DataSetName = "bit_investDataSet1";
-            this.bit_investDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultarclientesBindingSource
-            // 
-            this.consultarclientesBindingSource.DataMember = "consultar_clientes";
-            this.consultarclientesBindingSource.DataSource = this.bit_investDataSet1;
-            // 
             // consultar_clientesTableAdapter
             // 
             this.consultar_clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataMember = "Cliente";
+            this.Cliente.DataSource = this.bit_investDataSet1;
+            this.Cliente.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // clienteTableAdapter1
+            // 
+            this.clienteTableAdapter1.ClearBeforeFill = true;
+            // 
+            // usuario_tem_perfilTableAdapter1
+            // 
+            this.usuario_tem_perfilTableAdapter1.ClearBeforeFill = true;
+            // 
+            // usuariosTableAdapter1
+            // 
+            this.usuariosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // clienteconsultarclientesBindingSource
+            // 
+            this.clienteconsultarclientesBindingSource.DataMember = "Cliente_consultar_clientes";
+            this.clienteconsultarclientesBindingSource.DataSource = this.Cliente;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            // 
+            // usuario_tem_perfilTableAdapter
+            // 
+            this.usuario_tem_perfilTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.bit_investDataSet1;
+            this.bindingSource1.Position = 0;
+            // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataMember = "Cliente_consultar_clientes";
+            this.bindingSource2.DataSource = this.Cliente;
+            // 
+            // bit_investDataSet2
+            // 
+            this.bit_investDataSet2.DataSetName = "bit_investDataSet2";
+            this.bit_investDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.analise_tem_perfilTableAdapter = null;
+            this.tableAdapterManager.AnaliseTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BancoTableAdapter = null;
+            this.tableAdapterManager.Cadastros_excluidosTableAdapter = null;
+            this.tableAdapterManager.CargoTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = this.clienteTableAdapter;
+            this.tableAdapterManager.Dados_bancariosTableAdapter = null;
+            this.tableAdapterManager.EnderecoTableAdapter = null;
+            this.tableAdapterManager.esqueci_senhaTableAdapter = null;
+            this.tableAdapterManager.FuncionarioTableAdapter = null;
+            this.tableAdapterManager.GraficosTableAdapter = null;
+            this.tableAdapterManager.MoedasTableAdapter = null;
+            this.tableAdapterManager.PerfilTableAdapter = null;
+            this.tableAdapterManager.RelatoriosTableAdapter = null;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
+            this.tableAdapterManager.TransacaoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = desktop_bitinvest_v1.bit_investDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuario_tem_perfilTableAdapter = null;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1141, 25);
+            this.fillByToolStrip.TabIndex = 1;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // idusuarioDataGridViewTextBoxColumn
             // 
@@ -220,13 +337,6 @@
             this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sobrenomeDataGridViewTextBoxColumn
-            // 
-            this.sobrenomeDataGridViewTextBoxColumn.DataPropertyName = "sobrenome";
-            this.sobrenomeDataGridViewTextBoxColumn.HeaderText = "sobrenome";
-            this.sobrenomeDataGridViewTextBoxColumn.Name = "sobrenomeDataGridViewTextBoxColumn";
-            this.sobrenomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rgDataGridViewTextBoxColumn
             // 
@@ -249,7 +359,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1121, 700);
+            this.ClientSize = new System.Drawing.Size(1141, 722);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.pnlClientesCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clientes";
@@ -257,8 +368,16 @@
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.pnlClientesCadastrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultarclientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteconsultarclientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bit_investDataSet2)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,9 +393,23 @@
         private bit_investDataSet1 bit_investDataSet1;
         private System.Windows.Forms.BindingSource consultarclientesBindingSource;
         private bit_investDataSet1TableAdapters.consultar_clientesTableAdapter consultar_clientesTableAdapter;
+        private System.Windows.Forms.BindingSource Cliente;
+        private bit_investDataSet1TableAdapters.ClienteTableAdapter clienteTableAdapter1;
+        private bit_investDataSet1TableAdapters.usuario_tem_perfilTableAdapter usuario_tem_perfilTableAdapter1;
+        private bit_investDataSet1TableAdapters.UsuariosTableAdapter usuariosTableAdapter1;
+        private System.Windows.Forms.BindingSource clienteconsultarclientesBindingSource;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private bit_investDataSet1TableAdapters.usuario_tem_perfilTableAdapter usuario_tem_perfilTableAdapter;
+        private bit_investDataSet1TableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource bindingSource2;
+        private bit_investDataSet2 bit_investDataSet2;
+        private bit_investDataSet2TableAdapters.ClienteTableAdapter clienteTableAdapter;
+        private bit_investDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sobrenomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfcnpjDataGridViewTextBoxColumn;
     }

@@ -21,7 +21,7 @@ namespace desktop_bitinvest_v1.Controller
 
             command.Connection = connection;
            // command.CommandText = "select * from usuarios where (email=@email and senha=@senha)"; //Selecionando os dados do usuario
-            command.CommandText = "select u.nome,c.nome_cargo,p.id_perfil from usuarios u inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario inner join perfil p on p.id_perfil=up.id_perfil full outer join funcionario f on f.id_usuario = u.id_usuario full outer join cargo c on c.id_cargo = f.id_cargo where (u.email=@email and u.senha=@senha)"; 
+            command.CommandText = "select u.nome,c.nome_cargo,p.id_perfil,u.id_usuario from usuarios u inner join usuario_tem_perfil up on up.id_usuario = u.id_usuario inner join perfil p on p.id_perfil=up.id_perfil full outer join funcionario f on f.id_usuario = u.id_usuario full outer join cargo c on c.id_cargo = f.id_cargo where (u.email=@email and u.senha=@senha)"; 
 
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", senha);
@@ -43,6 +43,7 @@ namespace desktop_bitinvest_v1.Controller
 
                     }
                     Usuario.NomeFun = reader.GetString(0);
+                    Funcionario.Id = reader.GetInt32(3);
 
                 }
                 return true;
@@ -280,7 +281,7 @@ namespace desktop_bitinvest_v1.Controller
                 return true;
             }
         }
-        
+       
         
 //Classe para inserir o código do esqueci a senha do usuario na tabela esqueci a senha
         public bool Esqueceu(int id_usuario, int cod)
@@ -668,17 +669,8 @@ string pis_paes, string obs, string data_de_admissao, string tipo_contrato, stri
 int id_cargo, int id_perfil, string rua, string bairro, string complemento, string cidade, string numero, string estado, string pais, string cep, string n_conta_bancaria, string n_agencia, int cod_banco
                 )
         {
-            UnicodeEncoding UE = new UnicodeEncoding();
-            byte[] HashValue, MessageBytes = UE.GetBytes(senha);
-            SHA1Managed SHhash = new SHA1Managed();
-            string strHex = "";
-            HashValue = SHhash.ComputeHash(MessageBytes);
-            foreach (byte b in HashValue)
-
-            {
-                strHex += String.Format("{0:x2}", b);
-
-            }
+           
+           
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -689,7 +681,7 @@ int id_cargo, int id_perfil, string rua, string bairro, string complemento, stri
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@email ", email);
-                    cmd.Parameters.AddWithValue("@senha ", strHex);
+                    cmd.Parameters.AddWithValue("@senha ", senha);
                     cmd.Parameters.AddWithValue("@sobrenome ", sobrenome);
                     cmd.Parameters.AddWithValue("@data_nasc_fund ", data_nasc_fund);
                     cmd.Parameters.AddWithValue("@rg ", rg);

@@ -31,8 +31,11 @@
             this.bntCancelarFunc = new Guna.UI2.WinForms.Guna2Button();
             this.pnlFuncCadastrar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bntAvançar = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtObs = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.txtAdmissao = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -84,7 +87,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.mskCepFunc = new System.Windows.Forms.MaskedTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -98,7 +100,6 @@
             this.txtEmailFunc = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.mskCelularFunc = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -107,7 +108,6 @@
             this.txtCpfFunc = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtDataNascFunc = new System.Windows.Forms.TextBox();
-            this.mskRGFunc = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -119,10 +119,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDadosPeF = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.txtObs = new System.Windows.Forms.TextBox();
+            this.bntAvançar = new Guna.UI2.WinForms.Guna2Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.pnlFuncCadastrar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -167,30 +167,13 @@
             this.panel1.Size = new System.Drawing.Size(953, 567);
             this.panel1.TabIndex = 9;
             // 
-            // bntAvançar
-            // 
-            this.bntAvançar.BackColor = System.Drawing.SystemColors.Control;
-            this.bntAvançar.BorderRadius = 23;
-            this.bntAvançar.CheckedState.Parent = this.bntAvançar;
-            this.bntAvançar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntAvançar.CustomImages.Parent = this.bntAvançar;
-            this.bntAvançar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(1)))));
-            this.bntAvançar.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntAvançar.ForeColor = System.Drawing.Color.White;
-            this.bntAvançar.HoverState.Parent = this.bntAvançar;
-            this.bntAvançar.Location = new System.Drawing.Point(185, 612);
-            this.bntAvançar.Name = "bntAvançar";
-            this.bntAvançar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(10)))));
-            this.bntAvançar.ShadowDecoration.Parent = this.bntAvançar;
-            this.bntAvançar.Size = new System.Drawing.Size(206, 45);
-            this.bntAvançar.TabIndex = 8;
-            this.bntAvançar.Text = "CADASTRAR";
-            this.bntAvançar.Click += new System.EventHandler(this.bntAvançar_Click);
-            // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.txtObs);
             this.panel2.Controls.Add(this.label58);
             this.panel2.Controls.Add(this.label57);
@@ -246,7 +229,6 @@
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.mskCepFunc);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label20);
@@ -260,7 +242,6 @@
             this.panel2.Controls.Add(this.txtEmailFunc);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.mskCelularFunc);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
@@ -269,7 +250,6 @@
             this.panel2.Controls.Add(this.txtCpfFunc);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.txtDataNascFunc);
-            this.panel2.Controls.Add(this.mskRGFunc);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label5);
@@ -285,6 +265,54 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(933, 1000);
             this.panel2.TabIndex = 3;
+            // 
+            // txtObs
+            // 
+            this.txtObs.Location = new System.Drawing.Point(23, 771);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(756, 187);
+            this.txtObs.TabIndex = 220;
+            this.txtObs.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label58.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(25, 735);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(109, 21);
+            this.label58.TabIndex = 219;
+            this.label58.Text = "OBSERVAÇÃO";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label57.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Red;
+            this.label57.Location = new System.Drawing.Point(385, 625);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(17, 21);
+            this.label57.TabIndex = 218;
+            this.label57.Text = "*";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label56.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.Red;
+            this.label56.Location = new System.Drawing.Point(175, 625);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(17, 21);
+            this.label56.TabIndex = 217;
+            this.label56.Text = "*";
             // 
             // label55
             // 
@@ -306,6 +334,7 @@
             this.txtAdmissao.Name = "txtAdmissao";
             this.txtAdmissao.Size = new System.Drawing.Size(87, 25);
             this.txtAdmissao.TabIndex = 215;
+            this.txtAdmissao.TextChanged += new System.EventHandler(this.txtAdmissao_TextChanged_1);
             // 
             // label54
             // 
@@ -327,6 +356,7 @@
             this.txtPis_Paes.Name = "txtPis_Paes";
             this.txtPis_Paes.Size = new System.Drawing.Size(173, 25);
             this.txtPis_Paes.TabIndex = 213;
+            this.txtPis_Paes.TextChanged += new System.EventHandler(this.txtPis_Paes_TextChanged_1);
             // 
             // cmbCargo
             // 
@@ -342,6 +372,7 @@
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(160, 21);
             this.cmbCargo.TabIndex = 212;
+            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.cmbCargo_SelectedIndexChanged_1);
             // 
             // comboBox1
             // 
@@ -363,6 +394,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(158, 21);
             this.comboBox1.TabIndex = 211;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtConta
             // 
@@ -371,6 +403,7 @@
             this.txtConta.Name = "txtConta";
             this.txtConta.Size = new System.Drawing.Size(156, 25);
             this.txtConta.TabIndex = 181;
+            this.txtConta.TextChanged += new System.EventHandler(this.txtConta_TextChanged_1);
             // 
             // label37
             // 
@@ -405,6 +438,7 @@
             this.txtAgencia.Name = "txtAgencia";
             this.txtAgencia.Size = new System.Drawing.Size(105, 25);
             this.txtAgencia.TabIndex = 180;
+            this.txtAgencia.TextChanged += new System.EventHandler(this.txtAgencia_TextChanged_1);
             // 
             // label35
             // 
@@ -478,6 +512,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(173, 25);
             this.textBox4.TabIndex = 188;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged_1);
             // 
             // label52
             // 
@@ -512,6 +547,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(141, 25);
             this.textBox3.TabIndex = 187;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // label50
             // 
@@ -546,6 +582,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(117, 25);
             this.textBox2.TabIndex = 185;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // label48
             // 
@@ -580,6 +617,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(118, 25);
             this.textBox1.TabIndex = 186;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label46
             // 
@@ -614,6 +652,7 @@
             this.txtCTPS.Name = "txtCTPS";
             this.txtCTPS.Size = new System.Drawing.Size(107, 25);
             this.txtCTPS.TabIndex = 184;
+            this.txtCTPS.TextChanged += new System.EventHandler(this.txtCTPS_TextChanged_1);
             // 
             // label44
             // 
@@ -648,6 +687,7 @@
             this.txtTipoContrato.Name = "txtTipoContrato";
             this.txtTipoContrato.Size = new System.Drawing.Size(119, 25);
             this.txtTipoContrato.TabIndex = 183;
+            this.txtTipoContrato.TextChanged += new System.EventHandler(this.txtTipoContrato_TextChanged_1);
             // 
             // label42
             // 
@@ -721,6 +761,7 @@
             this.txtPaisFunc.Name = "txtPaisFunc";
             this.txtPaisFunc.Size = new System.Drawing.Size(195, 25);
             this.txtPaisFunc.TabIndex = 15;
+            this.txtPaisFunc.TextChanged += new System.EventHandler(this.txtPaisFunc_TextChanged_1);
             // 
             // txtBairroFunc
             // 
@@ -729,6 +770,7 @@
             this.txtBairroFunc.Name = "txtBairroFunc";
             this.txtBairroFunc.Size = new System.Drawing.Size(165, 25);
             this.txtBairroFunc.TabIndex = 12;
+            this.txtBairroFunc.TextChanged += new System.EventHandler(this.txtBairroFunc_TextChanged_1);
             // 
             // txtEstadoFunc
             // 
@@ -737,6 +779,7 @@
             this.txtEstadoFunc.Name = "txtEstadoFunc";
             this.txtEstadoFunc.Size = new System.Drawing.Size(241, 25);
             this.txtEstadoFunc.TabIndex = 14;
+            this.txtEstadoFunc.TextChanged += new System.EventHandler(this.txtEstadoFunc_TextChanged_1);
             // 
             // txtCidadeFunc
             // 
@@ -745,6 +788,7 @@
             this.txtCidadeFunc.Name = "txtCidadeFunc";
             this.txtCidadeFunc.Size = new System.Drawing.Size(170, 25);
             this.txtCidadeFunc.TabIndex = 13;
+            this.txtCidadeFunc.TextChanged += new System.EventHandler(this.txtCidadeFunc_TextChanged_1);
             // 
             // txtComplFunc
             // 
@@ -753,6 +797,7 @@
             this.txtComplFunc.Name = "txtComplFunc";
             this.txtComplFunc.Size = new System.Drawing.Size(256, 25);
             this.txtComplFunc.TabIndex = 11;
+            this.txtComplFunc.TextChanged += new System.EventHandler(this.txtComplFunc_TextChanged_1);
             // 
             // label32
             // 
@@ -787,6 +832,7 @@
             this.txtNumFunc.Name = "txtNumFunc";
             this.txtNumFunc.Size = new System.Drawing.Size(86, 25);
             this.txtNumFunc.TabIndex = 10;
+            this.txtNumFunc.TextChanged += new System.EventHandler(this.txtNumFunc_TextChanged_1);
             // 
             // label30
             // 
@@ -821,6 +867,7 @@
             this.txtRuaFunc.Name = "txtRuaFunc";
             this.txtRuaFunc.Size = new System.Drawing.Size(215, 25);
             this.txtRuaFunc.TabIndex = 9;
+            this.txtRuaFunc.TextChanged += new System.EventHandler(this.txtRuaFunc_TextChanged_1);
             // 
             // label28
             // 
@@ -873,17 +920,6 @@
             this.label27.Size = new System.Drawing.Size(88, 21);
             this.label27.TabIndex = 108;
             this.label27.Text = "BAIRRO     :";
-            // 
-            // mskCepFunc
-            // 
-            this.mskCepFunc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mskCepFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.mskCepFunc.Location = new System.Drawing.Point(94, 310);
-            this.mskCepFunc.Mask = "###-#####";
-            this.mskCepFunc.Name = "mskCepFunc";
-            this.mskCepFunc.Size = new System.Drawing.Size(157, 25);
-            this.mskCepFunc.TabIndex = 8;
-            this.mskCepFunc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label24
             // 
@@ -1009,6 +1045,7 @@
             this.txtTelefoneFunc.Name = "txtTelefoneFunc";
             this.txtTelefoneFunc.Size = new System.Drawing.Size(147, 25);
             this.txtTelefoneFunc.TabIndex = 6;
+            this.txtTelefoneFunc.TextChanged += new System.EventHandler(this.txtTelefoneFunc_TextChanged_1);
             // 
             // txtEmailFunc
             // 
@@ -1017,6 +1054,7 @@
             this.txtEmailFunc.Name = "txtEmailFunc";
             this.txtEmailFunc.Size = new System.Drawing.Size(280, 25);
             this.txtEmailFunc.TabIndex = 7;
+            this.txtEmailFunc.TextChanged += new System.EventHandler(this.txtEmailFunc_TextChanged_1);
             // 
             // label12
             // 
@@ -1043,17 +1081,6 @@
             this.label14.Size = new System.Drawing.Size(83, 21);
             this.label14.TabIndex = 95;
             this.label14.Text = "E-MAIL     :";
-            // 
-            // mskCelularFunc
-            // 
-            this.mskCelularFunc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mskCelularFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.mskCelularFunc.Location = new System.Drawing.Point(129, 196);
-            this.mskCelularFunc.Mask = "(99) 00000-000";
-            this.mskCelularFunc.Name = "mskCelularFunc";
-            this.mskCelularFunc.Size = new System.Drawing.Size(157, 25);
-            this.mskCelularFunc.TabIndex = 5;
-            this.mskCelularFunc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -1123,10 +1150,11 @@
             // txtCpfFunc
             // 
             this.txtCpfFunc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtCpfFunc.Location = new System.Drawing.Point(96, 86);
+            this.txtCpfFunc.Location = new System.Drawing.Point(93, 86);
             this.txtCpfFunc.Name = "txtCpfFunc";
             this.txtCpfFunc.Size = new System.Drawing.Size(126, 25);
             this.txtCpfFunc.TabIndex = 2;
+            this.txtCpfFunc.TextChanged += new System.EventHandler(this.txtCpfFunc_TextChanged_1);
             // 
             // label17
             // 
@@ -1148,17 +1176,7 @@
             this.txtDataNascFunc.Name = "txtDataNascFunc";
             this.txtDataNascFunc.Size = new System.Drawing.Size(147, 25);
             this.txtDataNascFunc.TabIndex = 4;
-            // 
-            // mskRGFunc
-            // 
-            this.mskRGFunc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mskRGFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.mskRGFunc.Location = new System.Drawing.Point(290, 86);
-            this.mskRGFunc.Mask = "00.0000.000-99";
-            this.mskRGFunc.Name = "mskRGFunc";
-            this.mskRGFunc.Size = new System.Drawing.Size(127, 25);
-            this.mskRGFunc.TabIndex = 3;
-            this.mskRGFunc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDataNascFunc.TextChanged += new System.EventHandler(this.txtDataNascFunc_TextChanged_1);
             // 
             // label7
             // 
@@ -1219,6 +1237,7 @@
             this.txtSobrenomeFunc.Name = "txtSobrenomeFunc";
             this.txtSobrenomeFunc.Size = new System.Drawing.Size(266, 25);
             this.txtSobrenomeFunc.TabIndex = 1;
+            this.txtSobrenomeFunc.TextChanged += new System.EventHandler(this.txtSobrenomeFunc_TextChanged_1);
             // 
             // txtNomeFun
             // 
@@ -1227,6 +1246,7 @@
             this.txtNomeFun.Name = "txtNomeFun";
             this.txtNomeFun.Size = new System.Drawing.Size(215, 25);
             this.txtNomeFun.TabIndex = 0;
+            this.txtNomeFun.TextChanged += new System.EventHandler(this.txtNomeFun_TextChanged_1);
             // 
             // label3
             // 
@@ -1293,53 +1313,52 @@
             this.lblDadosPeF.TabIndex = 72;
             this.lblDadosPeF.Text = "DADOS PESSOAIS";
             // 
-            // label56
+            // bntAvançar
             // 
-            this.label56.AutoSize = true;
-            this.label56.BackColor = System.Drawing.Color.Transparent;
-            this.label56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label56.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.Red;
-            this.label56.Location = new System.Drawing.Point(175, 625);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(17, 21);
-            this.label56.TabIndex = 217;
-            this.label56.Text = "*";
+            this.bntAvançar.BackColor = System.Drawing.SystemColors.Control;
+            this.bntAvançar.BorderRadius = 23;
+            this.bntAvançar.CheckedState.Parent = this.bntAvançar;
+            this.bntAvançar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntAvançar.CustomImages.Parent = this.bntAvançar;
+            this.bntAvançar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(1)))));
+            this.bntAvançar.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntAvançar.ForeColor = System.Drawing.Color.White;
+            this.bntAvançar.HoverState.Parent = this.bntAvançar;
+            this.bntAvançar.Location = new System.Drawing.Point(185, 612);
+            this.bntAvançar.Name = "bntAvançar";
+            this.bntAvançar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(10)))));
+            this.bntAvançar.ShadowDecoration.Parent = this.bntAvançar;
+            this.bntAvançar.Size = new System.Drawing.Size(206, 45);
+            this.bntAvançar.TabIndex = 8;
+            this.bntAvançar.Text = "CADASTRAR";
+            this.bntAvançar.Click += new System.EventHandler(this.bntAvançar_Click);
             // 
-            // label57
+            // textBox5
             // 
-            this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.Transparent;
-            this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label57.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.Red;
-            this.label57.Location = new System.Drawing.Point(385, 625);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(17, 21);
-            this.label57.TabIndex = 218;
-            this.label57.Text = "*";
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox5.Location = new System.Drawing.Point(305, 86);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(126, 25);
+            this.textBox5.TabIndex = 221;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged_1);
             // 
-            // label58
+            // textBox6
             // 
-            this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label58.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(25, 735);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(109, 21);
-            this.label58.TabIndex = 219;
-            this.label58.Text = "OBSERVAÇÃO";
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox6.Location = new System.Drawing.Point(129, 197);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(147, 25);
+            this.textBox6.TabIndex = 222;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // txtObs
+            // textBox7
             // 
-            this.txtObs.Location = new System.Drawing.Point(23, 771);
-            this.txtObs.Multiline = true;
-            this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(756, 187);
-            this.txtObs.TabIndex = 220;
-            this.txtObs.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox7.Location = new System.Drawing.Point(101, 310);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(175, 25);
+            this.textBox7.TabIndex = 223;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // Funcionarios_Cadastrar
             // 
@@ -1415,7 +1434,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.MaskedTextBox mskCepFunc;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label20;
@@ -1429,7 +1447,6 @@
         private System.Windows.Forms.TextBox txtEmailFunc;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.MaskedTextBox mskCelularFunc;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -1438,7 +1455,6 @@
         private System.Windows.Forms.TextBox txtCpfFunc;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtDataNascFunc;
-        private System.Windows.Forms.MaskedTextBox mskRGFunc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
@@ -1454,5 +1470,8 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }

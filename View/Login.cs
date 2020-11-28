@@ -50,17 +50,6 @@ namespace desktop_bitinvest_v1
             {
                 if (txtSenha.Text != "Senha")
                 {
-                   /* UnicodeEncoding UE = new UnicodeEncoding();
-                    byte[] HashValue, MessageBytes = UE.GetBytes(txtSenha.Text);
-                    SHA1Managed SHhash = new SHA1Managed();
-                    string strHex = "";
-                    HashValue = SHhash.ComputeHash(MessageBytes);
-                    foreach (byte b in HashValue)
-
-                    {
-                        strHex += String.Format("{0:x2}", b);
-
-                    } */
                     UsuarioModel user = new UsuarioModel();
                     var validLogin = user.LoginUser(txtEmail.Text, txtSenha.Text);
                     
@@ -73,6 +62,8 @@ namespace desktop_bitinvest_v1
                      }
                         //verifica se o usuario é cliente se for nega acesso
                         else{
+                            user.SelecionarFuncionario(Funcionario.Id);
+
                             Home mainMenu = new Home();
                             mainMenu.Show();
                             this.Hide();

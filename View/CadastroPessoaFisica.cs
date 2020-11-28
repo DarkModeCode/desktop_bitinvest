@@ -67,13 +67,11 @@ namespace desktop_bitinvest_v1.View
 
         private void mskRG_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            Cliente.rg = mskRG.Text;
 
         }
 
         private void mskCelularPeF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            Cliente.celular = mskCelularPeF.Text;
 
         }
 
@@ -144,7 +142,6 @@ namespace desktop_bitinvest_v1.View
         private void mskCepPeF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
-            Cliente.Cep = mskCepPeF.Text;
 
         }
 
@@ -272,6 +269,24 @@ namespace desktop_bitinvest_v1.View
                 memory.Read(fotoS, 0, fotoS.Length);
                 Cliente.Foto_Selfie = fotoS;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            Cliente.celular = textBox1.Text;
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            Cliente.Cep = textBox2.Text;
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            Cliente.rg = textBox3.Text;
+
         }
     }
     }

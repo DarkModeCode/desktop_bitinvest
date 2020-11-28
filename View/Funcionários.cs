@@ -82,5 +82,10 @@ namespace desktop_bitinvest_v1.View
             }
 
         }
+
+        private void usuariosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

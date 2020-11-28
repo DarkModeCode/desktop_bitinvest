@@ -12,6 +12,24 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\valem\OneDrive\Área de Trabalho\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/desktop_bitinvest_v1/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +49,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FBE1C42B4CBD642BF84B94E89751BE4EA8362BE0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>desktop_bitinvest_v5_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AWSSDK, Version=2.3.55.2, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
@@ -110,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bit_investDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bit_investDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bit_investDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Cliente.cs" />
     <Compile Include="Controller\Funcionario.cs" />
     <Compile Include="View\CadastroPessoaFisica.cs">
@@ -164,6 +199,12 @@
     </Compile>
     <Compile Include="View\EsqueceuSenha_RedefinindoSenha.Designer.cs">
       <DependentUpon>EsqueceuSenha_RedefinindoSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Funcionarios_Cadastrar.cs">
       <SubType>Form</SubType>
@@ -263,6 +304,9 @@
     <EmbeddedResource Include="View\EsqueceuSenha_RedefinindoSenha.resx">
       <DependentUpon>EsqueceuSenha_RedefinindoSenha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios_Cadastrar.resx">
       <DependentUpon>Funcionarios_Cadastrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +376,18 @@
     <None Include="bit_investDataSet1.xss">
       <DependentUpon>bit_investDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="bit_investDataSet2.xsc">
+      <DependentUpon>bit_investDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bit_investDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bit_investDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bit_investDataSet2.xss">
+      <DependentUpon>bit_investDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="desktop_bitinvest_v5_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -354,6 +410,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Retângulo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

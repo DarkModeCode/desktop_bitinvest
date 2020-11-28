@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bntCancelarSenhaNova = new Guna.UI2.WinForms.Guna2Button();
-            this.bntSalvarSenhaNova = new Guna.UI2.WinForms.Guna2Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.lblConfirmarSenhaAtual = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -86,52 +84,14 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.bntCancelarSenhaNova);
-            this.panel3.Controls.Add(this.bntSalvarSenhaNova);
             this.panel3.Controls.Add(this.textBox11);
             this.panel3.Controls.Add(this.lblConfirmarSenhaAtual);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(531, 191);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(433, 155);
+            this.panel3.Size = new System.Drawing.Size(433, 115);
             this.panel3.TabIndex = 48;
-            // 
-            // bntCancelarSenhaNova
-            // 
-            this.bntCancelarSenhaNova.BackColor = System.Drawing.Color.White;
-            this.bntCancelarSenhaNova.BorderRadius = 17;
-            this.bntCancelarSenhaNova.CheckedState.Parent = this.bntCancelarSenhaNova;
-            this.bntCancelarSenhaNova.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntCancelarSenhaNova.CustomImages.Parent = this.bntCancelarSenhaNova;
-            this.bntCancelarSenhaNova.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bntCancelarSenhaNova.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntCancelarSenhaNova.ForeColor = System.Drawing.Color.White;
-            this.bntCancelarSenhaNova.HoverState.Parent = this.bntCancelarSenhaNova;
-            this.bntCancelarSenhaNova.Location = new System.Drawing.Point(28, 103);
-            this.bntCancelarSenhaNova.Name = "bntCancelarSenhaNova";
-            this.bntCancelarSenhaNova.ShadowDecoration.Parent = this.bntCancelarSenhaNova;
-            this.bntCancelarSenhaNova.Size = new System.Drawing.Size(147, 33);
-            this.bntCancelarSenhaNova.TabIndex = 27;
-            this.bntCancelarSenhaNova.Text = "Cancelar";
-            // 
-            // bntSalvarSenhaNova
-            // 
-            this.bntSalvarSenhaNova.BackColor = System.Drawing.Color.White;
-            this.bntSalvarSenhaNova.BorderRadius = 17;
-            this.bntSalvarSenhaNova.CheckedState.Parent = this.bntSalvarSenhaNova;
-            this.bntSalvarSenhaNova.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntSalvarSenhaNova.CustomImages.Parent = this.bntSalvarSenhaNova;
-            this.bntSalvarSenhaNova.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(184)))), ((int)(((byte)(1)))));
-            this.bntSalvarSenhaNova.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntSalvarSenhaNova.ForeColor = System.Drawing.Color.White;
-            this.bntSalvarSenhaNova.HoverState.Parent = this.bntSalvarSenhaNova;
-            this.bntSalvarSenhaNova.Location = new System.Drawing.Point(219, 103);
-            this.bntSalvarSenhaNova.Name = "bntSalvarSenhaNova";
-            this.bntSalvarSenhaNova.ShadowDecoration.Parent = this.bntSalvarSenhaNova;
-            this.bntSalvarSenhaNova.Size = new System.Drawing.Size(147, 33);
-            this.bntSalvarSenhaNova.TabIndex = 23;
-            this.bntSalvarSenhaNova.Text = "Salvar";
             // 
             // textBox11
             // 
@@ -275,6 +235,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(198, 20);
             this.textBox10.TabIndex = 9;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox2
             // 
@@ -285,6 +246,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 20);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox9
             // 
@@ -292,6 +254,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(203, 20);
             this.textBox9.TabIndex = 8;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // textBox5
             // 
@@ -509,8 +472,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2Button bntCancelarSenhaNova;
-        private Guna.UI2.WinForms.Guna2Button bntSalvarSenhaNova;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label lblConfirmarSenhaAtual;
         private System.Windows.Forms.TextBox textBox1;

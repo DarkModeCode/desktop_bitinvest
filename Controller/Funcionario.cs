@@ -12,6 +12,7 @@ namespace desktop_bitinvest_v1.Controller
         public static int Id { get; set; }
         public static string Email { get; set; }
         public static string Senha { get; set; }
+        public static string SenhaNova { get; set; }
         public static string Nome { get; set; }
         public static string NomeFun { get; set; }
         public static string Sobrenome { get; set; }

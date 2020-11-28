@@ -35,9 +35,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.picDocVerso = new System.Windows.Forms.PictureBox();
-            this.picSelfieDoc = new System.Windows.Forms.PictureBox();
-            this.picDocFrente = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -65,7 +62,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.mskCepPeF = new System.Windows.Forms.MaskedTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -77,8 +73,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.mskRG = new System.Windows.Forms.MaskedTextBox();
-            this.mskCelularPeF = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -95,6 +89,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblDadosPeF = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.picDocVerso = new System.Windows.Forms.PictureBox();
+            this.picSelfieDoc = new System.Windows.Forms.PictureBox();
+            this.picDocFrente = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDocVerso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSelfieDoc)).BeginInit();
@@ -106,6 +106,9 @@
             this.panel2.AllowDrop = true;
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label41);
             this.panel2.Controls.Add(this.label40);
             this.panel2.Controls.Add(this.label39);
@@ -142,7 +145,6 @@
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.mskCepPeF);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label20);
@@ -154,8 +156,6 @@
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.mskRG);
-            this.panel2.Controls.Add(this.mskCelularPeF);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
@@ -255,42 +255,6 @@
             this.label36.Size = new System.Drawing.Size(64, 21);
             this.label36.TabIndex = 79;
             this.label36.Text = "FRENTE";
-            // 
-            // picDocVerso
-            // 
-            this.picDocVerso.BackColor = System.Drawing.Color.Silver;
-            this.picDocVerso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDocVerso.Location = new System.Drawing.Point(356, 534);
-            this.picDocVerso.Name = "picDocVerso";
-            this.picDocVerso.Size = new System.Drawing.Size(89, 136);
-            this.picDocVerso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDocVerso.TabIndex = 78;
-            this.picDocVerso.TabStop = false;
-            this.picDocVerso.Click += new System.EventHandler(this.picDocVerso_Click);
-            // 
-            // picSelfieDoc
-            // 
-            this.picSelfieDoc.BackColor = System.Drawing.Color.Silver;
-            this.picSelfieDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSelfieDoc.Location = new System.Drawing.Point(583, 534);
-            this.picSelfieDoc.Name = "picSelfieDoc";
-            this.picSelfieDoc.Size = new System.Drawing.Size(89, 136);
-            this.picSelfieDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSelfieDoc.TabIndex = 77;
-            this.picSelfieDoc.TabStop = false;
-            this.picSelfieDoc.Click += new System.EventHandler(this.picSelfieDoc_Click);
-            // 
-            // picDocFrente
-            // 
-            this.picDocFrente.BackColor = System.Drawing.Color.Silver;
-            this.picDocFrente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDocFrente.Location = new System.Drawing.Point(129, 534);
-            this.picDocFrente.Name = "picDocFrente";
-            this.picDocFrente.Size = new System.Drawing.Size(89, 136);
-            this.picDocFrente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDocFrente.TabIndex = 76;
-            this.picDocFrente.TabStop = false;
-            this.picDocFrente.Click += new System.EventHandler(this.picDocFrente_Click);
             // 
             // label23
             // 
@@ -592,18 +556,6 @@
             this.label27.TabIndex = 45;
             this.label27.Text = "BAIRRO     :";
             // 
-            // mskCepPeF
-            // 
-            this.mskCepPeF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mskCepPeF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.mskCepPeF.Location = new System.Drawing.Point(150, 326);
-            this.mskCepPeF.Mask = "###-#####";
-            this.mskCepPeF.Name = "mskCepPeF";
-            this.mskCepPeF.Size = new System.Drawing.Size(157, 25);
-            this.mskCepPeF.TabIndex = 10;
-            this.mskCepPeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskCepPeF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCepPeF_MaskInputRejected);
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -746,30 +698,6 @@
             this.label14.Size = new System.Drawing.Size(83, 21);
             this.label14.TabIndex = 26;
             this.label14.Text = "E-MAIL     :";
-            // 
-            // mskRG
-            // 
-            this.mskRG.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mskRG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.mskRG.Location = new System.Drawing.Point(340, 96);
-            this.mskRG.Mask = "00.0000.000-99";
-            this.mskRG.Name = "mskRG";
-            this.mskRG.Size = new System.Drawing.Size(127, 25);
-            this.mskRG.TabIndex = 3;
-            this.mskRG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskRG.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskRG_MaskInputRejected);
-            // 
-            // mskCelularPeF
-            // 
-            this.mskCelularPeF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mskCelularPeF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.mskCelularPeF.Location = new System.Drawing.Point(181, 205);
-            this.mskCelularPeF.Mask = "(99) 00000-000";
-            this.mskCelularPeF.Name = "mskCelularPeF";
-            this.mskCelularPeF.Size = new System.Drawing.Size(157, 25);
-            this.mskCelularPeF.TabIndex = 6;
-            this.mskCelularPeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskCelularPeF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCelularPeF_MaskInputRejected);
             // 
             // label13
             // 
@@ -962,6 +890,69 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // picDocVerso
+            // 
+            this.picDocVerso.BackColor = System.Drawing.Color.Silver;
+            this.picDocVerso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDocVerso.Location = new System.Drawing.Point(356, 534);
+            this.picDocVerso.Name = "picDocVerso";
+            this.picDocVerso.Size = new System.Drawing.Size(89, 136);
+            this.picDocVerso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDocVerso.TabIndex = 78;
+            this.picDocVerso.TabStop = false;
+            this.picDocVerso.Click += new System.EventHandler(this.picDocVerso_Click);
+            // 
+            // picSelfieDoc
+            // 
+            this.picSelfieDoc.BackColor = System.Drawing.Color.Silver;
+            this.picSelfieDoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSelfieDoc.Location = new System.Drawing.Point(583, 534);
+            this.picSelfieDoc.Name = "picSelfieDoc";
+            this.picSelfieDoc.Size = new System.Drawing.Size(89, 136);
+            this.picSelfieDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSelfieDoc.TabIndex = 77;
+            this.picSelfieDoc.TabStop = false;
+            this.picSelfieDoc.Click += new System.EventHandler(this.picSelfieDoc_Click);
+            // 
+            // picDocFrente
+            // 
+            this.picDocFrente.BackColor = System.Drawing.Color.Silver;
+            this.picDocFrente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDocFrente.Location = new System.Drawing.Point(129, 534);
+            this.picDocFrente.Name = "picDocFrente";
+            this.picDocFrente.Size = new System.Drawing.Size(89, 136);
+            this.picDocFrente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDocFrente.TabIndex = 76;
+            this.picDocFrente.TabStop = false;
+            this.picDocFrente.Click += new System.EventHandler(this.picDocFrente_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox1.Location = new System.Drawing.Point(181, 202);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 25);
+            this.textBox1.TabIndex = 85;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox2.Location = new System.Drawing.Point(153, 326);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(147, 25);
+            this.textBox2.TabIndex = 86;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox3.Location = new System.Drawing.Point(340, 96);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(126, 25);
+            this.textBox3.TabIndex = 87;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // CadastroPessoaFisica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -985,7 +976,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.MaskedTextBox mskCelularPeF;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -1008,14 +998,12 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.MaskedTextBox mskCepPeF;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.MaskedTextBox mskRG;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSobrenomePeF;
@@ -1049,5 +1037,8 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

@@ -257,6 +257,7 @@
             // 
             this.usuariosBindingSource.DataMember = "Usuarios";
             this.usuariosBindingSource.DataSource = this.bitinvestDataSet1BindingSource;
+            this.usuariosBindingSource.CurrentChanged += new System.EventHandler(this.usuariosBindingSource_CurrentChanged);
             // 
             // fKusuariotIdus6477ECF3BindingSource
             // 

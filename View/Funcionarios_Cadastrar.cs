@@ -44,7 +44,6 @@ namespace desktop_bitinvest_v1.View
 
         private void mskRGFunc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            Funcionario.rg = mskRGFunc.Text;
 
         }
 
@@ -56,7 +55,7 @@ namespace desktop_bitinvest_v1.View
 
         private void mskCelularFunc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            Funcionario.celular = mskCelularFunc.Text;
+          //  Funcionario.celular = mskCelularFunc.Text;
 
         }
 
@@ -74,7 +73,6 @@ namespace desktop_bitinvest_v1.View
 
         private void mskCepFunc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            Funcionario.Cep = mskCepFunc.Text;
 
         }
 
@@ -198,34 +196,7 @@ namespace desktop_bitinvest_v1.View
 
         private void cmbCargo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var cargo = this.cmbCargo.SelectedItem.ToString();
-
-            if (cargo == "Gerente")
-            {
-                Funcionario.Cargo = 1;
-
-            }
-            else if (cargo == "Analista de sistemas")
-            {
-                Funcionario.Cargo = 2;
-
-            }else if (cargo == "Analista de negocios")
-            {
-                Funcionario.Cargo = 3;
-
-            }else if (cargo == "Analista Administrativo")
-            {
-                Funcionario.Cargo = 4;
-
-            }else if (cargo == "Coordenador")
-            {
-                Funcionario.Cargo = 5;
-
-            }else if (cargo == "Estagiario")
-            {
-                Funcionario.Cargo = 6;
-
-            }
+            
         }
 
         private void txtTipoContrato_TextChanged(object sender, EventArgs e)
@@ -288,7 +259,7 @@ namespace desktop_bitinvest_v1.View
         }
         private void bntAvançar_Click(object sender, EventArgs e)
         {
-            UsuarioModel user = new UsuarioModel();
+            /*UsuarioModel user = new UsuarioModel();
             int perfil = 2;
             var nulo = "nulo";
             var cadastro = user.CadastrarFuncionarios(
@@ -298,12 +269,229 @@ namespace desktop_bitinvest_v1.View
                 Funcionario.Conta, Funcionario.Agencia, Funcionario.Cod_banco
                 );
             MessageBox.Show("Cadastrado com Sucesso!");
-            limparVariaveis();
+            limparVariaveis(); 
+            */
+            Form1 frm = new Form1();
+            frm.Show();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             Funcionario.Obs = txtObs.Text;
+        }
+
+        private void txtCpfFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.cpf = txtCpfFunc.Text;
+
+        }
+
+        private void txtCidadeFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Cidade = txtCidadeFunc.Text;
+
+        }
+
+        private void txtNomeFun_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Nome = txtNomeFun.Text;
+
+        }
+
+        private void txtSobrenomeFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Sobrenome = txtSobrenomeFunc.Text;
+
+        }
+
+        private void mskRGFunc_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtDataNascFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Data_nasc = txtDataNascFunc.Text;
+
+        }
+
+        private void mskCelularFunc_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+      //      Funcionario.celular = mskCelularFunc.Text;
+
+        }
+
+        private void txtTelefoneFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.telefone_residencial = txtTelefoneFunc.Text;
+
+        }
+
+        private void txtEmailFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Email = txtEmailFunc.Text;
+
+        }
+
+        private void mskCepFunc_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtRuaFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Rua = txtRuaFunc.Text;
+
+        }
+
+        private void txtNumFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Numero = txtNumFunc.Text;
+
+        }
+
+        private void txtComplFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Complemento = txtComplFunc.Text;
+
+        }
+
+        private void txtBairroFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Bairro = txtBairroFunc.Text;
+
+        }
+
+        private void txtConta_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Conta = txtConta.Text;
+
+        } 
+        
+        private void txtObs_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Conta = txtConta.Text;
+
+        }
+
+        private void txtEstadoFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Estado = txtEstadoFunc.Text;
+
+        }
+
+        private void txtPaisFunc_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Pais = txtPaisFunc.Text;
+
+        }
+
+        private void txtAgencia_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Agencia = txtAgencia.Text;
+
+        }
+
+        private void cmbCargo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            var cargo = this.cmbCargo.SelectedItem.ToString();
+
+            if (cargo == "Gerente")
+            {
+                Funcionario.Cargo = 1;
+
+            }
+            else if (cargo == "Analista de sistemas")
+            {
+                Funcionario.Cargo = 2;
+
+            }
+            else if (cargo == "Analista de negocios")
+            {
+                Funcionario.Cargo = 3;
+
+            }
+            else if (cargo == "Analista Administrativo")
+            {
+                Funcionario.Cargo = 4;
+
+            }
+            else if (cargo == "Coordenador")
+            {
+                Funcionario.Cargo = 5;
+
+            }
+            else if (cargo == "Estagiario")
+            {
+                Funcionario.Cargo = 6;
+
+            }
+        }
+
+        private void txtTipoContrato_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Tipo_Contrato = txtTipoContrato.Text;
+
+        }
+
+        private void txtAdmissao_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Admissao = txtAdmissao.Text;
+
+        }
+
+        private void txtPis_Paes_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Pis_Paes = txtPis_Paes.Text;
+
+        }
+
+        private void txtCTPS_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.CTPS = txtCTPS.Text;
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Dias_Trabalho = textBox2.Text;
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Horas_Trabalho = textBox1.Text;
+
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Ferias = textBox3.Text;
+
+        }
+
+        private void textBox4_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.Salario = textBox4.Text;
+
+        }
+
+        private void textBox5_TextChanged_1(object sender, EventArgs e)
+        {
+            Funcionario.rg = textBox5.Text;
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            Funcionario.celular = textBox6.Text;
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            Funcionario.Cep = textBox7.Text;
+
         }
     }
 }

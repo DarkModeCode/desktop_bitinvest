@@ -133,10 +133,88 @@ namespace desktop_bitinvest_v1
 
         private void Clientes_Load(object sender, EventArgs e)
         {
+            this.usuario_tem_perfilTableAdapter.Fill(this.bit_investDataSet1.usuario_tem_perfil);
+            this.usuariosTableAdapter.Fill(this.bit_investDataSet1.Usuarios);
+            this.clienteTableAdapter1.Fill(this.bit_investDataSet1.Cliente);
+
             // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet1.consultar_clientes'. Você pode movê-la ou removê-la conforme necessário.
             this.consultar_clientesTableAdapter.Fill(this.bit_investDataSet1.consultar_clientes);
             // TODO: esta linha de código carrega dados na tabela 'bit_investDataSet1.consultar_clientes'. Você pode movê-la ou removê-la conforme necessário.
             this.consultar_clientesTableAdapter.Fill(this.bit_investDataSet1.consultar_clientes);
+        }
+
+        private void dataClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Infos infos = new Infos()
+                {
+                    TopLevel = false,
+                };
+                this.pnlInfos.Controls.Add(infos);
+                infos.Show();
+                infos.BringToFront();
+
+                DataGridViewRow row = dataClientes.Rows[e.RowIndex];
+
+                var id = (int)row.Cells[0].Value;
+
+
+                UsuarioModel user = new UsuarioModel();
+                user.SelecionarLinhas(id);
+                user.SelecionarTransacao(id);
+                user.SelecionarRealBit(id);
+                user.SelecionarRealEt(id);
+                user.SelecionarRealLite(id);
+                user.SelecionarBitcoin(id);
+                user.SelecionarLitecoin(id);
+                user.SelecionarEthereum(id);
+
+                var id_usu = id.ToString();
+                var transacao = Transacao.TotalTransacao.ToString();
+                var saldoBitcoin = Transacao.TotalBitcoin.ToString();
+                var saldoBitcoinReal = Transacao.TotalRealBit.ToString();
+                var saldoEtReal = Transacao.TotalRealEt.ToString();
+                var saldoEthereun = Transacao.TotalEthereum.ToString();
+                var saldoLiteReal = Transacao.TotalRealLite.ToString();
+                var saldoLitecoin = Transacao.TotalLiteCoin.ToString();
+
+                infos.lblIdUsu.Text = row.Cells[0].Value.ToString();
+                infos.lblNomeCompleto.Text = Usuario.Nome;
+                infos.lblCpfUsu.Text = Usuario.cpf_cnpj;
+                infos.lblRgUsu.Text = Usuario.rg;
+                infos.lblTransacaoUsu.Text = transacao;
+                infos.lblSaldoBitUsu.Text = saldoBitcoin;
+                infos.lblRealBitUsu.Text = saldoBitcoinReal;
+                infos.lblSaldoEtUsu.Text = saldoEthereun;
+                infos.lblSaldoRealEtUsu.Text = saldoEtReal;
+                infos.lblSaldoLiteRealUsu.Text = saldoLiteReal;
+                infos.lblSaldoLiteUsu.Text = saldoLitecoin;
+
+            }
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultarclientesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clienteTableAdapter.FillBy(this.bit_investDataSet2.Cliente);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

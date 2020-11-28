@@ -21,7 +21,7 @@ namespace desktop_bitinvest_v1.View
 
         private void bntConfirmarSenha_Click(object sender, EventArgs e)
         {
-            if (txtNovaSenha.TextLength > 8)
+            if (txtNovaSenha.TextLength > 7)
             {
                 if (txtNovaSenha.Text == txtNovaSenhaConfirmar.Text)
                 {

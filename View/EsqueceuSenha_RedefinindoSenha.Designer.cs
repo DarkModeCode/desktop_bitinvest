@@ -110,6 +110,7 @@
             // 
             this.txtNovaSenha.BackColor = System.Drawing.Color.White;
             this.txtNovaSenha.BorderRadius = 15;
+            this.txtNovaSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNovaSenha.DefaultText = "";
             this.txtNovaSenha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNovaSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -157,6 +158,7 @@
             this.txtNovaSenhaConfirmar.BackColor = System.Drawing.Color.White;
             this.txtNovaSenhaConfirmar.BorderRadius = 15;
             this.txtNovaSenhaConfirmar.CausesValidation = false;
+            this.txtNovaSenhaConfirmar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNovaSenhaConfirmar.DefaultText = "";
             this.txtNovaSenhaConfirmar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNovaSenhaConfirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -218,6 +220,7 @@
             this.Controls.Add(this.pnlRedefinirSenha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EsqueceuSenha_RedefinindoSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EsqueceuSenha_RedefinindoSenha";
             this.pnlRedefinirSenha.ResumeLayout(false);
             this.pnlRedefinirSenha.PerformLayout();
