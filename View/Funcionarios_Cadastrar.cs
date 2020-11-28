@@ -259,7 +259,7 @@ namespace desktop_bitinvest_v1.View
         }
         private void bntAvançar_Click(object sender, EventArgs e)
         {
-            /*UsuarioModel user = new UsuarioModel();
+            UsuarioModel user = new UsuarioModel();
             int perfil = 2;
             var nulo = "nulo";
             var cadastro = user.CadastrarFuncionarios(
@@ -270,9 +270,7 @@ namespace desktop_bitinvest_v1.View
                 );
             MessageBox.Show("Cadastrado com Sucesso!");
             limparVariaveis(); 
-            */
-            Form1 frm = new Form1();
-            frm.Show();
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
